@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+    padding: 16px 26px !important;
+    border: 1px solid transparent !important;
+    border-radius: 10px;
+    font-family: $font-medium;
+    font-size: 0.9375rem;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out !important;
+
+    &:hover {
+        padding: 16px 26px !important;
+        transition: all 0.1s ease-in-out !important;
+    }
+
+    &:after {
+        display: none;
+    }
+
+    @media all and (max-width: $breakpoint-tablet-sm) {
+        width: 100%;
+    }
+
+    &--primary {
+        background-color: $purple;
+        color: $white;
+
+        &:hover {
+            background-color: $purple !important;
+            background-image: linear-gradient(rgb(0 0 0 / 10%) 0 0);
+        }
+    }
+
+    &--secondary {
+        background-color: $white;
+        border: 1px solid $border-color !important;
+        color: $black !important;
+
+        &:hover {
+            background-color: $white !important;
+            background-image: linear-gradient(rgb(0 0 0 / 10%) 0 0);
+
+        }
+    }
+
+    &--inline {
+        .et_pb_button_module_wrapper {
+            margin-bottom: 0.75rem !important;
+
+            @media all and (min-width: 768px) {
+                display: inline-flex;
+                margin-bottom: 0 !important;
+
+                &:not(:last-child) {
+                    margin-right: 1rem !important;
+                }
+            }
+        }
+    }
+}

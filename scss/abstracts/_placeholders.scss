@@ -1,0 +1,45 @@
+%link {
+    color: $purple;
+    transition: all 0.1s ease-in-out;
+    
+    &:hover {
+        opacity: 0.75;
+        transition: all 0.1s ease-in-out;
+    }
+}
+
+%label {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 50px;
+    font-size: 13px;
+    cursor: auto;
+
+    @media all and (max-width: $breakpoint-mobile) {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    &:before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        margin-right: 0.5rem;
+        background-color: $black;
+        display: block;
+        border-radius: 50%;
+
+        @media all and (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: 0.75rem;
+
+        @media all and (max-width: $breakpoint-mobile) {
+            margin-right: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.content {
+    &__row {
+        @media all and (max-width: $breakpoint-tablet) {
+            padding: 0.5rem 0 !important;
+        }
+    }
+
+    &__col {
+        @media all and (min-width: $breakpoint-desktop) {
+            display: flex;
+        }
+    }
+
+    &__heading {
+        @media all and (min-width: $breakpoint-desktop) {
+            min-width: 400px;
+        }
+
+        @media all and (max-width: $breakpoint-tablet) {
+            margin-bottom: 1.5rem !important;
+        }
+
+        h4 {
+            font-family: $font-regular;
+        }
+    }
+
+    &__body {
+        @media all and (min-width: $breakpoint-desktop) {
+            min-width: 300px;
+        }
+
+        margin-bottom: 0 !important;
+
+        h5 {
+            font-family: $font-regular;
+            font-size: var(--h5-font-size-mobile);
+            line-height: 1.6;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                @extend p;
+            }
+        }
+    }
+}

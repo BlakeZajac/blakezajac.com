@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Breakpoints map
+$breakpoint-mobile: 479px;
+$breakpoint-tablet-sm: 767px;
+$breakpoint-tablet: 980px;
+$breakpoint-desktop: 981px;
+$breakpoint-header: 980px;
+
+// Color
+$black: #000;
+$white: #fff;
+$purple: #7f56d9;
+$border-color: #dadada;
+
+// Labels
+$label-purple--bg: #edebfe;
+$label-purple--dot: #9061f9;
+$label-purple--text: #5521b5;
+$label-red--bg: #fce8f3;
+$label-red--text: #99154b;
+$label-blue--bg: #e1effe;
+$label-blue--text: #1e429f;
+
+// Fonts (/base/_fonts.scss)
+$font-light: "Gordita Light";
+$font-regular: "Gordita Regular";
+$font-medium: "Gordita Medium";
+$font-bold: "Gordita Bold";
+
+// Logo
+$logo-black: url('/wp-content/uploads/2022/10/BlakeZajac-Logo-BLK.svg');
+$logo-white: url('/wp-content/uploads/2022/10/BlakeZajac-Logo-WHT.svg');
+
+// Cursors
+$cursor-figma: url('/wp-content/uploads/2022/10/icon-figma.svg');
+$cursor-wordpress: url('/wp-content/uploads/2022/10/icon-wordpress.svg');
+
+// Icons
+$icon-arrow: url('/wp-content/uploads/2022/10/icon-arrow.svg');
+$icon-close: url('/wp-content/uploads/2022/10/icon-close.svg');
+$icon-mail: url('/wp-content/uploads/2022/10/icon-mail-circle.svg');
+$icon-menu: url('/wp-content/uploads/2022/10/icon-menu.svg');
+
+// CDN
+:root {
+    // Website width
+    --desktop-width: 80%;
+    --mobile-width: 90%;
+
+    // Typography
+    --h1-font-size: 4rem;
+    --h2-font-size: 2.625rem;
+    --h3-font-size: 2.125rem;
+    --h4-font-size: 1.75rem;
+    --h5-font-size: 1.5rem;
+    --h6-font-size: 1.25rem;
+
+    --h1-font-size-mobile: 2.25rem;
+    --h2-font-size-mobile: 1.75rem;
+    --h3-font-size-mobile: 1.625rem;
+    --h4-font-size-mobile: 1.5rem;
+    --h5-font-size-mobile: 1.25rem;
+    --h6-font-size-mobile: 1.125rem;
+
+    // Color
+    --site-background: $white;
+    --dropdown-icon-color: $black;
+}

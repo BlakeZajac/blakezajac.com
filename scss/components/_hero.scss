@@ -1,0 +1,98 @@
+.hero {
+    // &__row {
+
+    // }
+
+    // &__col {
+
+    // }
+
+    &__image {
+        text-align: center !important;
+
+        &:not(.arrow) {
+            margin-bottom: 3rem !important;
+
+            img {
+                position: relative;
+                top: 0;
+                border: 1px solid $border-color;
+                border-radius: 50%;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    top: -5px;
+                    border-color: $black;
+                    box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.3);
+                    -webkit-box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.3);
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+
+        &.arrow {
+            position: absolute;
+            right: 31%;
+            top: 82%;
+
+            @media all and (max-width: 1730px) {
+                right: 27%;
+            }
+
+            @media all and (max-width: 1440px) {
+                right: 24%;
+            }
+
+            @media all and (max-width: 1280px) {
+                right: 21%;
+            }
+
+            @media all and (max-width: 1140px) {
+                right: 16%;
+            }
+
+            @media all and (max-width: 900px) {
+                right: 11%;
+            }
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                display: none;
+            }
+
+            img {
+                height: 80px;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 2rem !important;
+
+        @media all and (max-width: $breakpoint-tablet-sm) {
+            margin-bottom: 1rem !important;
+        }
+
+        h4 {
+            font-family: $font-regular;
+            padding-bottom: 2rem;
+        }
+
+        h2 {
+            line-height: 1.5;
+
+            span {
+                color: var(--black-50);
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    color: $black;
+                    transition: all 0.2s ease-in-out;
+
+                    &:not(span) {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
