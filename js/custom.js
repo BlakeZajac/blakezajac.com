@@ -1,11 +1,6 @@
 console.log(`
-  ___  _____  ___    ____  ____    __    _  _  ____  ____  _  _  ___
- / __)(  _  )/ __)  (  _ \(  _ \  /__\  ( \( )(  _ \(_  _)( \( )/ __)
-( (__  )(_)(( (_-.   ) _ < )   / /(__)\  )  (  )(_) )_)(_  )  (( (_-.
- \___)(_____)\___/  (____/(_)\_)(__)(__)(_)\_)(____/(____)(_)\_)\___/
- 
-                Designed & Developed by COG Branding
-                    https://cogbranding.com.au`);
+                Designed & Developed by Blake Zajac
+                  https://github.com/BlakeZajac/`);
 
 document.addEventListener("DOMContentLoaded", (event) => {
   stickyMobileHeader(980);
