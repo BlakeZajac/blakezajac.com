@@ -27,8 +27,11 @@
         margin: 0 auto 2rem !important;
 
         p {
-            font-size: 1.25rem;
             line-height: 1.8;
+
+            @media all and (min-width: 768px) {
+                font-size: 1.25rem;
+            }
         }
     }
 
@@ -45,6 +48,10 @@
         .et_pb_main_blurb_image {
             margin-bottom: 0;
             width: 80px;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                width: 64px;
+            }
 
             .et_pb_image_wrap {
                 border: 1px solid $border-color;
@@ -166,6 +173,10 @@
             padding: 0 !important;
             border-radius: 50px;
 
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                width: unset;
+            }
+
             &:hover {
                 padding: 0 !important;
             }
@@ -174,6 +185,10 @@
                 padding: 16px 26px !important;
                 font-size: 0.875rem;
                 color: $black;
+
+                @media all and (max-width: $breakpoint-tablet-sm) {
+                    padding: 12px 20px !important;
+                }
             }
         }
     }
