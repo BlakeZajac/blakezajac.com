@@ -6,6 +6,15 @@
 
         p {
             font-family: $font-medium;
+            color: $white;
+
+            a {               
+                &:not(:last-child) {
+                    @media all and (min-width: 768px) {
+                        margin-right: 2rem;
+                    }
+                }
+            }
 
             @media all and (min-width: 768px) {
                 font-size: 1.125rem;
@@ -190,6 +199,99 @@
                     padding: 12px 20px !important;
                 }
             }
+        }
+    }
+
+    // Photography posts
+    &__slider {
+        &__row {
+            padding-top: 0 !important;
+            width: 100% !important;
+
+            @media all and (max-width: $breakpoint-tablet) {
+                width: 100% !important;
+            }
+        }
+    }
+
+    &__gallery {
+        img {
+            @media all and (max-width: $breakpoint-mobile) {
+                height: 400px;
+                object-fit: cover;
+            }
+        } 
+
+        .et-pb-arrow-prev,
+        .et-pb-arrow-next {
+            opacity: 1;
+            background-color: $white;
+            color: $black !important;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-image: linear-gradient(rgb(0 0 0 / 10%) 0 0);
+            }
+
+            &:before {
+                position: relative;
+                left: -1px;
+                font-size: 2rem;
+            }
+        }
+
+        .et-pb-arrow-prev {
+            left: 1rem !important;
+        }
+
+        .et-pb-arrow-next {
+            right: 1rem !important;
+        }
+
+        .et-pb-controllers {
+            padding: 1rem 1.5rem 2px !important;
+            left: 45%;
+            bottom: 2rem;
+            background-color: $white;
+            border-radius: 50px;
+            height: unset !important;
+            max-width: fit-content;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                display: none;
+            }
+
+            a {
+                color: $black;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    &__hero-img {
+        padding: 400px 0 !important;
+
+        @media all and (max-width: $breakpoint-tablet) {
+            padding: 200px 0 !important;
+        }
+
+        @media all and (max-width: $breakpoint-tablet-sm) {
+            padding: 150px 0 !important;
+        }
+
+        @media all and (max-width: $breakpoint-mobile) {
+            padding: 100px 0 !important;
         }
     }
 }

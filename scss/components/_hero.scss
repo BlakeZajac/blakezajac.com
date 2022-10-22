@@ -1,11 +1,15 @@
 .hero {
-    // &__row {
-
-    // }
-
-    // &__col {
-
-    // }
+    &__row {
+        &.btn--inline {
+            .et_pb_button_module_wrapper {
+                .btn--secondary {
+                    @media all and (min-width: 768px) {
+                        margin-top: 2rem !important;
+                    }
+                }
+            }
+        }
+    }
 
     &__image {
         text-align: center !important;
@@ -66,12 +70,6 @@
     }
 
     &__content {
-        margin-bottom: 2rem !important;
-
-        @media all and (max-width: $breakpoint-tablet-sm) {
-            margin-bottom: 1rem !important;
-        }
-
         h4 {
             font-family: $font-regular;
             padding-bottom: 2rem;

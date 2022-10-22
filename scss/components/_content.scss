@@ -30,6 +30,10 @@
             min-width: 300px;
         }
 
+        @media all and (min-width: 1200px) {
+            min-width: 400px;
+        }
+
         margin-bottom: 0 !important;
 
         h5 {
