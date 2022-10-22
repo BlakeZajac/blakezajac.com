@@ -1,0 +1,180 @@
+.single-post {
+    padding: 0.5rem 0 !important;
+
+    &__category {
+        margin-bottom: 0.5rem !important;
+
+        p {
+            font-family: $font-medium;
+
+            @media all and (min-width: 768px) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    &__title {
+        max-width: 1100px;
+        margin: 0 auto 0.5rem !important;
+
+        h1 {
+            line-height: 1.3;
+        }
+    }
+
+    &__excerpt {
+        max-width: 1000px;
+        margin: 0 auto 2rem !important;
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+        }
+    }
+
+    &__author {
+        margin-bottom: 2rem !important;
+        
+        .et_pb_blurb_content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 100%;
+        }
+
+        .et_pb_main_blurb_image {
+            margin-bottom: 0;
+            width: 80px;
+
+            .et_pb_image_wrap {
+                border: 1px solid $border-color;
+                border-radius: 50%;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.3);
+                    -webkit-box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.3);
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+
+        .et_pb_blurb_container {
+            padding-left: 0;
+
+            h4 {
+                font-family: $font-regular;
+                font-size: 1rem;
+                padding-bottom: 0.25rem;
+            }
+
+            p {
+                font-size: 0.875rem;
+                color: #666;
+            }
+        }
+    }
+
+    &__featured-img {
+        max-width: 1100px;
+        margin: 0 auto 3rem !important;
+
+        img {
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.15);
+                -webkit-box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.15);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 900px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 3rem;
+            padding: 1rem 0 2rem;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                font-size: 2.25rem;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            padding: 1rem 0 2rem;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                font-size: 2rem;
+            }
+        }
+
+        h3 {
+            font-size: 2.25rem;
+            padding: 1rem 0 2rem;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                font-size: 1.75rem;
+            }
+        }
+
+        h4 {
+            font-size: 2rem;
+            padding: 1rem 0 2rem;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                font-size: 1.5rem;
+            }
+        }
+
+        h5 {
+            font-size: 1.5rem;
+            padding: 1rem 0 2rem;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                font-size: 1.25rem;
+            }
+        }
+
+        h6 {
+            font-size: 1.125rem;
+            padding: 1rem 0 2rem;
+
+            @media all and (max-width: $breakpoint-tablet-sm) {
+                font-size: 1rem;
+            }
+        }
+
+        p {
+            padding-bottom: 2rem !important;
+        }
+    }
+
+    &__more-posts {
+        padding-bottom: 0 !important;
+    }
+
+    &__navigation {
+        .nav-previous,
+        .nav-next {
+            @extend .btn;
+            @extend .btn--secondary;
+            padding: 0 !important;
+            border-radius: 50px;
+
+            &:hover {
+                padding: 0 !important;
+            }
+            
+            a {
+                padding: 16px 26px !important;
+                font-size: 0.875rem;
+                color: $black;
+            }
+        }
+    }
+}

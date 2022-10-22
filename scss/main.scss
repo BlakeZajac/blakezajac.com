@@ -33,15 +33,7 @@
   
 // 6. Page-specific styles
 @import
-  'pages/home',
-  'pages/about',
-  'pages/team',
-  'pages/contact_us',
-  'pages/buddy_register',
-  'pages/login',
-  'pages/maintenance',
-  'pages/post',
-  'pages/search';
+  'pages/single-post';
 
   //import from cdn
 @import url('https://cogbranding.github.io/css/diviNormalize.css');

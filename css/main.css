@@ -512,7 +512,7 @@ p, .filtergrid__grid .dp-dfg-content, .content__body h5, ol, ul {
   color: #000 !important;
   transition: all 0.1s ease-in-out;
 }
-.btn {
+.btn, .single-post__navigation .nav-previous, .single-post__navigation .nav-next {
   padding: 16px 26px !important;
   border: 1px solid transparent !important;
   border-radius: 10px;
@@ -523,15 +523,15 @@ p, .filtergrid__grid .dp-dfg-content, .content__body h5, ol, ul {
   cursor: pointer;
   transition: all 0.1s ease-in-out !important;
 }
-.btn:hover {
+.btn:hover, .single-post__navigation .nav-previous:hover, .single-post__navigation .nav-next:hover {
   padding: 16px 26px !important;
   transition: all 0.1s ease-in-out !important;
 }
-.btn:after {
+.btn:after, .single-post__navigation .nav-previous:after, .single-post__navigation .nav-next:after {
   display: none;
 }
 @media (max-width: 767px) {
-  .btn {
+  .btn, .single-post__navigation .nav-previous, .single-post__navigation .nav-next {
     width: 100%;
   }
 }
@@ -543,12 +543,12 @@ p, .filtergrid__grid .dp-dfg-content, .content__body h5, ol, ul {
   background-color: #7f56d9 !important;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
 }
-.btn--secondary {
+.btn--secondary, .single-post__navigation .nav-previous, .single-post__navigation .nav-next {
   background-color: #fff;
   border: 1px solid #dadada !important;
   color: #000 !important;
 }
-.btn--secondary:hover {
+.btn--secondary:hover, .single-post__navigation .nav-previous:hover, .single-post__navigation .nav-next:hover {
   background-color: #fff !important;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
 }
@@ -824,4 +824,157 @@ p, .filtergrid__grid .dp-dfg-content, .content__body h5, ol, ul {
   font-size: var(--h5-font-size-mobile);
   line-height: 1.6;
 }
-/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22http%3A%2F%2Fblake-zajac.local%2F%22%2C%22sources%22%3A%5B%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fmain.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fabstracts%2F_variables.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fabstracts%2F_placeholders.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_base.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_fonts.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_typography.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_helpers.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Flayout%2F_header.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Flayout%2F_footer.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_button.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_hero.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_filtergrid.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_content.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAA%3BAA8CA%3BACCA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAC%2FCA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAASI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BACrCR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BACHJ%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BACZA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAASI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAL9FJ%3BAAAA%3BAAAA%3BAMOA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BANPA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAMkBA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BANlBA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAM8BA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAWA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAACI%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAALJ%3BAAUI%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAA1BJ%3BAA%2BBI%3BAAAA%3BAAAA%3BAAAA%3BACrFJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAwBI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAOQ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAShB%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAWI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BAAAA%3BAC7MpB%3BAAAA%3BAAAA%3BAAIQ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAShB%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAUI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQJ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAChHhB%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAWI%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAChDZ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAUR%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAMR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BACnFR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMQ%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMR%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3BAAAA%3BAAAA%3BAAOQ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAMR%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAASZ%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAQJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAChMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAACI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%22%7D */
+.single-post {
+  padding: 0.5rem 0 !important;
+}
+.single-post__category {
+  margin-bottom: 0.5rem !important;
+}
+.single-post__category p, .single-post__category .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__category .dp-dfg-content, .single-post__category .content__body h5, .content__body .single-post__category h5 {
+  font-family: "Gordita Medium";
+}
+@media (min-width: 768px) {
+  .single-post__category p, .single-post__category .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__category .dp-dfg-content, .single-post__category .content__body h5, .content__body .single-post__category h5 {
+    font-size: 1.125rem;
+  }
+}
+.single-post__title {
+  max-width: 1100px;
+  margin: 0 auto 0.5rem !important;
+}
+.single-post__title h1 {
+  line-height: 1.3;
+}
+.single-post__excerpt {
+  max-width: 1000px;
+  margin: 0 auto 2rem !important;
+}
+.single-post__excerpt p, .single-post__excerpt .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__excerpt .dp-dfg-content, .single-post__excerpt .content__body h5, .content__body .single-post__excerpt h5 {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+.single-post__author {
+  margin-bottom: 2rem !important;
+}
+.single-post__author .et_pb_blurb_content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 100%;
+}
+.single-post__author .et_pb_main_blurb_image {
+  margin-bottom: 0;
+  width: 80px;
+}
+.single-post__author .et_pb_main_blurb_image .et_pb_image_wrap {
+  border: 1px solid #dadada;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.single-post__author .et_pb_main_blurb_image .et_pb_image_wrap:hover {
+  box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.3);
+  -webkit-box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+.single-post__author .et_pb_blurb_container {
+  padding-left: 0;
+}
+.single-post__author .et_pb_blurb_container h4, .single-post__author .et_pb_blurb_container .footer__content.email p, .single-post__author .et_pb_blurb_container .footer__content.email .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__author .et_pb_blurb_container .footer__content.email .dp-dfg-content, .single-post__author .et_pb_blurb_container .footer__content.email .content__body h5, .content__body .single-post__author .et_pb_blurb_container .footer__content.email h5, .footer__content.email .single-post__author .et_pb_blurb_container p, .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-header h2, .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-header .footer__content p, .footer__content .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-header p, .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-header .footer__content .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-header .footer__content .dp-dfg-content, .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-header .footer__content .content__body h5, .content__body .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-header .footer__content h5, .filtergrid__grid .dp-dfg-header .single-post__author .et_pb_blurb_container h2 {
+  font-family: "Gordita Regular";
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+}
+.single-post__author .et_pb_blurb_container p, .single-post__author .et_pb_blurb_container .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__author .et_pb_blurb_container .dp-dfg-content, .single-post__author .et_pb_blurb_container .content__body h5, .content__body .single-post__author .et_pb_blurb_container h5 {
+  font-size: 0.875rem;
+  color: #666;
+}
+.single-post__featured-img {
+  max-width: 1100px;
+  margin: 0 auto 3rem !important;
+}
+.single-post__featured-img img {
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.single-post__featured-img img:hover {
+  box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.15);
+  -webkit-box-shadow: 0px 30px 80px rgba(85, 33, 181, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+.single-post__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.single-post__content h1 {
+  font-size: 3rem;
+  padding: 1rem 0 2rem;
+}
+@media (max-width: 767px) {
+  .single-post__content h1 {
+    font-size: 2.25rem;
+  }
+}
+.single-post__content h2, .single-post__content .footer__content p, .footer__content .single-post__content p, .single-post__content .footer__content .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__content .footer__content .dp-dfg-content, .single-post__content .footer__content .content__body h5, .content__body .single-post__content .footer__content h5 {
+  font-size: 2.5rem;
+  padding: 1rem 0 2rem;
+}
+@media (max-width: 767px) {
+  .single-post__content h2, .single-post__content .footer__content p, .footer__content .single-post__content p, .single-post__content .footer__content .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__content .footer__content .dp-dfg-content, .single-post__content .footer__content .content__body h5, .content__body .single-post__content .footer__content h5 {
+    font-size: 2rem;
+  }
+}
+.single-post__content h3 {
+  font-size: 2.25rem;
+  padding: 1rem 0 2rem;
+}
+@media (max-width: 767px) {
+  .single-post__content h3 {
+    font-size: 1.75rem;
+  }
+}
+.single-post__content h4, .single-post__content .footer__content.email p, .single-post__content .footer__content.email .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__content .footer__content.email .dp-dfg-content, .single-post__content .footer__content.email .content__body h5, .content__body .single-post__content .footer__content.email h5, .footer__content.email .single-post__content p, .single-post__content .filtergrid__grid .dp-dfg-header h2, .single-post__content .filtergrid__grid .dp-dfg-header .footer__content p, .footer__content .single-post__content .filtergrid__grid .dp-dfg-header p, .single-post__content .filtergrid__grid .dp-dfg-header .footer__content .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__content .filtergrid__grid .dp-dfg-header .footer__content .dp-dfg-content, .single-post__content .filtergrid__grid .dp-dfg-header .footer__content .content__body h5, .content__body .single-post__content .filtergrid__grid .dp-dfg-header .footer__content h5, .filtergrid__grid .dp-dfg-header .single-post__content h2 {
+  font-size: 2rem;
+  padding: 1rem 0 2rem;
+}
+@media (max-width: 767px) {
+  .single-post__content h4, .single-post__content .footer__content.email p, .single-post__content .footer__content.email .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__content .footer__content.email .dp-dfg-content, .single-post__content .footer__content.email .content__body h5, .content__body .single-post__content .footer__content.email h5, .footer__content.email .single-post__content p, .single-post__content .filtergrid__grid .dp-dfg-header h2, .single-post__content .filtergrid__grid .dp-dfg-header .footer__content p, .footer__content .single-post__content .filtergrid__grid .dp-dfg-header p, .single-post__content .filtergrid__grid .dp-dfg-header .footer__content .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__content .filtergrid__grid .dp-dfg-header .footer__content .dp-dfg-content, .single-post__content .filtergrid__grid .dp-dfg-header .footer__content .content__body h5, .content__body .single-post__content .filtergrid__grid .dp-dfg-header .footer__content h5, .filtergrid__grid .dp-dfg-header .single-post__content h2 {
+    font-size: 1.5rem;
+  }
+}
+.single-post__content h5 {
+  font-size: 1.5rem;
+  padding: 1rem 0 2rem;
+}
+@media (max-width: 767px) {
+  .single-post__content h5 {
+    font-size: 1.25rem;
+  }
+}
+.single-post__content h6 {
+  font-size: 1.125rem;
+  padding: 1rem 0 2rem;
+}
+@media (max-width: 767px) {
+  .single-post__content h6 {
+    font-size: 1rem;
+  }
+}
+.single-post__content p, .single-post__content .filtergrid__grid .dp-dfg-content, .filtergrid__grid .single-post__content .dp-dfg-content, .single-post__content .content__body h5, .content__body .single-post__content h5 {
+  padding-bottom: 2rem !important;
+}
+.single-post__more-posts {
+  padding-bottom: 0 !important;
+}
+.single-post__navigation .nav-previous, .single-post__navigation .nav-next {
+  padding: 0 !important;
+  border-radius: 50px;
+}
+.single-post__navigation .nav-previous:hover, .single-post__navigation .nav-next:hover {
+  padding: 0 !important;
+}
+.single-post__navigation .nav-previous a, .single-post__navigation .nav-next a {
+  padding: 16px 26px !important;
+  font-size: 0.875rem;
+  color: #000;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22http%3A%2F%2Fblake-zajac.local%2F%22%2C%22sources%22%3A%5B%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fmain.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fabstracts%2F_variables.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fabstracts%2F_placeholders.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_base.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_fonts.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_typography.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fbase%2F_helpers.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Flayout%2F_header.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Flayout%2F_footer.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_button.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_hero.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_filtergrid.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fcomponents%2F_content.scss%22%2C%22C%3A%2FUsers%2Fconta%2FLocal%20Sites%2Fblake-zajac%2Fapp%2Fpublic%2Fwp-content%2Fthemes%2Fdivi-child%2Fscss%2Fpages%2F_single-post.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAA%3BAAsCA%3BACSA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAC%2FCA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAASI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BACrCR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BACHJ%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BACZA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAASI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAL9FJ%3BAAAA%3BAAAA%3BAMOA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BANPA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAMkBA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BANlBA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAM8BA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAWA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAACI%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAALJ%3BAAUI%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAA1BJ%3BAA%2BBI%3BAAAA%3BAAAA%3BAAAA%3BACrFJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAwBI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAOQ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAShB%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAWI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BAAAA%3BAC7MpB%3BAAAA%3BAAAA%3BAAIQ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAQI%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAShB%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAUI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQJ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAChHhB%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAWI%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAChDZ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAUR%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAMR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BACnFR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMQ%3BAAAA%3BAAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMR%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3BAAAA%3BAAAA%3BAAOQ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAMR%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAASZ%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3BAAAA%3BAAQJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMI%3BAAAA%3BAAAA%3BAChMJ%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAACI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAClCR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMR%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAGI%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3BAAAA%3BAAOR%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAQR%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAAA%3BAAII%3BAAAA%3BAAAA%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAKJ%3BAAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3BAAAA%3BAAAA%3BAAAA%22%7D */
