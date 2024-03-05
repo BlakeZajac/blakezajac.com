@@ -14,8 +14,12 @@
     padding: 0 $l-container-padding-lg;
   }
 
-  @media (min-width: $break-grid-2xl) {
+  @media (min-width: $break-grid-xl) {
     padding: 0 $l-container-padding-xl;
+  }
+
+  @media (min-width: $break-grid-2xl) {
+    padding: 0 $l-container-padding-2xl;
   }
 }
 

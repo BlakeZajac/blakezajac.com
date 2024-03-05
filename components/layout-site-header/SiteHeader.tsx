@@ -6,7 +6,7 @@ import Container from "../layout-container/Container";
 const SiteHeader = () => {
   return (
     <header className="site-header">
-      <Container className="test">
+      <Container className="site-header__container">
         <div className="site-header__unit site-header__unit--site-brand">
           <SiteBrand />
         </div>
