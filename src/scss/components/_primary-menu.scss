@@ -28,6 +28,12 @@
   }
 }
 
+.primary-menu__link--active,
+.primary-menu__link--active:hover,
+.primary-menu__link--active:focus {
+  background: $color-brand-yellow;
+}
+
 .primary-menu__label {
   @include type-style-10;
   color: $color-brand-black;
