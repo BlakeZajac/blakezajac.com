@@ -7,6 +7,7 @@ import SiteHeader from "@/components/layout-site-header/SiteHeader";
 import SiteFooter from "@/components/layout-site-footer/SiteFooter";
 import SkipToMain from "@/components/layout-skip-to-main/SkipToMain";
 import SiteOffcanvas from "@/components/layout-site-offcanvas/SiteOffcanvas";
+import LenisProvider from "@/providers/LenisProvider";
 
 export const metadata: Metadata = {
   title: "Blake Zajac",
@@ -24,11 +25,13 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/lec4mqw.css" />
       </head>
       <body>
-        {/* <SkipToMain /> */}
-        <SiteHeader />
-        {children}
-        <SiteFooter />
-        <SiteOffcanvas />
+        <LenisProvider>
+          {/* <SkipToMain /> */}
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+          <SiteOffcanvas />
+        </LenisProvider>
       </body>
     </html>
   );
