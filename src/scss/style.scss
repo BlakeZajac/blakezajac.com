@@ -1,6 +1,4 @@
 // Vendor
-@import "vendor/fancybox";
-@import "vendor/swiper";
 
 // Abstracts
 @import "abstracts/functions";
@@ -13,20 +11,13 @@
 @import "base/base";
 @import "base/layout";
 @import "base/utilities";
-@import "base/grid";
 @import "base/copy";
 @import "base/animation";
-@import "base/icons";
 @import "base/forms";
 
-// Global components
-
-// Framework components
-//noinspection CssUnknownTarget
-@import "../components/**/*.scss";
+// Components
 
 // Layout
-@import "layout/site-main";
-@import "layout/site-content";
+@import "layout/site-header";
 
 // Pages
