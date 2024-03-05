@@ -1,3 +1,5 @@
+import Image, { StaticImageData } from "next/image";
+
 import Section from "../layout-section/Section";
 import Container from "../layout-container/Container";
 import Button from "../block-button/Button";
@@ -16,7 +18,7 @@ interface FeaturedContentProps {
   statisticNumber02?: string;
   statisticNumberSuffix02?: string;
   statisticContent02?: string;
-  image?: string;
+  image?: StaticImageData | string;
   imageAlt?: string;
 }
 
@@ -84,7 +86,17 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
               )}
             </div>
           </div>
-          <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--75-at-2xl"></div>
+          <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--75-at-2xl">
+            {image ? (
+              <Image
+                src={image}
+                alt={imageAlt}
+                className="featured-content__media u-rounded"
+              />
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </Container>
     </Section>

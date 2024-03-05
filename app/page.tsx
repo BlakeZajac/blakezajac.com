@@ -5,17 +5,21 @@ import FeaturedProjects from "@/components/layout-featured-projects/FeaturedProj
 import Hero from "@/components/layout-hero/Hero";
 
 import heroImage from "../src/img/headshots/headshots-1920x1080-01.webp";
+import featuredContentImage from "../src/img/headshots/headshots-1400x1400-1.webp";
 
 export default function Home() {
   return (
     <main className="site-main" id="main">
       <Hero title="Extraordinary Digital Experiences" image={heroImage} />
+
       <CalloutContent
         activeClass="theme-orange"
         className="l-section--background-orange"
         content="I design, develop and deliver exceptional digital products for forward-thinking brands."
       />
+
       {/* <FeaturedProjects /> */}
+
       <FeaturedContent
         title="A little about me"
         content01="I'm a full stack designer and web developer from Australia. I find immense joy in creating and enjoy working on custom WordPress projects, design systems, and product design, but I try not to take myself too seriously."
@@ -27,7 +31,9 @@ export default function Home() {
         statisticNumber02="1"
         statisticNumberSuffix02="%"
         statisticContent02="Better every day"
+        image={featuredContentImage}
       />
+
       {/* <BackgroundCardCollection /> */}
     </main>
   );
