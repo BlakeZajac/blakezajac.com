@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 import Container from "../layout-container/Container";
 import Badge from "../block-badge/Badge";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 // @todo - Load from Sanity CMS
 interface HeroProps {
@@ -13,7 +13,7 @@ interface HeroProps {
   title?: string;
   description01?: string;
   description02?: string;
-  image?: string;
+  image?: StaticImageData | string;
   imageAlt?: string;
 }
 
