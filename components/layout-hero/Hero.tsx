@@ -26,13 +26,16 @@ const Hero: React.FC<HeroProps> = ({
   image,
   imageAlt,
 }) => {
+  const componentClasses = `hero ${badge ? "hero--has-badge" : ""} ${
+    image ? "hero--has-image" : ""
+  }`;
   return (
-    <div className={twMerge(className, `hero`)}>
+    <div className={twMerge(componentClasses, className)}>
       <Container className="hero__container">
         {badge ? <Badge label={badge} /> : ""}
         {title ? <h1 className="hero__title">{title}</h1> : ""}
         {description01 || description02 ? (
-          <div className="hero__content">
+          <div className="hero__content copy">
             {description01 ? <p>{description01}</p> : ""}
             {description02 ? <p>{description02}</p> : ""}
           </div>
@@ -40,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({
           ""
         )}
         {image ? (
-          <Image className="hero__media" src={image} alt={imageAlt} />
+          <Image className="hero__media u-rounded" src={image} alt={imageAlt} />
         ) : (
           ""
         )}

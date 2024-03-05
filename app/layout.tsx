@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/lec4mqw.css" />
       </head>
       <body>
-        <SkipToMain />
+        {/* <SkipToMain /> */}
         <SiteHeader />
         {children}
         <SiteFooter />

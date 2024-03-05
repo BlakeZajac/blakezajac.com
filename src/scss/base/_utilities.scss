@@ -58,3 +58,11 @@
     display: block;
   }
 }
+
+.u-rounded {
+  border-radius: rem(20px);
+
+  @media (min-width: $break-grid-xl) {
+    border-radius: rem(30px);
+  }
+}
