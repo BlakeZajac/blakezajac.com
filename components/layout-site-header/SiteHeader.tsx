@@ -8,7 +8,7 @@ const SiteHeader = () => {
     <header className="site-header">
       <Container className="site-header__container">
         <div className="site-header__unit site-header__unit--site-brand">
-          <SiteBrand />
+          <SiteBrand link="/" />
         </div>
         <div className="site-header__unit site-header__unit--primary-menu">
           <PrimaryMenu />
