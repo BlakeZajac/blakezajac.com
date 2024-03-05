@@ -15,7 +15,7 @@ export default function Home() {
         <Hero title="Extraordinary Digital Experiences" image={heroImage} />
       </Waypoint>
 
-      <Waypoint threshold={1} activeClass="theme-orange">
+      <Waypoint threshold={0.5} activeClass="theme-orange">
         <CalloutContent
           className="l-section--background-orange"
           content="I design, develop and deliver exceptional digital products for forward-thinking brands."

@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 interface WaypointProps {
   activeClass: string;
-  threshold?: number;
+  threshold?: number | Array<number>;
   children: React.ReactNode;
 }
 
@@ -32,7 +32,7 @@ const Waypoint: React.FC<WaypointProps> = ({
 
   return (
     <div
-      className={`waypoint ${inView && "waypoint--is-active"}`}
+      className={`waypoint ${inView ? "waypoint--is-active" : ""}`}
       ref={waypointRef}
     >
       {children}
