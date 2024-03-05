@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SkipToMain />
+        {/* <SkipToMain /> */}
         <SiteHeader />
         {children}
-        <SiteFooter />
-        <SiteOffcanvas />
+        {/* <SiteFooter />
+        <SiteOffcanvas /> */}
       </body>
     </html>
   );

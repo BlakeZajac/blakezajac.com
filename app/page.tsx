@@ -7,11 +7,11 @@ import Hero from "@/components/layout-hero/Hero";
 export default function Home() {
   return (
     <main className="site-main" id="main">
-      <Hero />
+      {/* <Hero />
       <CalloutContent />
       <FeaturedProjects />
       <FeaturedContent />
-      <BackgroundCardCollection />
+      <BackgroundCardCollection /> */}
     </main>
   );
 }
