@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import "../build/css/style.min.css";
 import "../build/js/main.min.js";
 
 import SiteHeader from "@/components/layout-site-header/SiteHeader";
-
-const inter = Inter({ subsets: ["latin"] });
+import SiteFooter from "@/components/layout-site-footer/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Blake Zajac",
@@ -20,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <SiteHeader />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
