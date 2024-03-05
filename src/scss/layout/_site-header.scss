@@ -8,3 +8,20 @@
   padding-top: rem(24px);
   padding-bottom: rem(24px);
 }
+
+.site-header__unit {
+}
+
+.site-header__unit--site-brand {
+}
+
+.site-header__unit--primary-menu {
+  display: none;
+
+  @media (min-width: $break-grid-sm) {
+    display: block;
+  }
+}
+
+.site-header__unit--site-offcanvas-trigger {
+}
