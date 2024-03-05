@@ -44,7 +44,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, href }) => {
       <a
         href={href}
         className={`primary-menu__link ${
-          isActive ? "primary-menu__link--active" : null
+          isActive ? "primary-menu__link--active" : ""
         }`}
         itemProp="url"
       >
