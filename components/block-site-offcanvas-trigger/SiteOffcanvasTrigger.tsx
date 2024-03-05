@@ -1,19 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const SiteOffcanvasTrigger = () => {
   const [isActive, setIsActive] = useState(false);
+  const activeClass = "site-offcanvas--active";
 
   const toggleActive = () => {
     setIsActive(!isActive);
   };
 
+  useEffect(() => {
+    if (isActive) {
+      document.body.classList.add(activeClass);
+    } else {
+      document.body.classList.remove(activeClass);
+    }
+  }, [isActive]);
+
   return (
     <button
-      className={`site-offcanvas-trigger ${
-        isActive ? "site-offcanvas-trigger--is-active" : ""
-      }`}
+      className={`site-offcanvas-trigger ${isActive ? activeClass : ""}`}
       onClick={toggleActive}
     >
       <span className="site-offcanvas-trigger__icon"></span>

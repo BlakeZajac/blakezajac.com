@@ -21,7 +21,7 @@
   background: $color-brand-black;
   transition: all $transition-default;
 
-  .site-offcanvas-trigger--is-active & {
+  .site-offcanvas--active & {
     gap: rem(24px);
   }
 
@@ -34,7 +34,7 @@
     background: $color-brand-black;
     transition: all $transition-default;
 
-    .site-offcanvas-trigger--is-active & {
+    .site-offcanvas--active & {
       opacity: 0;
       transform: scale(0);
     }

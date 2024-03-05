@@ -1,7 +1,15 @@
-import React from "react";
+"use client";
+
+import { useState } from "react";
 
 const SiteOffcanvas = () => {
-  return <div>SiteOffcanvas</div>;
+  const [isOffcanvasVisible, setIsOffcanvasVisible] = useState(false);
+
+  const toggleOffCanvas = () => {
+    setIsOffcanvasVisible(!isOffcanvasVisible);
+  };
+
+  return <div className="site-offcanvas">SiteOffcanvas</div>;
 };
 
 export default SiteOffcanvas;
