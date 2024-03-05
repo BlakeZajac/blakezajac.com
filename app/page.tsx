@@ -10,10 +10,14 @@ export default function Home() {
   return (
     <main className="site-main" id="main">
       <Hero title="Extraordinary Digital Experiences" image={heroImage} />
-      {/* <CalloutContent />
-      <FeaturedProjects />
-      <FeaturedContent />
-      <BackgroundCardCollection /> */}
+      <CalloutContent
+        activeClass="theme-orange"
+        className="l-section--background-orange"
+        content="I design, develop and deliver exceptional digital products for forward-thinking brands."
+      />
+      {/* <FeaturedProjects /> */}
+      {/* <FeaturedContent /> */}
+      {/* <BackgroundCardCollection /> */}
     </main>
   );
 }

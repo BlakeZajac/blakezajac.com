@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({
   description01,
   description02,
   image,
-  imageAlt,
+  imageAlt = "",
 }) => {
   const componentClasses = `hero ${badge ? "hero--has-badge" : ""} ${
     image ? "hero--has-image" : ""
