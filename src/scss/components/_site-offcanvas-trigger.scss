@@ -1,0 +1,42 @@
+.site-offcanvas-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(48px);
+  height: rem(48px);
+  position: relative;
+  background: rgba($color-system-white, 80%);
+  border-radius: $border-radius-full;
+  backdrop-filter: blur(8px);
+}
+
+.site-offcanvas-trigger__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: rem(10px);
+  width: rem(32px);
+  height: rem(1px);
+  background: $color-brand-black;
+  transition: all $transition-default;
+
+  .site-offcanvas-trigger--is-active & {
+    gap: rem(24px);
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: rem(30px);
+    min-height: rem(1px);
+    background: $color-brand-black;
+    transition: all $transition-default;
+
+    .site-offcanvas-trigger--is-active & {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+}
