@@ -2,7 +2,8 @@
 @mixin type-style-01 {
   font-family: $font-family-01;
   font-size: rem(40px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.1;
   letter-spacing: 0.03em;
 
@@ -23,7 +24,8 @@
 @mixin type-style-01--hero {
   font-family: $font-family-01;
   font-size: rem(48px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 0.95;
   letter-spacing: -0.03em;
 
@@ -44,7 +46,8 @@
 @mixin type-style-02 {
   font-family: $font-family-01;
   font-size: rem(42px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1;
   letter-spacing: -0.03em;
 
@@ -65,7 +68,8 @@
 @mixin type-style-02--featured {
   font-family: $font-family-01;
   font-size: rem(36px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.1;
   letter-spacing: -0.03em;
 
@@ -86,7 +90,8 @@
 @mixin type-style-03 {
   font-family: $font-family-01;
   font-size: rem(32px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1;
   letter-spacing: -0.03em;
 
@@ -107,7 +112,8 @@
 @mixin type-style-03--featured {
   font-family: $font-family-01;
   font-size: rem(48px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1;
   letter-spacing: -0.03em;
 
@@ -139,7 +145,8 @@
 @mixin type-style-07 {
   font-family: $font-family-01;
   font-size: rem(14px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.4;
 
   @media (min-width: $break-grid-md) {
@@ -155,7 +162,8 @@
 @mixin type-style-08 {
   font-family: $font-family-01;
   font-size: rem(15px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.4;
 
   @media (min-width: $break-grid-xl) {
@@ -171,7 +179,8 @@
 @mixin type-style-09 {
   font-family: $font-family-01;
   font-size: rem(18px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.4;
 
   @media (min-width: $break-grid-xl) {
@@ -187,7 +196,8 @@
 @mixin type-style-10 {
   font-family: $font-family-01;
   font-size: rem(14px);
-  font-weight: 550;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.2;
 
   @media (min-width: $break-grid-md) {
