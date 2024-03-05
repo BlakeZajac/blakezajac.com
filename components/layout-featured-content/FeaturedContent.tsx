@@ -39,16 +39,19 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
   imageAlt = "",
 }) => {
   const componentClass = `${
-    mediaPosition === "right"
-      ? "featured-content--media-right"
-      : "featured-content--media-left"
+    mediaPosition === "left"
+      ? "featured-content--media-left"
+      : "featured-content--media-right"
+  }`;
+  const gridClass = `${
+    mediaPosition === "left" ? "l-grid--row-reverse-at-lg" : ""
   }`;
 
   return (
     <Section className={`featured-content ${componentClass}`}>
       <Container className="featured-content__container">
         {title ? <h2 className="featured-content__title">{title}</h2> : ""}
-        <div className="featured-content__grid l-grid">
+        <div className={`featured-content__grid l-grid ${gridClass}`}>
           <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--25-at-2xl">
             <div className="featured-content__unit featured-content__unit--copy copy">
               {content01 || content02 ? (
@@ -65,7 +68,7 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
                 ""
               )}
             </div>
-            <div className="featured-content__unit featured-content__unit--statistics">
+            <div className="featured-content__unit featured-content__unit--statistic">
               {statisticNumber01 ? (
                 <Statistic
                   number={statisticNumber01}
@@ -86,7 +89,7 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
               )}
             </div>
           </div>
-          <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--75-at-2xl">
+          <div className="featured-content__cell featured-content__cell--media l-grid__cell l-grid__cell--50-at-lg l-grid__cell--75-at-2xl">
             {image ? (
               <Image
                 src={image}

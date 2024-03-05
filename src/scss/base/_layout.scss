@@ -50,6 +50,12 @@
   }
 }
 
+.l-grid--row-reverse-at-lg {
+  @media (min-width: $break-grid-lg) {
+    flex-direction: row-reverse;
+  }
+}
+
 .l-grid__cell {
   width: 100%;
   padding: 0 $l-grid-padding-xs;
