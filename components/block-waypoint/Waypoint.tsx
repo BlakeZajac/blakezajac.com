@@ -26,7 +26,7 @@ const Waypoint: React.FC<WaypointProps> = ({ activeClass, children }) => {
     } else {
       const timeout = setTimeout(() => {
         bodyClassList.remove(activeClass);
-      }, 1000);
+      }, 10000);
 
       return () => clearTimeout(timeout);
     }
