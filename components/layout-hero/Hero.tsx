@@ -32,20 +32,17 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <div className={twMerge(componentClasses, className)}>
       <Container className="hero__container">
-        {badge ? <Badge label={badge} /> : ""}
-        {title ? <h1 className="hero__title">{title}</h1> : ""}
-        {description01 || description02 ? (
-          <div className="hero__content copy">
-            {description01 ? <p>{description01}</p> : ""}
-            {description02 ? <p>{description02}</p> : ""}
-          </div>
-        ) : (
-          ""
-        )}
-        {image ? (
+        {badge && <Badge label={badge} />}
+        {title && <h1 className="hero__title">{title}</h1>}
+        {description01 ||
+          (description02 && (
+            <div className="hero__content copy">
+              {description01 ? <p>{description01}</p> : ""}
+              {description02 ? <p>{description02}</p> : ""}
+            </div>
+          ))}
+        {image && (
           <Image className="hero__media u-rounded" src={image} alt={imageAlt} />
-        ) : (
-          ""
         )}
       </Container>
     </div>
