@@ -13,7 +13,7 @@ const SiteBrand: React.FC<SiteBrandProps> = ({ link }) => {
   return (
     <div className="site-brand">
       {link ? (
-        <a href={link} className="sitebrand__logo">
+        <a href={link} className="site-brand__link">
           <Logo />
         </a>
       ) : (
