@@ -5,6 +5,7 @@ import "../build/js/main.min.js";
 
 import SiteHeader from "@/components/layout-site-header/SiteHeader";
 import SiteFooter from "@/components/layout-site-footer/SiteFooter";
+import SkipToMain from "@/components/layout-skip-to-main/SkipToMain";
 
 export const metadata: Metadata = {
   title: "Blake Zajac",
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <SkipToMain />
         <SiteHeader />
         {children}
         <SiteFooter />
