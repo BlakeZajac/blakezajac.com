@@ -1,3 +1,4 @@
+// @todo - Move menuItems array to Sanity CMS
 const menuItems = [
   {
     label: "Home",
