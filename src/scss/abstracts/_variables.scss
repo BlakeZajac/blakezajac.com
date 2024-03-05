@@ -1,0 +1,89 @@
+@import "functions";
+
+//---------------------------------------------------------------------------
+//	Typography
+//---------------------------------------------------------------------------
+
+$font-family-01: "Roboto", Arial, Helvetica, sans-serif;
+$font-family-02: serif;
+
+$font-size-base: 16px;
+
+//---------------------------------------------------------------------------
+//	Colors
+//---------------------------------------------------------------------------
+
+$color-branding-01: #2f80ed;
+$color-page-bg: #fff;
+$color-page-bg-alt: #f3f3f3;
+$color-default: #758797;
+$color-emphasis: #333;
+$color-placeholder: #4f4f4f;
+$color-selection-bg: rgba($color-branding-01, 0.3);
+$color-separator: #e0e0e0;
+$color-footer: #333;
+
+// TODO: remove color-based names and rename for purpose
+$color-grey-000: #f1f7f6;
+$color-grey-100: #eeeeee;
+$color-grey-200: #acacac;
+$color-grey-300: #758797;
+$color-grey-400: #5f6870;
+$color-grey-600: #30353b;
+
+//---------------------------------------------------------------------------
+//  Breakpoints
+//
+//  Global breakpoints used across the site. Use t-shirt sizing for naming.
+//  Add larger and smaller sizes with the format 2xs or 2xl.
+//---------------------------------------------------------------------------
+
+$break-grid-xs: em(460px);
+$break-grid-sm: em(580px);
+$break-grid-md: em(768px);
+$break-grid-lg: em(1024px);
+$break-grid-xl: em(1280px);
+$break-grid-2xl: em(1400px);
+$break-grid-3xl: em(1600px);
+
+//---------------------------------------------------------------------------
+//	Layout
+//---------------------------------------------------------------------------
+
+$l-container-padding-xs: rem(20px);
+$l-container-padding-lg: rem(30px);
+$l-container-padding-xl: rem(60px);
+
+$l-container-max-width-sm: rem(800px);
+$l-container-max-width-md: rem(968px);
+$l-container-max-width-lg: rem(1520px);
+
+$l-grid-padding-xs: rem(10px);
+$l-grid-padding-xl: rem(20px);
+
+$l-section-spacing-xs: rem(40px);
+$l-section-spacing-sm: rem(50px);
+$l-section-spacing-md: rem(60px);
+$l-section-spacing-lg: rem(80px);
+$l-section-spacing-xl: rem(100px);
+
+$l-component-spacing-xs: rem(30px);
+
+//---------------------------------------------------------------------------
+//	Site Header
+//---------------------------------------------------------------------------
+
+$site-header-height: rem(140px);
+
+//---------------------------------------------------------------------------
+//	Transitions
+//---------------------------------------------------------------------------
+
+$transition-default: 0.2s ease-out;
+
+//---------------------------------------------------------------------------
+//	Border Radius
+//---------------------------------------------------------------------------
+
+$border-radius: rem(6px);
+$border-radius-default: $border-radius;

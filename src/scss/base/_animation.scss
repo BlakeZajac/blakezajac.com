@@ -1,0 +1,84 @@
+$animation-duration: 0.8s !default;
+$animation-easing: ease !default;
+$animation-amount: 40px !default;
+$animation-delay: 0.2s !default;
+$animation-appear-background: white !default;
+
+%animation {
+  transition: opacity $animation-duration linear,
+    transform $animation-duration ease, clip-path $animation-duration;
+
+  .no-js & {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: translate(0) !important;
+  }
+
+  @media (prefers-reduced-motion) {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: translate(0) !important;
+  }
+}
+
+// Generate transition delay classes of up to 10s
+// Usage: .a-delay--1
+@for $i from 1 through 10 {
+  .a-delay--#{$i} {
+    transition-delay: ($animation-delay * $i) + 0s !important;
+  }
+}
+
+.a-fade-in-left {
+  @extend %animation;
+
+  opacity: 0;
+  transform: translateX(-$animation-amount);
+
+  .is-visible & {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.a-fade-in-up {
+  @extend %animation;
+
+  transform: translateY($animation-amount);
+  opacity: 0;
+
+  .is-visible & {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.a-fade-in-down {
+  @extend %animation;
+
+  transform: translateY(-$animation-amount);
+  opacity: 0;
+
+  .is-visible & {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.a-appear-in-left {
+  @extend %animation;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+  .is-visible & {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.a-appear-in-right {
+  @extend %animation;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+  .is-visible & {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}

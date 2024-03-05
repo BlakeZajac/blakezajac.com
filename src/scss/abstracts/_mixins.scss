@@ -1,0 +1,23 @@
+@use "sass:math";
+
+// https://a11yproject.com/posts/how-to-hide-content/
+@mixin visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+@mixin link-underline($color: currentColor) {
+  text-decoration: underline;
+  text-decoration-color: $color;
+  text-decoration-thickness: rem(2px);
+  text-underline-offset: rem(7px);
+  transition: text-decoration $transition-default;
+}
+
+@mixin link-underline-hover($color: transparent) {
+  text-decoration-color: $color;
+}

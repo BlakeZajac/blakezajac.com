@@ -1,0 +1,60 @@
+//	Project: Boilerplate
+
+//	[ Utilities ]
+
+//---------------------------------------------------------------------------
+//	Display
+//---------------------------------------------------------------------------
+
+.u-visually-hidden {
+  @include visually-hidden;
+}
+
+.u-responsive-embed {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%; // 16x9
+
+  > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+}
+
+//---------------------------------------------------------------------------
+//	Clearfix
+//---------------------------------------------------------------------------
+
+.u-clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//---------------------------------------------------------------------------
+//	Print Only
+//---------------------------------------------------------------------------
+
+.u-print-only {
+  display: none;
+
+  @media print {
+    display: block;
+  }
+}

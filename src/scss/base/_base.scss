@@ -1,0 +1,51 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+$color-selection: white !default;
+$color-selection-bg: rgba(25, 47, 3, 0.3) !default;
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $color-page-bg;
+  color: $color-default;
+  font-family: $font-family-01;
+  font-size: rem($font-size-base);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Text Selection
+/* Set text selection colour & kill text shadow */
+::selection {
+  background: $color-selection-bg;
+  color: $color-selection;
+  text-shadow: none;
+}
+
+//---------------------------------------------------------------------------
+//	Type
+//---------------------------------------------------------------------------
+
+strong {
+  font-weight: bold;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+p:empty {
+  display: none;
+}
