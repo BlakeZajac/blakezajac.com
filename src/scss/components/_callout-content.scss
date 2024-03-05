@@ -1,20 +1,14 @@
 .callout-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
   text-align: center;
 }
 
 .callout-content__container {
   padding-top: rem(128px);
   padding-bottom: rem(128px);
-
-  @media (min-width: $break-grid-md) {
-    padding-top: rem(192px);
-    padding-bottom: rem(192px);
-  }
-
-  @media (min-width: $break-grid-xl) {
-    padding-top: rem(256px);
-    padding-bottom: rem(256px);
-  }
 }
 
 .callout-content__content {

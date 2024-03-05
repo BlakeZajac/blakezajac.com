@@ -11,11 +11,12 @@ import Waypoint from "@/components/block-waypoint/Waypoint";
 export default function Home() {
   return (
     <main className="site-main" id="main">
-      <Hero title="Extraordinary Digital Experiences" image={heroImage} />
+      <Waypoint activeClass="theme-yellow">
+        <Hero title="Extraordinary Digital Experiences" image={heroImage} />
+      </Waypoint>
 
-      <Waypoint activeClass="theme-orange">
+      <Waypoint threshold={1} activeClass="theme-orange">
         <CalloutContent
-          activeClass="theme-orange"
           className="l-section--background-orange"
           content="I design, develop and deliver exceptional digital products for forward-thinking brands."
         />
@@ -23,19 +24,21 @@ export default function Home() {
 
       {/* <FeaturedProjects /> */}
 
-      <FeaturedContent
-        title="A little about me"
-        content01="I'm a full stack designer and web developer from Australia. I find immense joy in creating and enjoy working on custom WordPress projects, design systems, and product design, but I try not to take myself too seriously."
-        content02="I'm a lifelong learner, long-distance runner, and crappy pianist. I'm currently residing in Newcastle, Australia where I work for Redback Solutions as a full stack designer."
-        buttonHref="/about"
-        buttonLabel="More about me"
-        statisticNumber01="5"
-        statisticContent01="Years crafting digital experiences"
-        statisticNumber02="1"
-        statisticNumberSuffix02="%"
-        statisticContent02="Better every day"
-        image={featuredContentImage}
-      />
+      <Waypoint activeClass="theme-black">
+        <FeaturedContent
+          title="A little about me"
+          content01="I'm a full stack designer and web developer from Australia. I find immense joy in creating and enjoy working on custom WordPress projects, design systems, and product design, but I try not to take myself too seriously."
+          content02="I'm a lifelong learner, long-distance runner, and crappy pianist. I'm currently residing in Newcastle, Australia where I work for Redback Solutions as a full stack designer."
+          buttonHref="/about"
+          buttonLabel="More about me"
+          statisticNumber01="5"
+          statisticContent01="Years crafting digital experiences"
+          statisticNumber02="1"
+          statisticNumberSuffix02="%"
+          statisticContent02="Better every day"
+          image={featuredContentImage}
+        />
+      </Waypoint>
 
       {/* <BackgroundCardCollection /> */}
     </main>

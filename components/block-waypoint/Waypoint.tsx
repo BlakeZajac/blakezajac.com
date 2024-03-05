@@ -5,36 +5,34 @@ import { useInView } from "react-intersection-observer";
 
 interface WaypointProps {
   activeClass: string;
+  threshold?: number;
   children: React.ReactNode;
 }
 
-const Waypoint: React.FC<WaypointProps> = ({ activeClass, children }) => {
+const Waypoint: React.FC<WaypointProps> = ({
+  activeClass,
+  threshold = 0.5,
+  children,
+}) => {
   const { ref: waypointRef, inView } = useInView({
-    triggerOnce: false,
-    threshold: 1,
+    threshold: threshold,
   });
 
   useEffect(() => {
-    const bodyClassList = document.body.classList;
     if (inView) {
-      bodyClassList.forEach((className) => {
-        if (className.startsWith("theme-")) {
-          bodyClassList.remove(className);
-        }
-      });
-      bodyClassList.add(activeClass);
+      document.body.classList.add(activeClass);
     } else {
-      const timeout = setTimeout(() => {
-        bodyClassList.remove(activeClass);
-      }, 10000);
-
-      return () => clearTimeout(timeout);
+      document.body.classList.remove(activeClass);
     }
+
+    return () => {
+      document.body.classList.remove(activeClass);
+    };
   }, [inView, activeClass]);
 
   return (
     <div
-      className={`waypoint ${inView ? "waypoint--is-active" : ""}`}
+      className={`waypoint ${inView && "waypoint--is-active"}`}
       ref={waypointRef}
     >
       {children}

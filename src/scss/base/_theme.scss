@@ -1,7 +1,23 @@
 // @todo - Refactor when this grows
+.theme-yellow {
+  .primary-menu__link--active {
+    background: $color-brand-yellow;
+  }
+}
+
 .theme-orange {
   .primary-menu__link--active {
     background: $color-brand-orange;
+  }
+
+  .primary-menu__link--active .primary-menu__label {
+    color: $color-system-white;
+  }
+}
+
+.theme-black {
+  .primary-menu__link--active {
+    background: $color-brand-black;
   }
 
   .primary-menu__link--active .primary-menu__label {
