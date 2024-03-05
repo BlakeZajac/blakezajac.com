@@ -1,0 +1,9 @@
+.theme-orange {
+  .primary-menu__link--active {
+    background: $color-brand-orange;
+  }
+
+  .primary-menu__link--active .primary-menu__label {
+    color: $color-system-white;
+  }
+}

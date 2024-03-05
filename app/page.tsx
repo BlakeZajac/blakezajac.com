@@ -6,17 +6,20 @@ import Hero from "@/components/layout-hero/Hero";
 
 import heroImage from "../src/img/headshots/headshots-1920x1080-01.webp";
 import featuredContentImage from "../src/img/headshots/headshots-1400x1400-1.webp";
+import Waypoint from "@/components/block-waypoint/Waypoint";
 
 export default function Home() {
   return (
     <main className="site-main" id="main">
       <Hero title="Extraordinary Digital Experiences" image={heroImage} />
 
-      <CalloutContent
-        activeClass="theme-orange"
-        className="l-section--background-orange"
-        content="I design, develop and deliver exceptional digital products for forward-thinking brands."
-      />
+      <Waypoint activeClass="theme-orange">
+        <CalloutContent
+          activeClass="theme-orange"
+          className="l-section--background-orange"
+          content="I design, develop and deliver exceptional digital products for forward-thinking brands."
+        />
+      </Waypoint>
 
       {/* <FeaturedProjects /> */}
 

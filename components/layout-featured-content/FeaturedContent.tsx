@@ -96,13 +96,11 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
         <div className={`featured-content__grid l-grid ${gridClass}`}>
           <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--25-at-2xl">
             <div className="featured-content__unit featured-content__unit--copy copy">
-              {content01 ||
-                (content02 && (
-                  <>
-                    {content01 && <p>{content01}</p>}
-                    {content02 && <p>{content02}</p>}
-                  </>
-                ))}
+              <>
+                {content01 && <p>{content01}</p>}
+                {content02 && <p>{content02}</p>}
+              </>
+
               {buttonHref && (
                 <Button buttonHref={buttonHref} buttonLabel={buttonLabel} />
               )}
