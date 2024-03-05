@@ -236,10 +236,6 @@
   }
 }
 
-.l-section--background_alt {
-  background-color: $color-page-bg-alt;
-}
-
 .l-section--padding {
   padding-top: $l-section-spacing-xs;
   padding-bottom: $l-section-spacing-xs;
@@ -279,7 +275,7 @@
 }
 
 .l-section-header__title {
-  color: $color-emphasis;
+  color: $color-brand-black;
 }
 
 .l-section-header__carousel-nav {

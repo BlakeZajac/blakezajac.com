@@ -13,7 +13,7 @@ $color-selection-bg: rgba(25, 47, 3, 0.3) !default;
 body {
   margin: 0;
   background: $color-page-bg;
-  color: $color-default;
+  color: $color-brand-grey;
   font-family: $font-family-01;
   font-size: rem($font-size-base);
   line-height: 1.5;
@@ -51,5 +51,5 @@ p:empty {
 }
 
 :focus {
-  outline: rem(2px) solid black;
+  outline: rem(1px) solid $color-brand-black;
 }

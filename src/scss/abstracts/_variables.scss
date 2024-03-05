@@ -13,23 +13,21 @@ $font-size-base: 16px;
 //	Colors
 //---------------------------------------------------------------------------
 
-$color-branding-01: #2f80ed;
-$color-page-bg: #fff;
-$color-page-bg-alt: #f3f3f3;
-$color-default: #758797;
-$color-emphasis: #333;
-$color-placeholder: #4f4f4f;
-$color-selection-bg: rgba($color-branding-01, 0.3);
-$color-separator: #e0e0e0;
-$color-footer: #333;
+$color-brand-yellow: #dbfc0d;
+$color-brand-yellow-light: #f5f9de;
+$color-brand-orange: #fc550d;
+$color-brand-orange-light: #faede7;
 
-// TODO: remove color-based names and rename for purpose
-$color-grey-000: #f1f7f6;
-$color-grey-100: #eeeeee;
-$color-grey-200: #acacac;
-$color-grey-300: #758797;
-$color-grey-400: #5f6870;
-$color-grey-600: #30353b;
+$color-brand-black: #000;
+$color-brand-grey: #4b4b4b;
+$color-brand-light-grey: #f7f7f7;
+
+$color-system-black: #000;
+$color-system-border: #dddee1;
+$color-system-placeholder: #969696;
+$color-system-white: #fff;
+
+$color-page-bg: $color-brand-light-grey;
 
 //---------------------------------------------------------------------------
 //  Breakpoints
@@ -88,3 +86,4 @@ $transition-default: 0.2s ease-out;
 
 $border-radius: rem(6px);
 $border-radius-default: $border-radius;
+$border-radius-full: rem(9999px);

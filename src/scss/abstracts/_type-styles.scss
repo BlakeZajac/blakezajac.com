@@ -182,3 +182,15 @@
     font-size: rem(22px);
   }
 }
+
+// primary-menu__label
+@mixin type-style-10 {
+  font-family: $font-family-01;
+  font-size: rem(14px);
+  font-weight: 550;
+  line-height: 1.2;
+
+  @media (min-width: $break-grid-md) {
+    font-size: rem(15px);
+  }
+}
