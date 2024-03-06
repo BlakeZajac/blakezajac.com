@@ -1,0 +1,55 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: rem(32px);
+  padding: rem(6px) rem(8px) rem(6px) rem(16px);
+  width: fit-content;
+  background: $color-system-white;
+  border: rem(1px) solid $color-system-border;
+  border-radius: $border-radius-full;
+  color: $color-brand-black;
+  transition: all $transition-cubic;
+
+  &:hover,
+  &:focus {
+    padding: rem(6px);
+    gap: 0;
+    background: $color-brand-yellow;
+    border-color: $color-brand-yellow;
+  }
+}
+
+.btn__label {
+  @include type-style-10;
+  transition: all $transition-cubic;
+
+  .btn:hover &,
+  .btn:focus & {
+    opacity: 0;
+    font-size: 0;
+  }
+}
+
+.btn__accessory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(32px);
+  height: rem(32px);
+  background: $color-brand-yellow;
+  border-radius: $border-radius-full;
+  color: $color-brand-black;
+  transition: all $transition-cubic;
+
+  .btn:hover &,
+  .btn:focus & {
+    transform: rotate(-45deg);
+  }
+}
+
+.btn__icon {
+  font-size: rem(24px);
+}
+
+.btn__icon--arrow {
+}
