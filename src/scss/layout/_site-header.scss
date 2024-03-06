@@ -15,6 +15,7 @@
 }
 
 .site-header__unit {
+  transition: all $transition-cubic;
 }
 
 .site-header__unit--site-brand {
@@ -25,6 +26,12 @@
 
   @media (min-width: $break-grid-sm) {
     display: block;
+  }
+
+  .site-offcanvas--active & {
+    transform: translateY(rem(-24px));
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
