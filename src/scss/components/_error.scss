@@ -1,0 +1,42 @@
+.error {
+  height: 100svh;
+  text-align: center;
+}
+
+.error--404 {
+}
+
+.error__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: rem(48px);
+  padding-bottom: rem(48px);
+  height: 100%;
+}
+
+.error__unit {
+}
+
+.error__unit--content {
+}
+
+.error__unit--actions {
+}
+
+.error-title {
+  @include type-style-01--hero;
+}
+
+.error-content {
+  @include type-style-03;
+
+  &:not(.error-content--alt) {
+    margin-top: rem(12px);
+  }
+}
+
+.error__btn {
+  margin-top: rem(48px);
+}
