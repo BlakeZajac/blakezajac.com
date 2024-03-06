@@ -61,9 +61,12 @@
   font-size: 0;
   opacity: 0;
 
+  .btn:hover & {
+    position: fixed;
+  }
+
   .btn:hover &,
   .btn:focus & {
-    position: fixed;
     font-size: rem(24px);
     opacity: 1;
   }
