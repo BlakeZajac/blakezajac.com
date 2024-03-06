@@ -4,6 +4,7 @@
   gap: rem(32px);
   padding: rem(6px) rem(8px) rem(6px) rem(16px);
   width: fit-content;
+  position: relative;
   background: $color-system-white;
   border: rem(1px) solid $color-system-border;
   border-radius: $border-radius-full;
@@ -36,20 +37,34 @@
   justify-content: center;
   width: rem(32px);
   height: rem(32px);
+  position: relative;
   background: $color-brand-yellow;
   border-radius: $border-radius-full;
   color: $color-brand-black;
   transition: all $transition-cubic;
-
-  .btn:hover &,
-  .btn:focus & {
-    transform: rotate(-45deg);
-  }
 }
 
 .btn__icon {
   font-size: rem(24px);
+  transition: all $transition-cubic;
 }
 
 .btn__icon--arrow {
+  .btn:hover &,
+  .btn:focus & {
+    font-size: 0;
+    opacity: 0;
+  }
+}
+
+.btn__icon--smile {
+  font-size: 0;
+  opacity: 0;
+
+  .btn:hover &,
+  .btn:focus & {
+    position: fixed;
+    font-size: rem(24px);
+    opacity: 1;
+  }
 }
