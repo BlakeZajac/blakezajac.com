@@ -74,8 +74,16 @@
 // SM
 
 @media (min-width: $break-grid-xs) {
+  .l-grid__cell--33-at-sm {
+    width: 33.33%;
+  }
+
   .l-grid__cell--50-at-sm {
     width: 50%;
+  }
+
+  .l-grid__cell--66-at-sm {
+    width: 66.66%;
   }
 }
 
