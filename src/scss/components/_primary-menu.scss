@@ -20,7 +20,7 @@
   padding: rem(8px) rem(12px);
   background: transparent;
   border-radius: $border-radius-full;
-  transition: all $transition-default;
+  transition: all $transition-cubic;
 
   &:hover,
   &:focus {

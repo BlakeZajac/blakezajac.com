@@ -34,6 +34,10 @@
   @include type-style-01--hero;
   color: $color-brand-black;
 
+  .hero--title-primary & {
+    @include type-style-01;
+  }
+
   .hero--has-badge & {
     margin-top: rem(48px);
   }

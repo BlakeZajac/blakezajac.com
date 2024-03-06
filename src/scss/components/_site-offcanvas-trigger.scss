@@ -19,7 +19,7 @@
   width: rem(32px);
   height: rem(1px);
   background: $color-brand-black;
-  transition: all $transition-default;
+  transition: all $transition-cubic;
 
   .site-offcanvas--active & {
     gap: rem(24px);
@@ -32,7 +32,7 @@
     width: rem(30px);
     min-height: rem(1px);
     background: $color-brand-black;
-    transition: all $transition-default;
+    transition: all $transition-cubic;
 
     .site-offcanvas--active & {
       opacity: 0;

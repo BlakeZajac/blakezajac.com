@@ -10,7 +10,7 @@ import Waypoint from "@/components/block-waypoint/Waypoint";
 
 export default function Home() {
   return (
-    <main className="site-main" id="main">
+    <>
       <Waypoint activeClass="theme-yellow">
         <Hero title="Extraordinary Digital Experiences" image={heroImage} />
       </Waypoint>
@@ -41,6 +41,6 @@ export default function Home() {
       </Waypoint>
 
       {/* <BackgroundCardCollection /> */}
-    </main>
+    </>
   );
 }

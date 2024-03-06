@@ -7,10 +7,12 @@ import FeaturedContent from "@/components/layout-featured-content/FeaturedConten
 
 import visionImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
 import missionImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
+import ReadingList from "@/components/layout-reading-list/ReadingList";
+import FullwidthMedia from "@/components/layout-fullwidth-media/FullwidthMedia";
 
 const AboutPage = () => {
   return (
-    <main className="site-main">
+    <>
       <Waypoint activeClass="theme-yellow">
         <Hero
           className="u-bg-yellow"
@@ -41,7 +43,11 @@ const AboutPage = () => {
           buttonLabel="Let's work together"
         />
       </Waypoint>
-    </main>
+
+      <ReadingList />
+
+      <FullwidthMedia />
+    </>
   );
 };
 

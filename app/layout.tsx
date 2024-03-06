@@ -26,9 +26,13 @@ export default function RootLayout({
       </head>
       <body>
         <LenisProvider>
-          {/* <SkipToMain /> */}
+          <SkipToMain />
           <SiteHeader />
-          {children}
+
+          <main className="site-main" id="main">
+            {children}
+          </main>
+
           <SiteFooter />
           <SiteOffcanvas />
         </LenisProvider>
