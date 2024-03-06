@@ -11,6 +11,10 @@
 }
 
 .featured-content__cell--content {
+  @media (min-width: $break-grid-lg) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .featured-content__cell--media {
@@ -35,6 +39,10 @@
 }
 
 .featured-content__unit--copy {
+  @media (min-width: $break-grid-lg) {
+    padding-bottom: rem(48px);
+    margin-bottom: auto;
+  }
 }
 
 .featured-content__unit--statistic {
