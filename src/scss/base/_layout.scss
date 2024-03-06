@@ -50,6 +50,10 @@
   }
 }
 
+.l-grid--align-items-center {
+  align-items: center;
+}
+
 .l-grid--row-reverse-at-lg {
   @media (min-width: $break-grid-lg) {
     flex-direction: row-reverse;

@@ -15,14 +15,16 @@ const Statistic: React.FC<StatisticProps> = ({
 }) => {
   return (
     <div className={twMerge(className, `statistic`)}>
-      <div className="statistic__grid l-grid">
-        <div className="statistic__cell statistic__cell--number l-grid__cell l-grid__cell--33-at-sm">
+      <div className="statistic__grid l-grid l-grid--align-items-center">
+        <div className="statistic__cell statistic__cell--number l-grid__cell l-grid__cell--50-at-sm">
           <span className="statistic-title">{number}</span>
           {numberSuffix && (
-            <span className="statistic-title__suffic">{numberSuffix}</span>
+            <span className="statistic-title statistic-title--suffix">
+              {numberSuffix}
+            </span>
           )}
         </div>
-        <div className="statistic__cell statistic__cell--content l-grid__cell l-grid__cell--66-at-sm">
+        <div className="statistic__cell statistic__cell--content l-grid__cell l-grid__cell--50-at-sm">
           <div className="statistic__content">{content}</div>
         </div>
       </div>

@@ -1,0 +1,32 @@
+.statistic {
+  padding-bottom: rem(32px);
+  border-bottom: rem(1px) solid rgba($color-brand-black, 20%);
+
+  &:not(:first-child) {
+    margin-top: rem(32px);
+  }
+}
+
+.statistic__grid {
+}
+
+.statistic__cell {
+}
+
+.statistic__cell--number {
+}
+
+.statistic__cell--content {
+}
+
+.statistic-title {
+  @include type-style-03--featured;
+  color: $color-brand-black;
+}
+
+.statistic-title--suffix {
+}
+
+.statistic__content {
+  @include type-style-08;
+}
