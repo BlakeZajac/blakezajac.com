@@ -30,7 +30,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
         <React.Fragment key={index}>
           <a
             href={social.href}
-            className="social-media__link underlink underlink--reverse"
+            className="social-media__link underlink"
             target="_blank"
           >
             {social.label}
