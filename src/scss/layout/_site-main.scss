@@ -1,0 +1,16 @@
+// @todo - Update with variable spacing
+.site-main {
+  padding-bottom: rem(64px);
+
+  @media (min-width: $break-grid-md) {
+    padding-bottom: rem(80px);
+  }
+
+  @media (min-width: $break-grid-xl) {
+    padding-bottom: rem(96px);
+  }
+
+  @media (min-width: $break-grid-3xl) {
+    padding-bottom: rem(128px);
+  }
+}

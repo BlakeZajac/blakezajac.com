@@ -1,0 +1,38 @@
+.site-footer {
+  background: $color-system-white;
+}
+
+.site-footer__container {
+  padding-top: rem(64px);
+  padding-bottom: rem(32px);
+
+  @media (min-width: $break-grid-md) {
+    padding-top: rem(80px);
+    padding-bottom: rem(40px);
+  }
+
+  @media (min-width: $break-grid-xl) {
+    padding-top: rem(96px);
+    padding-bottom: rem(48px);
+  }
+
+  @media (min-width: $break-grid-3xl) {
+    padding-top: rem(128px);
+    padding-bottom: rem(64px);
+  }
+}
+
+.site-footer__unit {
+}
+
+.site-footer__unit--cta {
+}
+
+.site-footer__unit--socket {
+}
+
+.site-footer__unit--site-legal {
+}
+
+.site-footer__unit--social-media {
+}
