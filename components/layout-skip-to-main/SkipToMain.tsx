@@ -1,10 +1,13 @@
+"use client";
+
 import React from "react";
+import Button from "../block-button/Button";
 
 const SkipToMain = () => {
   return (
-    <a className="skip" href="#main">
-      Skip to main content
-    </a>
+    <div className="skip">
+      <Button buttonHref="#main" buttonLabel="Skip to main content" />
+    </div>
   );
 };
 

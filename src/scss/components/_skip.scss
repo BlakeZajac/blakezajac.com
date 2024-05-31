@@ -1,0 +1,14 @@
+.skip {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, rem(-100px));
+  z-index: 10;
+  transition: all $transition-cubic;
+
+  &:focus {
+    transform: translate(-50%, rem(24px));
+  }
+}
