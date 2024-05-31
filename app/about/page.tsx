@@ -4,11 +4,12 @@ import Waypoint from "@/components/block-waypoint/Waypoint";
 import Hero from "@/components/layout-hero/Hero";
 import ImageGallery from "@/components/layout-image-gallery/ImageGallery";
 import FeaturedContent from "@/components/layout-featured-content/FeaturedContent";
+import ReadingList from "@/components/layout-reading-list/ReadingList";
+import FullwidthMedia from "@/components/layout-fullwidth-media/FullwidthMedia";
 
 import visionImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
 import missionImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
-import ReadingList from "@/components/layout-reading-list/ReadingList";
-import FullwidthMedia from "@/components/layout-fullwidth-media/FullwidthMedia";
+import fullwidthImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
 
 const AboutPage = () => {
   return (
@@ -18,7 +19,7 @@ const AboutPage = () => {
           className="u-bg-yellow"
           title="Blake Zajac"
           description01="Hey there! I'm an Australian full stack designer and web developer. I find immense joy in creating and enjoy working on custom WordPress projects, design systems, UI and UX design, and product design, but I try not to take myself too seriously."
-          description02="I'm a lifelong learner, long-distance runner, and self-proclaimed crappy pianist. I'm currently residing in Newcastle, Australia where I work for Redback Solutions as a full stack designer."
+          description02="I'm a lifelong learner, endurance runner, cyclist, and self-proclaimed crappy pianist. I'm currently residing in Newcastle, Australia where I work for Redback Solutions as a full stack designer."
         />
       </Waypoint>
 
@@ -46,7 +47,7 @@ const AboutPage = () => {
 
       <ReadingList />
 
-      <FullwidthMedia />
+      <FullwidthMedia image={fullwidthImage} imageAlt="Blake Zajac" />
     </>
   );
 };

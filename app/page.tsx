@@ -28,7 +28,7 @@ export default function Home() {
         <FeaturedContent
           title="A little about me"
           content01="I'm a full stack designer and web developer from Australia. I find immense joy in creating and enjoy working on custom WordPress projects, design systems, and product design, but I try not to take myself too seriously."
-          content02="I'm a lifelong learner, long-distance runner, and crappy pianist. I'm currently residing in Newcastle, Australia where I work for Redback Solutions as a full stack designer."
+          content02="I'm a lifelong learner, endurance runner, cyclist, and crappy pianist. I'm currently residing in Newcastle, Australia where I work for Redback Solutions as a full stack designer."
           buttonHref="/about"
           buttonLabel="More about me"
           statisticNumber01="5"
