@@ -1,0 +1,21 @@
+.fullwidth-media {
+}
+
+.fullwidth-media__image {
+  width: 100%;
+  height: rem(400px);
+  object-fit: cover;
+  object-position: center;
+
+  @media (min-width: $break-grid-sm) {
+    height: rem(500px);
+  }
+
+  @media (min-width: $break-grid-md) {
+    height: rem(800px);
+  }
+
+  @media (min-width: $break-grid-lg) {
+    height: 100svh;
+  }
+}
