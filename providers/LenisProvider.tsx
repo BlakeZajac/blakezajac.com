@@ -8,7 +8,7 @@ interface LenisProviderProps {
 
 const LenisProvider: React.FC<LenisProviderProps> = ({ children }) => {
   return (
-    <ReactLenis root options={{ lerp: 0.05, duration: 1.5 }}>
+    <ReactLenis root options={{ lerp: 0.075, duration: 1.5 }}>
       {children}
     </ReactLenis>
   );
