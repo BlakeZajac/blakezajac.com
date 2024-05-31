@@ -50,6 +50,6 @@ p:empty {
   display: none;
 }
 
-:focus {
+:focus-visible {
   outline: rem(1px) solid $color-brand-black;
 }
