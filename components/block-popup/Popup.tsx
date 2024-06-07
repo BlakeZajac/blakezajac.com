@@ -37,17 +37,21 @@ const Popup: React.FC<PopupProps> = ({ className, triggerLabel, content, highlig
             <button className={`${className}__trigger`} onClick={togglePopup}>
                 {triggerLabel}
             </button>
-            <div className="popup__content">
-                <button className="popup__close" onClick={togglePopup}>
-                    <IoMdClose />
-                </button>
-                {content}
-                {highlightedContent && (
-                    <>
-                        <span> </span>
-                        <span className="popup__content--highlighted">{highlightedContent}</span>
-                    </>
-                )}
+            <div className="popup__content-wrapper">
+                <div className="popup__content">
+                    <button className="popup__close" onClick={togglePopup}>
+                        <IoMdClose />
+                    </button>
+                    {content}
+                    {highlightedContent && (
+                        <>
+                            <span> </span>
+                            <span className="popup__content--highlighted">
+                                {highlightedContent}
+                            </span>
+                        </>
+                    )}
+                </div>
             </div>
         </div>
     );
