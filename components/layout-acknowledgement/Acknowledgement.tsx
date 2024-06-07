@@ -6,10 +6,9 @@ const Acknowledgement = () => {
     return (
         <Popup
             className="acknowledgement"
-            triggerClass="acknowledgement__trigger"
             triggerLabel="Acknowledgement of Country"
-            content="Test content."
-            highlightedContent="Test highlighted content."
+            content="Blake Zajac is located on land and waters belonging to the Awabakal and Worimi peoples."
+            highlightedContent="Always was, always will be Aboriginal land."
         />
     );
 };

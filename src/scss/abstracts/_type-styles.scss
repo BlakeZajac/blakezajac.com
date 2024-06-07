@@ -1,132 +1,133 @@
 // h1
 @mixin type-style-01 {
-  font-family: $font-family-01;
-  font-size: rem(40px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+    font-family: $font-family-01;
+    font-size: rem(40px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 
-  @media (min-width: $break-grid-md) {
-    font-size: rem(60px);
-  }
+    @media (min-width: $break-grid-md) {
+        font-size: rem(60px);
+    }
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(90px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(90px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(110px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(110px);
+    }
 }
 
 // h1 hero
 @mixin type-style-01--hero {
-  font-family: $font-family-01;
-  font-size: rem(48px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+    font-family: $font-family-01;
+    font-size: rem(48px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
 
-  @media (min-width: $break-grid-md) {
-    font-size: rem(80px);
-  }
+    @media (min-width: $break-grid-md) {
+        font-size: rem(80px);
+    }
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(120px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(120px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(150px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(150px);
+    }
 }
 
 // h2
+// popup__content
 @mixin type-style-02 {
-  font-family: $font-family-01;
-  font-size: rem(42px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: -0.03em;
+    font-family: $font-family-01;
+    font-size: rem(42px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.03em;
 
-  @media (min-width: $break-grid-md) {
-    font-size: rem(60px);
-  }
+    @media (min-width: $break-grid-md) {
+        font-size: rem(60px);
+    }
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(72px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(72px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(90px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(90px);
+    }
 }
 
 // h2 featured
 @mixin type-style-02--featured {
-  font-family: $font-family-01;
-  font-size: rem(36px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+    font-family: $font-family-01;
+    font-size: rem(36px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 
-  @media (min-width: $break-grid-md) {
-    font-size: rem(70px);
-  }
+    @media (min-width: $break-grid-md) {
+        font-size: rem(70px);
+    }
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(90px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(90px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(120px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(120px);
+    }
 }
 
 // h3
 @mixin type-style-03 {
-  font-family: $font-family-01;
-  font-size: rem(32px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: -0.03em;
+    font-family: $font-family-01;
+    font-size: rem(32px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.03em;
 
-  @media (min-width: $break-grid-md) {
-    font-size: rem(42px);
-  }
+    @media (min-width: $break-grid-md) {
+        font-size: rem(42px);
+    }
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(54px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(54px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(64px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(64px);
+    }
 }
 
 // h3 featured
 @mixin type-style-03--featured {
-  font-family: $font-family-01;
-  font-size: rem(48px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: -0.03em;
+    font-family: $font-family-01;
+    font-size: rem(48px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.03em;
 
-  @media (min-width: $break-grid-md) {
-  }
+    @media (min-width: $break-grid-md) {
+    }
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(64px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(64px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(80px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(80px);
+    }
 }
 
 // h4
@@ -143,72 +144,72 @@
 
 // body
 @mixin type-style-07 {
-  font-family: $font-family-01;
-  font-size: rem(14px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.4;
+    font-family: $font-family-01;
+    font-size: rem(14px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
 
-  @media (min-width: $break-grid-md) {
-    font-size: rem(15px);
-  }
+    @media (min-width: $break-grid-md) {
+        font-size: rem(15px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(16px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(16px);
+    }
 }
 
 // body featured
 // statistic__content
 @mixin type-style-08 {
-  font-family: $font-family-01;
-  font-size: rem(15px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.4;
+    font-family: $font-family-01;
+    font-size: rem(15px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(16px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(16px);
+    }
 
-  @media (min-width: $break-grid-3xl) {
-    font-size: rem(18px);
-  }
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(18px);
+    }
 }
 
 // body featured large
 @mixin type-style-09 {
-  font-family: $font-family-01;
-  font-size: rem(18px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.4;
+    font-family: $font-family-01;
+    font-size: rem(18px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
 
-  @media (min-width: $break-grid-xl) {
-    font-size: rem(20px);
-  }
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(20px);
+    }
 }
 
 // primary-menu__label
 // btn__label
 @mixin type-style-10 {
-  font-family: $font-family-01;
-  font-size: rem(14px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.2;
+    font-family: $font-family-01;
+    font-size: rem(14px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
 }
 
 // badge__label
 @mixin type-style-11 {
-  font-family: $font-family-01;
-  font-size: rem(14px);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+    font-family: $font-family-01;
+    font-size: rem(14px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
 
-  @media (min-width: $break-grid-md) {
-    font-size: rem(16px);
-  }
+    @media (min-width: $break-grid-md) {
+        font-size: rem(16px);
+    }
 }
