@@ -34,7 +34,10 @@ const Popup: React.FC<PopupProps> = ({ className, triggerLabel, content, highlig
 
     return (
         <div className={twMerge(className, `popup ${isActive ? "is-active" : ""}`)}>
-            <button className={`${className}__trigger`} onClick={togglePopup}>
+            <button
+                className={`${className ? `${className}__trigger` : ""} popup__trigger`}
+                onClick={togglePopup}
+            >
                 {triggerLabel}
             </button>
             <div className="popup__content-wrapper">

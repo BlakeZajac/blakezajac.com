@@ -1,6 +1,18 @@
 .popup {
 }
 
+.popup__trigger {
+    padding: rem(6px) rem(10px);
+    background-color: transparent;
+    border-radius: $border-radius-full;
+    transition: all $transition-default;
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-brand-yellow;
+    }
+}
+
 .popup__content-wrapper {
     display: flex;
     align-items: center;
