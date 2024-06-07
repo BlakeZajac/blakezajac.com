@@ -6,26 +6,53 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 50%;
     left: 50%;
-    padding: rem(96px) rem(192px);
-    margin-top: rem(500px);
-    transform: translate(-50%, -50%);
-    width: 95%;
-    height: 90%;
+    bottom: rem(-500px);
+    padding: rem(32px);
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50%;
     background-color: $color-brand-black;
-    border-radius: $border-radius-2xl;
+    border-radius: $border-radius-2xl $border-radius-2xl 0 0;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     z-index: 2;
     transition: all $transition-cubic;
 
+    @media (min-width: $break-grid-sm) {
+        padding: rem(48px);
+    }
+
+    @media (min-width: $break-grid-md) {
+        top: 50%;
+        width: 95%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+        padding: rem(64px);
+        margin-top: rem(500px);
+        border-radius: $border-radius-2xl;
+    }
+
+    @media (min-width: $break-grid-lg) {
+        padding: rem(96px);
+    }
+
+    @media (min-width: $break-grid-2xl) {
+        padding-left: rem(192px);
+        padding-right: rem(192px);
+    }
+
     .is-active & {
-        margin-top: 0;
+        bottom: 0;
         opacity: 1;
         visibility: visible;
         pointer-events: all;
+
+        @media (min-width: $break-grid-md) {
+            margin-top: 0;
+            bottom: unset;
+        }
     }
 }
 
@@ -46,12 +73,12 @@
     position: absolute;
     top: rem(32px);
     right: rem(32px);
-    width: rem(48px);
-    height: rem(48px);
+    width: rem(32px);
+    height: rem(32px);
     background-color: rgba($color-system-white, 10%);
     border-radius: $border-radius-full;
     color: $color-brand-light-grey;
-    font-size: rem(24px);
+    font-size: rem(16px);
     transition: all $transition-default;
 
     &:hover,
@@ -61,5 +88,13 @@
 
     &:focus-visible {
         outline-color: $color-system-white;
+    }
+
+    @media (min-width: $break-grid-sm) {
+        top: rem(48px);
+        right: rem(48px);
+        width: rem(48px);
+        height: rem(48px);
+        font-size: rem(24px);
     }
 }
