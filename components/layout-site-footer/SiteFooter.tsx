@@ -1,3 +1,7 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 import SocialMedia from "../block-social-media/SocialMedia";
 import Container from "../layout-container/Container";
 import SiteLegal from "../block-site-legal/SiteLegal";
@@ -11,16 +15,25 @@ const wordToggleTitles = [
 ];
 
 const SiteFooter = () => {
+    const pathname = usePathname();
+    const isContactPage = pathname === "/contact";
+
     return (
         <footer className="site-footer">
-            <Container className="site-footer__container">
-                <div className="site-footer__unit site-footer__unit--cta">
-                    <WordToggle
-                        href="/contact/"
-                        title="Let's make"
-                        secondaryTitle={wordToggleTitles}
-                    />
-                </div>
+            <Container
+                className={`${
+                    isContactPage ? "site-footer__container--sm" : "site-footer__container"
+                }`}
+            >
+                {!isContactPage && (
+                    <div className="site-footer__unit site-footer__unit--cta">
+                        <WordToggle
+                            href="/contact/"
+                            title="Let's make"
+                            secondaryTitle={wordToggleTitles}
+                        />
+                    </div>
+                )}
                 <div className="site-footer__unit site-footer__unit--socket">
                     <div className="site-footer__unit site-footer__unit--site-legal">
                         <SiteLegal />
