@@ -4,7 +4,7 @@ import React, { FC } from "react";
 
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utilities/send-email";
-import Button from "../block-button/Button";
+
 import { MdArrowForward } from "react-icons/md";
 import { FaRegSmile } from "react-icons/fa";
 
