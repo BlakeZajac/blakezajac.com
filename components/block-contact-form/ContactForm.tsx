@@ -4,6 +4,9 @@ import React, { FC } from "react";
 
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utilities/send-email";
+import Button from "../block-button/Button";
+import { MdArrowForward } from "react-icons/md";
+import { FaRegSmile } from "react-icons/fa";
 
 export type FormData = {
     name: string;
@@ -91,8 +94,12 @@ const ContactForm: FC = () => {
                     )}
                 </div>
             ))}
-            <button type="submit" className="form__submit">
-                Submit
+            <button type="submit" className="form__submit btn">
+                <span className="btn__label">Submit</span>
+                <div className="btn__accessory">
+                    <MdArrowForward className="btn__icon btn__icon--arrow" />
+                    <FaRegSmile className="btn__icon btn__icon--smile" />
+                </div>
             </button>
         </form>
     );
