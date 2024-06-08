@@ -32,7 +32,9 @@
 }
 
 .word-toggle__unit--secondary {
-    overflow: hidden;
+    .word-toggle--is-animated & {
+        overflow: hidden;
+    }
 }
 
 .word-toggle__title {
