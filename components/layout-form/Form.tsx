@@ -4,6 +4,7 @@ import React from "react";
 
 import Section from "../layout-section/Section";
 import Container from "../layout-container/Container";
+import ContactForm from "../block-contact-form/ContactForm";
 
 interface FormProps {
     phoneNumber?: string;
@@ -59,7 +60,9 @@ const Form: React.FC<FormProps> = ({ phoneNumber, email, title, description, des
                             </div>
                         )}
                     </div>
-                    <div className="form__unit form__unit--form"></div>
+                    <div className="form__unit form__unit--form">
+                        <ContactForm />
+                    </div>
                 </div>
             </Container>
         </Section>
