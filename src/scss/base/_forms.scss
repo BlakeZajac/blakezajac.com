@@ -1,0 +1,48 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(64px);
+}
+
+.form__unit {
+}
+
+.form__unit--content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px);
+}
+
+.form__unit--form {
+}
+
+.form-links {
+    display: flex;
+    gap: rem(16px) rem(48px);
+    flex-wrap: wrap;
+}
+
+.form-links__item {
+    @include type-style-09;
+    color: $color-brand-black;
+}
+
+.form__title {
+    @include type-style-01;
+    color: $color-brand-orange;
+}
+
+.form-description {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4px);
+}
+
+.form-description__item {
+    @include type-style-09;
+    color: $color-brand-black;
+}
+
+.form-description__item--alt {
+    color: $color-brand-grey;
+}
