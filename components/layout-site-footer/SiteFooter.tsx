@@ -3,6 +3,13 @@ import Container from "../layout-container/Container";
 import SiteLegal from "../block-site-legal/SiteLegal";
 import WordToggle from "../block-word-toggle/WordToggle";
 
+const wordToggleTitles = [
+    "the next best thing",
+    "something unique",
+    "something fun",
+    "something exciting",
+];
+
 const SiteFooter = () => {
     return (
         <footer className="site-footer">
@@ -11,7 +18,7 @@ const SiteFooter = () => {
                     <WordToggle
                         href="/contact/"
                         title="Let's make"
-                        secondaryTitle="the next best thing"
+                        secondaryTitle={wordToggleTitles}
                     />
                 </div>
                 <div className="site-footer__unit site-footer__unit--socket">

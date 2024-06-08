@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { TfiArrowRight } from "react-icons/tfi";
 
@@ -12,6 +12,19 @@ interface WordToggleProps {
 
 const WordToggle: React.FC<WordToggleProps> = ({ href, title, secondaryTitle }) => {
     const isAnimated = Array.isArray(secondaryTitle);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        if (isAnimated) {
+            const interval = setInterval(() => {
+                setCurrentIndex(
+                    (prevIndex) => (prevIndex + 1) % (secondaryTitle as string[]).length
+                );
+            }, 5000);
+
+            return () => clearInterval(interval);
+        }
+    }, [isAnimated, secondaryTitle]);
 
     return (
         <div className={`word-toggle ${isAnimated ? "word-toggle--is-animated" : ""}`}>
@@ -28,7 +41,12 @@ const WordToggle: React.FC<WordToggleProps> = ({ href, title, secondaryTitle }) 
                 {isAnimated ? (
                     <div className="word-toggle-ticker">
                         {secondaryTitle.map((title, index) => (
-                            <div key={index} className="word-toggle-ticker__item">
+                            <div
+                                key={index}
+                                className={`word-toggle-ticker__item ${
+                                    index === currentIndex ? "is-active" : ""
+                                }`}
+                            >
                                 {title}
                             </div>
                         ))}

@@ -1,0 +1,54 @@
+.word-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8px);
+    position: relative;
+    width: fit-content;
+    @include type-style-02;
+    color: $color-brand-black;
+    transition: all $transition-default;
+
+    &:has(.word-toggle__link:hover),
+    &:has(.word-toggle__link:focus-visible) {
+        color: $color-brand-orange;
+    }
+}
+
+.word-toggle--is-animated {
+}
+
+.word-toggle__link {
+    position: absolute;
+    inset: 0;
+}
+
+.word-toggle__unit {
+}
+
+.word-toggle__unit--primary {
+    display: flex;
+    gap: rem(24px);
+    align-items: center;
+}
+
+.word-toggle__unit--secondary {
+}
+
+.word-toggle__title {
+}
+
+.word-toggle__icon {
+    color: $color-brand-orange;
+    transition: all $transition-default;
+
+    .word-toggle:has(.word-toggle__link:hover) &,
+    .word-toggle:has(.word-toggle__link:focus-visible) & {
+        margin-left: rem(8px);
+    }
+}
+
+.word-toggle-ticker {
+}
+
+.word-toggle-ticker__item {
+}
