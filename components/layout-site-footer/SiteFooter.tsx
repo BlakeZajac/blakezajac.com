@@ -22,7 +22,9 @@ const SiteFooter = () => {
         <footer className="site-footer">
             <Container
                 className={`${
-                    isContactPage ? "site-footer__container--sm" : "site-footer__container"
+                    isContactPage
+                        ? "l-container--max-width_1440 site-footer__container--sm"
+                        : "site-footer__container"
                 }`}
             >
                 {!isContactPage && (
