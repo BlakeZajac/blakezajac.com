@@ -20,7 +20,7 @@ const WordToggle: React.FC<WordToggleProps> = ({ href, title, secondaryTitle }) 
                 setCurrentIndex(
                     (prevIndex) => (prevIndex + 1) % (secondaryTitle as string[]).length
                 );
-            }, 5000);
+            }, 3000);
 
             return () => clearInterval(interval);
         }
