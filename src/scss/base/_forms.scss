@@ -124,6 +124,8 @@ textarea {
 
 .form-message {
     display: flex;
+    flex-wrap: wrap;
+    gap: rem(16px) rem(20px);
     align-items: center;
     justify-content: space-between;
     padding: rem(20px);
