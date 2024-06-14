@@ -109,9 +109,9 @@ const ContactForm: FC = () => {
                             })}
                         />
                         {errors[field.name as keyof FormData] && (
-                            <span className="form__error">
+                            <div className="form__error">
                                 {errors[field.name as keyof FormData]?.message}
-                            </span>
+                            </div>
                         )}
                     </div>
                 ))}
@@ -144,9 +144,9 @@ const ContactForm: FC = () => {
                         />
                     )}
                     {errors[field.name as keyof FormData] && (
-                        <span className="form__error">
+                        <div className="form__error">
                             {errors[field.name as keyof FormData]?.message}
-                        </span>
+                        </div>
                     )}
                 </div>
             ))}

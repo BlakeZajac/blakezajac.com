@@ -110,3 +110,8 @@ textarea {
 .form__field {
     margin-bottom: rem(32px);
 }
+
+.form__error {
+    margin-top: rem(8px);
+    color: $color-brand-orange;
+}
