@@ -87,9 +87,36 @@ const ContactForm: FC = () => {
         },
     ];
 
+    const firstFourFields = formFields.slice(0, 4);
+    const remainingFields = formFields.slice(4);
+
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            {formFields.map((field) => (
+            <div className="form__grid">
+                {firstFourFields.map((field) => (
+                    <div className="form__field" key={field.name}>
+                        <label htmlFor={field.name} className="form__label">
+                            {field.label} {field.required && <span className="required">*</span>}
+                        </label>
+                        <input
+                            type={field.type}
+                            placeholder={field.placeholder}
+                            className={`form__input ${
+                                errors[field.name as keyof FormData] ? "form__input--error" : ""
+                            }`}
+                            {...register(field.name as keyof FormData, {
+                                required: field.required ? `${field.label} is required` : false,
+                            })}
+                        />
+                        {errors[field.name as keyof FormData] && (
+                            <span className="form__error">
+                                {errors[field.name as keyof FormData]?.message}
+                            </span>
+                        )}
+                    </div>
+                ))}
+            </div>
+            {remainingFields.map((field) => (
                 <div className="form__field" key={field.name}>
                     <label htmlFor={field.name} className="form__label">
                         {field.label} {field.required && <span className="required">*</span>}
@@ -131,9 +158,10 @@ const ContactForm: FC = () => {
                         <FaRegSmile className="btn__icon btn__icon--smile" />
                     </div>
                 </button>
-                {isSubmitting && <FaSpinner className="form__spinner" />}
+                {isSubmitting && (
+                    <FaSpinner className="form__spinner" role="presentation" focusable="false" />
+                )}
             </div>
-            {submitError && <div className="form__message form__message--error">{submitError}</div>}
             {submitSuccess && (
                 <div className="form__message form__message--success">{submitSuccess}</div>
             )}

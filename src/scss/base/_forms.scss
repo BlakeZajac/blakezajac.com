@@ -1,3 +1,55 @@
+//---------------------------------------------------------------------------
+//	Inputs
+//---------------------------------------------------------------------------
+
+label {
+    display: block;
+    margin-bottom: rem(12px);
+    @include type-style-09;
+}
+
+.required {
+    color: $color-brand-orange;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: rem(20px);
+    width: 100%;
+    background-color: $color-system-white;
+    border: rem(1px) solid $color-system-border;
+    outline: none;
+    border-radius: $border-radius-md;
+    transition-property: border-color box-shadow;
+    transition: $transition-cubic;
+
+    &:focus {
+        border-color: $color-brand-black;
+        box-shadow: 0 0 0 rem(1px) $color-brand-black;
+    }
+
+    &::placeholder {
+        opacity: 1;
+        color: $color-system-placeholder;
+    }
+
+    &.form__input--error {
+        border-color: $color-brand-orange;
+        box-shadow: 0 0 0 rem(1px) $color-brand-orange;
+    }
+}
+
+textarea {
+    height: rem(240px);
+    resize: vertical;
+}
+
+//---------------------------------------------------------------------------
+//	Form Block
+//---------------------------------------------------------------------------
+
 .form {
     display: flex;
     flex-direction: column;
@@ -45,4 +97,16 @@
 
 .form-description__item--alt {
     color: $color-brand-grey;
+}
+
+.form__grid {
+    @media (min-width: $break-grid-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 rem(30px);
+    }
+}
+
+.form__field {
+    margin-bottom: rem(32px);
 }
