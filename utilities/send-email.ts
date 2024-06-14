@@ -1,6 +1,17 @@
 import { FormData } from "@/components/block-contact-form/ContactForm";
 
 export function sendEmail(data: FormData) {
-    // @todo - send email
-    console.log(data);
+    const apiEndPoint = "/api/email";
+
+    fetch(apiEndPoint, {
+        method: "POST",
+        body: JSON.stringify(data),
+    })
+        .then((res) => res.json())
+        .then((response) => {
+            alert(response.message);
+        })
+        .catch((err) => {
+            alert(err);
+        });
 }
