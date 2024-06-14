@@ -115,3 +115,15 @@ textarea {
     margin-top: rem(8px);
     color: $color-brand-orange;
 }
+
+.form__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(16px);
+}
+
+.form__spinner {
+    font-size: rem(20px);
+    color: $color-brand-orange;
+    transition: rotate $transition-cubic;
+}

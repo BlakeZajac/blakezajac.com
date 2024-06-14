@@ -158,8 +158,12 @@ const ContactForm: FC = () => {
                         <FaRegSmile className="btn__icon btn__icon--smile" />
                     </div>
                 </button>
-                {isSubmitting && (
-                    <FaSpinner className="form__spinner" role="presentation" focusable="false" />
+                {!isSubmitting && (
+                    <FaSpinner
+                        className="form__spinner a-spin"
+                        role="presentation"
+                        focusable="false"
+                    />
                 )}
             </div>
             {submitSuccess && (
