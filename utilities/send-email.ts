@@ -1,17 +1,24 @@
 import { FormData } from "@/components/block-contact-form/ContactForm";
 
-export function sendEmail(data: FormData) {
+export function sendEmail(data: FormData): Promise<void> {
     const apiEndPoint = "/api/email";
 
-    fetch(apiEndPoint, {
+    return fetch(apiEndPoint, {
         method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
         body: JSON.stringify(data),
     })
-        .then((res) => res.json())
+        .then((res) => {
+            if (!res.ok) {
+                return res.json().then((response) => {
+                    throw new Error(response.error || "Email not delivered");
+                });
+            }
+            return res.json();
+        })
         .then((response) => {
             console.log(response.message);
-        })
-        .catch((err) => {
-            console.log(`Email not delivered: ${err}`);
         });
 }

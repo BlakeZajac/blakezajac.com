@@ -1,12 +1,12 @@
 "use client";
 
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { sendEmail } from "@/utilities/send-email";
 
 import { MdArrowForward } from "react-icons/md";
-import { FaRegSmile } from "react-icons/fa";
+import { FaRegSmile, FaSpinner } from "react-icons/fa";
 
 export type FormData = {
     name: string;
@@ -18,11 +18,31 @@ export type FormData = {
 };
 
 const ContactForm: FC = () => {
-    const { register, handleSubmit } = useForm<FormData>();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm<FormData>();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
+    const [submitSuccess, setSubmitSuccess] = useState<string | null>(null);
 
-    function onSubmit(data: FormData) {
-        sendEmail(data);
-    }
+    const onSubmit: SubmitHandler<FormData> = async (data) => {
+        setIsSubmitting(true);
+        setSubmitError(null);
+        setSubmitSuccess(null);
+
+        try {
+            await sendEmail(data);
+            setSubmitSuccess("Thanks for your submission! I'll be in touch.");
+            reset();
+        } catch (err) {
+            setSubmitError((err as Error).message || "Failed to deliver email. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     const formFields = [
         {
@@ -77,30 +97,46 @@ const ContactForm: FC = () => {
                     {field.type === "textarea" ? (
                         <textarea
                             placeholder={field.placeholder}
-                            className="form__input"
+                            className={`form__input ${
+                                errors[field.name as keyof FormData] ? "form__input--error" : ""
+                            }`}
                             {...register(field.name as keyof FormData, {
-                                required: field.required,
+                                required: field.required ? `${field.label} is required` : false,
                             })}
                         />
                     ) : (
                         <input
                             type={field.type}
                             placeholder={field.placeholder}
-                            className="form__input"
+                            className={`form__input ${
+                                errors[field.name as keyof FormData] ? "form__input--error" : ""
+                            }`}
                             {...register(field.name as keyof FormData, {
-                                required: field.required,
+                                required: field.required ? `${field.label} is required` : false,
                             })}
                         />
                     )}
+                    {errors[field.name as keyof FormData] && (
+                        <span className="form__error">
+                            {errors[field.name as keyof FormData]?.message}
+                        </span>
+                    )}
                 </div>
             ))}
-            <button type="submit" className="form__submit btn">
-                <span className="btn__label">Submit</span>
-                <div className="btn__accessory">
-                    <MdArrowForward className="btn__icon btn__icon--arrow" />
-                    <FaRegSmile className="btn__icon btn__icon--smile" />
-                </div>
-            </button>
+            <div className="form__actions">
+                <button type="submit" className="form__submit btn" disabled={isSubmitting}>
+                    <span className="btn__label">Submit</span>
+                    <div className="btn__accessory">
+                        <MdArrowForward className="btn__icon btn__icon--arrow" />
+                        <FaRegSmile className="btn__icon btn__icon--smile" />
+                    </div>
+                </button>
+                {isSubmitting && <FaSpinner className="form__spinner" />}
+            </div>
+            {submitError && <div className="form__message form__message--error">{submitError}</div>}
+            {submitSuccess && (
+                <div className="form__message form__message--success">{submitSuccess}</div>
+            )}
         </form>
     );
 };
