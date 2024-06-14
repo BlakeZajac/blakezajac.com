@@ -6,7 +6,9 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { sendEmail } from "@/utilities/send-email";
 
 import { MdArrowForward } from "react-icons/md";
-import { FaRegSmile, FaSpinner } from "react-icons/fa";
+import { FaRegSmile } from "react-icons/fa";
+import { SyncLoader } from "react-spinners";
+import Button from "../block-button/Button";
 
 export type FormData = {
     name: string;
@@ -158,16 +160,18 @@ const ContactForm: FC = () => {
                         <FaRegSmile className="btn__icon btn__icon--smile" />
                     </div>
                 </button>
-                {!isSubmitting && (
-                    <FaSpinner
-                        className="form__spinner a-spin"
-                        role="presentation"
-                        focusable="false"
-                    />
+                {isSubmitting && (
+                    <SyncLoader color="#ff5c0d" margin={4} size={6} speedMultiplier={0.7} />
                 )}
             </div>
             {submitSuccess && (
-                <div className="form__message form__message--success">{submitSuccess}</div>
+                // @todo - This can be a reusable notice component (block-notice)
+                <div className="form-message form-message--success">
+                    <div className="form-message__title">{submitSuccess}</div>
+                    <div className="form-message__actions">
+                        <Button buttonHref="/" buttonLabel="Back to home" />
+                    </div>
+                </div>
             )}
         </form>
     );

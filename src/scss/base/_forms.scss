@@ -122,8 +122,22 @@ textarea {
     gap: rem(16px);
 }
 
-.form__spinner {
-    font-size: rem(20px);
-    color: $color-brand-orange;
-    transition: rotate $transition-cubic;
+.form-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(20px);
+    margin-top: rem(32px);
+    background-color: $color-system-white;
+    border: rem(1px) solid $color-system-border;
+    border-radius: $border-radius-md;
+}
+
+.form-message--success {
+}
+
+.form-message--error {
+}
+
+.form-message__title {
 }
