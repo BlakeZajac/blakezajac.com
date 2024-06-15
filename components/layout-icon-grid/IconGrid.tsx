@@ -1,5 +1,7 @@
 import React from "react";
 import { StaticImageData } from "next/image";
+import Section from "../layout-section/Section";
+import Container from "../layout-container/Container";
 
 interface IconGridItem {
     icon?: StaticImageData | string;
@@ -16,7 +18,36 @@ interface IconGridProps {
 }
 
 const IconGrid: React.FC<IconGridProps> = ({ title, description, columns, items }) => {
-    return <div>IconGrid</div>;
+    const getCellClasses = (numColumns: 2 | 3 | 4): string => {
+        const cellClasses: string[] = [];
+
+        switch (numColumns) {
+            case 4:
+                cellClasses.push("l-grid__cell--25-at-xl");
+            case 3:
+                cellClasses.push("l-grid__cell--33-at-lg");
+            default:
+                cellClasses.push("l-grid__cell--50-at-md");
+        }
+
+        return cellClasses.reverse().join(" ");
+    };
+
+    const cellClass = getCellClasses(columns);
+
+    return (
+        <Section>
+            <Container>
+                <div className="icon-grid">
+                    {title && <h2 className="icon-grid__title">{title}</h2>}
+                    {description && <div className="icon-grid__content">{description}</div>}
+                    <div className="l-grid">
+                        <div className={`l-grid__cell ${cellClass}`}></div>
+                    </div>
+                </div>
+            </Container>
+        </Section>
+    );
 };
 
 export default IconGrid;
