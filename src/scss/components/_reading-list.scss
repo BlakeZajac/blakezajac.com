@@ -21,10 +21,15 @@
 
 .reading-list__group {
     display: flex;
-    gap: rem(16px);
+    flex-direction: column;
+    gap: rem(24px);
 
     &:not(:last-child) {
         margin-bottom: rem(48px);
+    }
+
+    @media (min-width: $break-grid-md) {
+        flex-direction: row;
     }
 }
 
