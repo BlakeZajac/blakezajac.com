@@ -4,9 +4,9 @@ import Section from "../layout-section/Section";
 import Container from "../layout-container/Container";
 
 interface IconGridItem {
-    icon?: StaticImageData | string;
-    title?: string;
-    description?: string;
+    icon: StaticImageData | string;
+    title: string;
+    description: string;
     link?: string;
 }
 
@@ -42,7 +42,12 @@ const IconGrid: React.FC<IconGridProps> = ({ title, description, columns, items 
                     {title && <h2 className="icon-grid__title">{title}</h2>}
                     {description && <div className="icon-grid__content">{description}</div>}
                     <div className="l-grid">
-                        <div className={`l-grid__cell ${cellClass}`}></div>
+                        {items.map((item, index) => (
+                            <div key={index} className={`l-grid__cell ${cellClass}`}>
+                                {/* @todo - Create IconText block */}
+                                {/* <IconText icon={item.icon} title={item.title} description={item.description} link={item.link} /> */}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </Container>

@@ -4,6 +4,7 @@
     background: rgba($color-brand-black, 10%);
     border-radius: $border-radius-full;
 
+    // @todo - move to theme.scss
     .theme-orange & {
         background: $color-brand-orange;
         color: $color-system-white;
