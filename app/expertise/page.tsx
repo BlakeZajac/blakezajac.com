@@ -10,7 +10,7 @@ const ExpertisePage = () => {
         <>
             <Waypoint activeClass="theme-orange">
                 <Hero
-                    className="u-bg-orange--light"
+                    className="hero--bg-orange-light"
                     badge="UX Design"
                     title="Strategic foundations lead to better outcomes"
                     image={heroImage}
