@@ -1,20 +1,16 @@
 import React from "react";
 import { StaticImageData } from "next/image";
+
 import Section from "../layout-section/Section";
 import Container from "../layout-container/Container";
 
-interface IconGridItem {
-    icon: StaticImageData | string;
-    title: string;
-    description: string;
-    link?: string;
-}
+import IconText, { IconTextProps } from "../block-icon-text/IconText";
 
 interface IconGridProps {
     title?: string;
     description?: string;
     columns: 2 | 3 | 4;
-    items: IconGridItem[];
+    items: IconTextProps[];
 }
 
 const IconGrid: React.FC<IconGridProps> = ({ title, description, columns, items }) => {
@@ -44,8 +40,7 @@ const IconGrid: React.FC<IconGridProps> = ({ title, description, columns, items 
                     <div className="l-grid">
                         {items.map((item, index) => (
                             <div key={index} className={`l-grid__cell ${cellClass}`}>
-                                {/* @todo - Create IconText block */}
-                                {/* <IconText icon={item.icon} title={item.title} description={item.description} link={item.link} /> */}
+                                <IconText {...item} />
                             </div>
                         ))}
                     </div>

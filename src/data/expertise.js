@@ -4,6 +4,7 @@
  * @property    {string}                    [title]         The title of the item.
  * @property    {string}                    [description]   The description of the item.
  * @property    {string}                    [link]          The link associated with the item.
+ * @property    {string}                    [linkTitle]     The title of the link.
  */
 
 // @todo - Sanity
