@@ -8,7 +8,7 @@ import Container from "../layout-container/Container";
 interface Book {
     title: string;
     author: string;
-    status?: string;
+    completed?: boolean;
 }
 
 interface Year {
@@ -18,16 +18,24 @@ interface Year {
 
 interface ReadingListProps {
     title?: string;
-    years?: Year[];
+    data?: Year[];
 }
 
-const ReadingList: React.FC<ReadingListProps> = ({ title, years = [] }) => {
+const ReadingList: React.FC<ReadingListProps> = ({ title, data = [] }) => {
+    const processedData = data.map((yearObj) => ({
+        ...yearObj,
+        books: yearObj.books.map((book) => ({
+            ...book,
+            completed: book.completed ?? false,
+        })),
+    }));
+
     return (
         <Section>
             <Container>
                 <div className="reading-list">
-                    {title && <h2>{title}</h2>}
-                    {years.map((yearObj) => (
+                    {title && <h2 className="reading-list__title">{title}</h2>}
+                    {data.map((yearObj) => (
                         <div key={yearObj.year} className="reading-list__group">
                             <div className="reading-list__unit reading-list__unit--year">
                                 <h3>{yearObj.year}</h3>
@@ -41,7 +49,15 @@ const ReadingList: React.FC<ReadingListProps> = ({ title, years = [] }) => {
                                                 {book.author}
                                             </div>
                                         </div>
-                                        <div className="reading-list__status">{book.status}</div>
+                                        <div
+                                            className={`reading-list__status ${
+                                                book.completed
+                                                    ? "reading-list__status--completed"
+                                                    : "reading-list__status--in-progress"
+                                            }`}
+                                        >
+                                            {book.completed ? "Completed" : "In progress"}
+                                        </div>{" "}
                                     </div>
                                 ))}
                             </div>
