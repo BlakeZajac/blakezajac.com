@@ -10,5 +10,6 @@
 
     &:focus-visible {
         transform: translate(-50%, rem(24px));
+        outline: none;
     }
 }
