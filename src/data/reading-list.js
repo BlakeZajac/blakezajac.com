@@ -8,7 +8,6 @@
  * @typedef     {Object}    Book
  * @property    {string}    title       The title of the book.
  * @property    {string}    author      The author of the book.
- * @property    {boolean}   [completed] Whether the book is completed or not. Defaults to false.
  */
 
 /**
@@ -36,17 +35,14 @@ const readingListData = [
             {
                 title: "No Death, No Fear",
                 author: "Thich Nhat Hanh",
-                completed: true,
             },
             {
                 title: "The Mamba Mentality",
                 author: "Kobe Bryant",
-                completed: true,
             },
             {
                 title: "Atomic Habits",
                 author: "James Clear",
-                completed: true,
             },
         ],
     },

@@ -1,0 +1,72 @@
+.reading-list {
+}
+
+.reading-list__section-title {
+    margin-bottom: rem(48px);
+    @include type-style-02;
+    color: $color-brand-black;
+
+    @media (min-width: $break-grid-md) {
+        margin-bottom: rem(64px);
+    }
+
+    @media (min-width: $break-grid-lg) {
+        margin-bottom: rem(96px);
+    }
+
+    @media (min-width: $break-grid-2xl) {
+        margin-bottom: rem(128px);
+    }
+}
+
+.reading-list__group {
+    display: flex;
+    gap: rem(16px);
+
+    &:not(:last-child) {
+        margin-bottom: rem(48px);
+    }
+}
+
+.reading-list__unit {
+}
+
+.reading-list__unit--year {
+    @media (min-width: $break-grid-md) {
+        width: 30%;
+    }
+}
+
+.reading-list__unit--items {
+    @media (min-width: $break-grid-md) {
+        width: 70%;
+    }
+}
+
+.reading-list__year {
+    @include type-style-05;
+    color: $color-brand-black;
+}
+
+.reading-list__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+        margin-bottom: rem(16px);
+    }
+}
+
+.reading-list__content {
+    display: flex;
+    gap: rem(16px);
+    @include type-style-05;
+}
+
+.reading-list__title {
+    color: $color-brand-black;
+}
+
+.reading-list__author {
+}
