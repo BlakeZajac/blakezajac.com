@@ -40,7 +40,7 @@ export default function Home() {
                 />
             </Waypoint>
 
-            <BackgroundCardCollection />
+            <BackgroundCardCollection items={[]} />
         </>
     );
 }
