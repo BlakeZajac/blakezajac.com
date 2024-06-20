@@ -35,8 +35,10 @@ const IconGrid: React.FC<IconGridProps> = ({ title, description, columns, items 
         <Section>
             <Container>
                 <div className="icon-grid">
-                    {title && <h2 className="icon-grid__title">{title}</h2>}
-                    {description && <div className="icon-grid__content">{description}</div>}
+                    <div className="icon-grid__copy">
+                        {title && <h2 className="icon-grid__title">{title}</h2>}
+                        {description && <div className="icon-grid__content">{description}</div>}
+                    </div>
                     <div className="l-grid">
                         {items.map((item, index) => (
                             <div key={index} className={`l-grid__cell ${cellClass}`}>
