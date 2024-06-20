@@ -26,17 +26,20 @@ const MediaContent: React.FC<MediaContentProps> = ({
     linkUrl,
     linkTitle,
 }) => {
+    const gridClasses = "right" === mediaPosition ? "l-grid--row-reverse-at-lg" : "";
     return (
         <Section className={twMerge(`media-content media-content--media-${mediaPosition}`)}>
             <Container>
-                <div className="media-content__grid l-grid l-grid--vertical-gap">
+                <div
+                    className={`l-grid l-grid--align-items-center l-grid--vertical-gap ${gridClasses}`}
+                >
                     <div className="l-grid__cell l-grid__cell--50-at-lg">
                         <Image src={media} alt={mediaAlt} className="media-content__image" />
                     </div>
                     <div className="l-grid__cell l-grid__cell--50-at-lg">
-                        <div className="media-content__copy copy">
+                        <div className="media-content__copy">
                             {title && <h2 className="media-content__title">{title}</h2>}
-                            {content && <p>{content}</p>}
+                            {content && <p className="media-content__content">{content}</p>}
                             {linkUrl && linkTitle && (
                                 <Button
                                     buttonHref={linkUrl}

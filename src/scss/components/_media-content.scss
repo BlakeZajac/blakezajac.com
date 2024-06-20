@@ -1,0 +1,36 @@
+.media-content {
+}
+
+.media-content--media-right {
+}
+
+.media-content__image {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    border-radius: $border-radius-2xl;
+}
+
+.media-content__copy {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px) 0;
+
+    @media (min-width: $break-grid-lg) {
+        padding-left: rem(64px);
+
+        .media-content--media-right & {
+            padding-left: 0;
+            padding-right: rem(64px);
+        }
+    }
+}
+
+.media-content__title {
+    @include type-style-03;
+    color: $color-brand-black;
+}
+
+.media-content__content {
+    @include type-style-08;
+}

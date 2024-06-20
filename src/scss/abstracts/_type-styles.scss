@@ -88,6 +88,7 @@
 
 // h3
 // popup__content
+// media-content__title
 @mixin type-style-03 {
     font-family: $font-family-01;
     font-size: rem(32px);
@@ -173,6 +174,7 @@
 // body featured
 // statistic__content
 // icon-text__description
+// media-content__content
 @mixin type-style-08 {
     font-family: $font-family-01;
     font-size: rem(15px);
