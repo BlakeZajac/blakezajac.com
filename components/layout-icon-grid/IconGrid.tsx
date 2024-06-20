@@ -21,7 +21,7 @@ const IconGrid: React.FC<IconGridProps> = ({ title, description, columns, items 
             case 4:
                 cellClasses.push("l-grid__cell--25-at-xl");
             case 3:
-                cellClasses.push("l-grid__cell--33-at-lg");
+                cellClasses.push("l-grid__cell--50-at-lg");
             default:
                 cellClasses.push("l-grid__cell--50-at-md");
         }
@@ -34,12 +34,12 @@ const IconGrid: React.FC<IconGridProps> = ({ title, description, columns, items 
     return (
         <Section>
             <Container>
-                <div className="icon-grid">
+                <div className={`icon-grid icon-grid--columns_${columns}`}>
                     <div className="icon-grid__copy">
                         {title && <h2 className="icon-grid__title">{title}</h2>}
                         {description && <div className="icon-grid__content">{description}</div>}
                     </div>
-                    <div className="l-grid">
+                    <div className="l-grid l-grid--vertical-gap">
                         {items.map((item, index) => (
                             <div key={index} className={`l-grid__cell ${cellClass}`}>
                                 <IconText {...item} />

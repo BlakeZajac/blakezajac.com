@@ -15,8 +15,6 @@ const expertiseItems = [
         icon: icon,
         title: 'Insight rich',
         description: 'We support a wide range of analytical and insight gathering activities, designed to understand audience behaviour and to help inform our strategic recommendations.',
-        link: '#',
-        linkTitle: 'Learn more'
     },
     {
         icon: icon,
@@ -29,6 +27,7 @@ const expertiseItems = [
         description: 'We combine audience insights with our strategic expertise to fuel intensive periods of conceptual thinking, creating solutions that keep your brand moving forward.',
     },
     {
+        icon: icon,
         title: 'Strategic execution',
         description: 'Our strategic solutions unlock opportunities and solve business problems. We create the best possible experience and the right conditions to deliver.',
     },

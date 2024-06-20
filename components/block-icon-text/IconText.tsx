@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 export interface IconTextProps {
     className?: string;
-    icon: StaticImageData | string;
+    icon?: StaticImageData | string;
     title: string;
     description: string;
     link?: string;
@@ -19,15 +19,19 @@ const IconText: React.FC<IconTextProps> = ({
     linkTitle,
 }) => {
     return (
-        <div className={twMerge(`icon-text ${link ? "icon-text--has-link" : ""}`, className)}>
+        <div className={twMerge("icon-text", className)}>
             <div className="icon-text__header">
-                <Image className="icon-text__icon" src={icon} alt="" />
+                {icon ? (
+                    <Image className="icon-text__icon" src={icon} alt="" />
+                ) : (
+                    <div className="icon-text__icon"></div>
+                )}
             </div>
             <div className="icon-text__body">
                 <h3 className="icon-text__title">{title}</h3>
-                <div className="icon-text__descripton">{description}</div>
+                <div className="icon-text__description">{description}</div>
             </div>
-            {link && (
+            {link && linkTitle && (
                 <div className="icon-text__footer">
                     <a className="icon-text__link underlink underlink--reverse" href={link}>
                         {linkTitle}
