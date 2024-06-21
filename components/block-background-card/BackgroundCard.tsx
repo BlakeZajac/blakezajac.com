@@ -48,6 +48,8 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
                 <div className="background-card__title">
                     {title}: <span className="background-card__description">{description}</span>
                 </div>
+            </div>
+            <div className="background-card__actions">
                 <Button buttonHref={buttonHref} buttonLabel={buttonLabel} />
             </div>
         </div>

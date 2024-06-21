@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100%;
 }
 
 .background-card__link {
@@ -15,6 +16,17 @@
     aspect-ratio: 4 / 5;
     border-radius: $border-radius-2xl;
     overflow: hidden;
+}
+
+.background-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24px) 0;
+    padding: rem(24px) 0;
+}
+
+.background-card__actions {
+    margin-top: auto;
 }
 
 .background-card__image {
@@ -33,13 +45,6 @@
     position: absolute;
     bottom: rem(24px);
     left: rem(24px);
-}
-
-.background-card__content {
-    display: flex;
-    flex-direction: column;
-    gap: rem(24px) 0;
-    padding: rem(24px) 0;
 }
 
 .background-card__title {

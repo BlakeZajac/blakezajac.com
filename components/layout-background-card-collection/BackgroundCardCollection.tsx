@@ -38,11 +38,15 @@ const BackgroundCardCollection: React.FC<BackgroundCardCollectionProps> = ({ tit
                             spaceBetween: 30,
                         },
                         768: {
-                            slidesPerView: 1.5,
+                            slidesPerView: 2.25,
+                            spaceBetween: 30,
+                        },
+                        480: {
+                            slidesPerView: 1.25,
                             spaceBetween: 30,
                         },
                         0: {
-                            slidesPerView: 1.25,
+                            slidesPerView: 1.125,
                             spaceBetween: 30,
                         },
                     }}
@@ -50,7 +54,7 @@ const BackgroundCardCollection: React.FC<BackgroundCardCollectionProps> = ({ tit
                     grabCursor={true}
                 >
                     {items.map((item, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} className="card-collection__slide">
                             <BackgroundCard {...item} />
                         </SwiperSlide>
                     ))}
