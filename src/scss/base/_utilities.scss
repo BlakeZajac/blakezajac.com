@@ -82,6 +82,22 @@
     color: $color-system-white;
 }
 
+.u-overflow-x {
+    margin: 0 -$l-container-padding-xs;
+
+    @media (min-width: $break-grid-lg) {
+        margin: 0 -$l-container-padding-lg;
+    }
+
+    @media (min-width: $break-grid-xl) {
+        margin: 0 -$l-container-padding-xl;
+    }
+
+    @media (min-width: $break-grid-2xl) {
+        margin: 0 -$l-container-padding-2xl;
+    }
+}
+
 .u-overflow-right {
     margin-right: -$l-container-padding-xs;
 

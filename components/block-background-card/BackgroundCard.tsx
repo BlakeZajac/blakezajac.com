@@ -37,19 +37,17 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
     buttonLabel,
 }) => {
     return (
-        <div className={(twMerge(`background-card`), className)}>
-            <a href={buttonHref} className="background-card__link"></a>
+        <div className={twMerge("background-card", className)}>
             <div className="background-card__header">
+                <a href={buttonHref} className="background-card__link"></a>
                 <Image src={media} alt={mediaAlt} className="background-card__image" />
                 <div className={`background-card__badge badge ${getBadgeClass(type)}`}>{badge}</div>
             </div>
-            <div className="background-card__body">
+            <div className="background-card__content">
                 {date && <div className="background-card__date">{date}</div>}
                 <div className="background-card__title">
                     {title}: <span className="background-card__description">{description}</span>
                 </div>
-            </div>
-            <div className="background-card__footer">
                 <Button buttonHref={buttonHref} buttonLabel={buttonLabel} />
             </div>
         </div>

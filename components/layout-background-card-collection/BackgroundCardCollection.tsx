@@ -24,10 +24,15 @@ const BackgroundCardCollection: React.FC<BackgroundCardCollectionProps> = ({ tit
 
     return (
         <Section className="card-collection">
-            <Container>
+            {/* @todo - Find a better way to apply the overflow in both directions without breaking the title */}
+            <Container className="u-overflow-right">
                 <h2 className="card-collection__title">{title}</h2>
                 <Swiper
                     breakpoints={{
+                        1920: {
+                            slidesPerView: 4.25,
+                            spaceBetween: 30,
+                        },
                         1440: {
                             slidesPerView: 3.125,
                             spaceBetween: 30,

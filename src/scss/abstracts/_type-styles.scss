@@ -1,6 +1,5 @@
 // h1
 @mixin type-style-01 {
-    font-family: $font-family-01;
     font-size: rem(40px);
     font-weight: 400;
     font-style: normal;
@@ -22,7 +21,6 @@
 
 // h1 hero
 @mixin type-style-01--hero {
-    font-family: $font-family-01;
     font-size: rem(48px);
     font-weight: 400;
     font-style: normal;
@@ -44,7 +42,6 @@
 
 // h2
 @mixin type-style-02 {
-    font-family: $font-family-01;
     font-size: rem(42px);
     font-weight: 400;
     font-style: normal;
@@ -66,7 +63,6 @@
 
 // h2 featured
 @mixin type-style-02--featured {
-    font-family: $font-family-01;
     font-size: rem(36px);
     font-weight: 400;
     font-style: normal;
@@ -90,7 +86,6 @@
 // popup__content
 // media-content__title
 @mixin type-style-03 {
-    font-family: $font-family-01;
     font-size: rem(32px);
     font-weight: 400;
     font-style: normal;
@@ -112,7 +107,6 @@
 
 // h3 featured
 @mixin type-style-03--featured {
-    font-family: $font-family-01;
     font-size: rem(48px);
     font-weight: 400;
     font-style: normal;
@@ -137,8 +131,8 @@
 
 // h5
 // icon-text__title
+// background-card__title
 @mixin type-style-05 {
-    font-family: $font-family-01;
     font-size: rem(18px);
     font-weight: 500;
     font-style: normal;
@@ -156,7 +150,6 @@
 
 // body
 @mixin type-style-07 {
-    font-family: $font-family-01;
     font-size: rem(14px);
     font-weight: 400;
     font-style: normal;
@@ -176,7 +169,6 @@
 // icon-text__description
 // media-content__content
 @mixin type-style-08 {
-    font-family: $font-family-01;
     font-size: rem(15px);
     font-weight: 400;
     font-style: normal;
@@ -195,7 +187,6 @@
 // label
 // icon-grid__content
 @mixin type-style-09 {
-    font-family: $font-family-01;
     font-size: rem(18px);
     font-weight: 400;
     font-style: normal;
@@ -209,7 +200,6 @@
 // primary-menu__label
 // btn__label
 @mixin type-style-10 {
-    font-family: $font-family-01;
     font-size: rem(14px);
     font-weight: 400;
     font-style: normal;
@@ -218,7 +208,6 @@
 
 // badge__label
 @mixin type-style-11 {
-    font-family: $font-family-01;
     font-size: rem(14px);
     font-weight: 400;
     font-style: normal;
@@ -228,4 +217,13 @@
     @media (min-width: $break-grid-md) {
         font-size: rem(16px);
     }
+}
+
+// meta default
+// background-card__date
+@mixin type-style-12 {
+    font-size: rem(14px);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
 }
