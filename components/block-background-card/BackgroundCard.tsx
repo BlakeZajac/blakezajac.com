@@ -47,9 +47,17 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
         setMousePosition({ x, y });
     };
 
+    const handleMouseLeave = () => {
+        setMousePosition({ x: 0, y: 0 });
+    };
+
     return (
         <div className={twMerge("background-card", className)}>
-            <div className="background-card__header" onMouseMove={handleMouseMove}>
+            <div
+                className="background-card__header"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+            >
                 <a href={buttonHref} className="background-card__link"></a>
                 <Image src={media} alt={mediaAlt} className="background-card__image" />
                 <div className="background-card__badge-wrapper">
