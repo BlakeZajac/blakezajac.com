@@ -1,0 +1,61 @@
+import postPlaceholder from "../img/posts/post-placeholder.jpg";
+
+const featuredPostsData = [
+    {
+        type: "project",
+        media: postPlaceholder,
+        mediaAlt: `Placeholder for ${title}`,
+        badge: "Product Design",
+        date: "21.02.24",
+        title: "Froxlor",
+        description: "New product design and experience for the customer interface.",
+        buttonHref: "#",
+        buttonLabel: "Learn more",
+    },
+    {
+        type: "post",
+        media: postPlaceholder,
+        mediaAlt: `Placeholder for ${title}`,
+        badge: "Product Design",
+        date: "22.12.23",
+        title: "Brand Refresh",
+        description: "Brand Refresh: A fresh new look for my personal brand — my fourth iteration. Please, take a look around.",
+        buttonHref: "#",
+        buttonLabel: "Learn more",
+    },
+    {
+        type: "custom",
+        media: postPlaceholder,
+        mediaAlt: `Placeholder for ${title}`,
+        badge: "Custom Badge",
+        date: "22.12.23",
+        title: "Brand Refresh",
+        description: "Brand Refresh: A fresh new look for my personal brand — my fourth iteration. Please, take a look around.",
+        buttonHref: "#",
+        buttonLabel: "Learn more",
+    },
+    {
+        type: "custom",
+        media: postPlaceholder,
+        mediaAlt: `Placeholder for ${title}`,
+        badge: "Custom Badge",
+        date: "22.12.23",
+        title: "Brand Refresh",
+        description: "Brand Refresh: A fresh new look for my personal brand — my fourth iteration. Please, take a look around.",
+        buttonHref: "#",
+        buttonLabel: "Learn more",
+    },
+    {
+        type: "custom",
+        media: postPlaceholder,
+        mediaAlt: `Placeholder for ${title}`,
+        badge: "Custom Badge",
+        date: "22.12.23",
+        title: "Brand Refresh",
+        description: "Brand Refresh: A fresh new look for my personal brand — my fourth iteration. Please, take a look around.",
+        buttonHref: "#",
+        buttonLabel: "Learn more",
+    },
+]
+
+export default featuredPostsData;
