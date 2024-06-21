@@ -1,10 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 
 import Button from "../block-button/Button";
-import { useState } from "react";
 
 export interface BackgroundCardProps {
     className?: string;
