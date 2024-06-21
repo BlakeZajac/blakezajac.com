@@ -58,6 +58,14 @@
     gap: rem(48px) 0;
 }
 
+.l-grid--vertical-gap_sm {
+    gap: ($l-grid-padding-xs * 2) 0;
+
+    @media (min-width: $break-grid-2xl) {
+        gap: ($l-grid-padding-xl * 2) 0;
+    }
+}
+
 .l-grid--align-items-center {
     align-items: center;
 }

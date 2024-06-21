@@ -9,16 +9,19 @@ interface FeaturedProjectsProps {
     items: ProjectCardProps[];
 }
 
-// @todo - This is where you were last up to
 const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
     return (
         <Section className="l-section--margin-top_none">
             <Container>
-                <div className="featured-projects">
+                <div className="l-grid l-grid--vertical-gap_sm">
                     {items.map((item, index) => (
                         <ProjectCard
                             key={index}
-                            className={index % 3 !== 0 ? "project-card--vertical" : ""}
+                            className={`l-grid__cell ${
+                                index % 3 !== 0
+                                    ? "project-card--vertical l-grid__cell--50-at-md"
+                                    : "l-grid__cell--100"
+                            }`}
                             {...item}
                         />
                     ))}

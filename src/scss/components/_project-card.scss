@@ -1,0 +1,31 @@
+.project-card {
+    color: $color-system-white;
+}
+
+.project-card--vertical {
+}
+
+.project-card__media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: $border-radius-2xl;
+    overflow: hidden;
+
+    .project-card--vertical & {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+.project-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card__title {
+    padding: rem(48px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include type-style-04--project;
+}

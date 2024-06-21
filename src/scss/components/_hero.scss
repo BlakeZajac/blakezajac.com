@@ -63,6 +63,10 @@
     }
 }
 
+.hero__content:empty {
+    display: none;
+}
+
 .hero__media {
     margin-top: rem(64px);
 }

@@ -129,6 +129,17 @@
 @mixin type-style-04 {
 }
 
+@mixin type-style-04--project {
+    font-size: rem(14px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+
+    @media (min-width: $break-grid-lg) {
+        font-size: rem(24px);
+    }
+}
+
 // h5
 // icon-text__title
 // background-card__title
