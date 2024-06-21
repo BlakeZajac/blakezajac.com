@@ -41,7 +41,11 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
             <div className="background-card__header">
                 <a href={buttonHref} className="background-card__link"></a>
                 <Image src={media} alt={mediaAlt} className="background-card__image" />
-                <div className={`background-card__badge badge ${getBadgeClass(type)}`}>{badge}</div>
+                <div className="background-card__badge-wrapper">
+                    <div className={`background-card__badge badge ${getBadgeClass(type)}`}>
+                        {badge}
+                    </div>
+                </div>
             </div>
             <div className="background-card__content">
                 {date && <div className="background-card__date">{date}</div>}
