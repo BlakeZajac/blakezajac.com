@@ -11,6 +11,22 @@
     }
 }
 
+.badge--primary {
+    background-color: $color-brand-orange;
+    color: $color-system-white;
+}
+
+.badge--secondary {
+    background-color: $color-brand-yellow;
+    color: $color-brand-black;
+}
+
+.badge--tertiary {
+    background-color: rgba($color-system-white, 20%);
+    color: $color-system-white;
+    backdrop-filter: blur($blur-md);
+}
+
 .badge__label {
     @include type-style-11;
 }
