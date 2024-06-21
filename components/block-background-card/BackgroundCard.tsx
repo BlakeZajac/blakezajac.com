@@ -56,8 +56,8 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
                     <div
                         className={`background-card__badge badge ${getBadgeClass(type)}`}
                         style={{
-                            transform: `translate(${mousePosition.x * 12}px, ${
-                                mousePosition.y * 16
+                            transform: `translate(${mousePosition.x * 24}px, ${
+                                mousePosition.y * 24
                             }px)`,
                         }}
                     >
