@@ -49,6 +49,7 @@
 }
 
 .background-card__badge {
+    transition: all $transition-cubic;
 }
 
 .background-card__title {

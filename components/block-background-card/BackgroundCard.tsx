@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 
 import Button from "../block-button/Button";
+import { useState } from "react";
 
 export interface BackgroundCardProps {
     className?: string;
@@ -36,13 +37,30 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
     buttonHref = "#",
     buttonLabel,
 }) => {
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        const { offsetX, offsetY, target } = e.nativeEvent;
+        const { offsetWidth, offsetHeight } = target as HTMLDivElement;
+        const x = offsetX / offsetWidth - 0.5;
+        const y = offsetY / offsetHeight - 0.5;
+        setMousePosition({ x, y });
+    };
+
     return (
         <div className={twMerge("background-card", className)}>
-            <div className="background-card__header">
+            <div className="background-card__header" onMouseMove={handleMouseMove}>
                 <a href={buttonHref} className="background-card__link"></a>
                 <Image src={media} alt={mediaAlt} className="background-card__image" />
                 <div className="background-card__badge-wrapper">
-                    <div className={`background-card__badge badge ${getBadgeClass(type)}`}>
+                    <div
+                        className={`background-card__badge badge ${getBadgeClass(type)}`}
+                        style={{
+                            transform: `translate(${mousePosition.x * 12}px, ${
+                                mousePosition.y * 16
+                            }px)`,
+                        }}
+                    >
                         {badge}
                     </div>
                 </div>
