@@ -33,3 +33,4 @@ npx webpack --watch
 -   Block and layout specific styles to be added in their respective component folder, and not in the sass boilerplate. The same goes for js
 -   Migrate email delivery to React Email, set up key templates for marketing
 -   Add an email capture block
+-   Reminder to self that the @ syntax is available for importing. Review ya code.

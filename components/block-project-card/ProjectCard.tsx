@@ -1,6 +1,6 @@
 "use client";
 
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 
 export interface ProjectCardProps {
@@ -10,7 +10,14 @@ export interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ className, media, title }) => {
-    return <div className={twMerge(`project-card`, className)}>ProjectCard</div>;
+    return (
+        <div className={twMerge(`project-card`, className)}>
+            <div className="project-card__media">
+                <Image src={media} alt="" />
+                <div className="project-card__title">{title}</div>
+            </div>
+        </div>
+    );
 };
 
 export default ProjectCard;

@@ -1,9 +1,9 @@
 "use client";
 
-import ProjectCard, { ProjectCardProps } from "../block-project-card/ProjectCard";
+import ProjectCard, { ProjectCardProps } from "@/components/block-project-card/ProjectCard";
 
-import Container from "../layout-container/Container";
-import Section from "../layout-section/Section";
+import Container from "@/components/layout-container/Container";
+import Section from "@/components/layout-section/Section";
 
 interface FeaturedProjectsProps {
     items: ProjectCardProps[];
