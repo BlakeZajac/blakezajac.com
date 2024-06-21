@@ -18,7 +18,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
                     {items.map((item, index) => (
                         <ProjectCard
                             key={index}
-                            className={index % 3 === 0 ? "project-card--featured" : ""}
+                            className={index % 3 !== 0 ? "project-card--vertical" : ""}
                             {...item}
                         />
                     ))}
