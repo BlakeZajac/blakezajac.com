@@ -8,6 +8,8 @@ import heroImage from "../src/img/headshots/headshots-1920x1080-01.webp";
 import featuredContentImage from "../src/img/headshots/headshots-1400x1400-1.webp";
 import Waypoint from "@/components/block-waypoint/Waypoint";
 
+import featuredPostsData from "../src/data/featured-posts";
+
 export default function Home() {
     return (
         <>
@@ -40,7 +42,7 @@ export default function Home() {
                 />
             </Waypoint>
 
-            <BackgroundCardCollection title="Latest" items={[]} />
+            <BackgroundCardCollection title="Latest" items={featuredPostsData} />
         </>
     );
 }

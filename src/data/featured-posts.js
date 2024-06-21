@@ -4,7 +4,7 @@ const featuredPostsData = [
     {
         type: "project",
         media: postPlaceholder,
-        mediaAlt: `Placeholder for ${title}`,
+        mediaAlt: "",
         badge: "Product Design",
         date: "21.02.24",
         title: "Froxlor",
@@ -15,7 +15,7 @@ const featuredPostsData = [
     {
         type: "post",
         media: postPlaceholder,
-        mediaAlt: `Placeholder for ${title}`,
+        mediaAlt: "",
         badge: "Product Design",
         date: "22.12.23",
         title: "Brand Refresh",
@@ -26,7 +26,7 @@ const featuredPostsData = [
     {
         type: "custom",
         media: postPlaceholder,
-        mediaAlt: `Placeholder for ${title}`,
+        mediaAlt: "",
         badge: "Custom Badge",
         date: "22.12.23",
         title: "Brand Refresh",
@@ -37,7 +37,7 @@ const featuredPostsData = [
     {
         type: "custom",
         media: postPlaceholder,
-        mediaAlt: `Placeholder for ${title}`,
+        mediaAlt: "",
         badge: "Custom Badge",
         date: "22.12.23",
         title: "Brand Refresh",
@@ -48,7 +48,7 @@ const featuredPostsData = [
     {
         type: "custom",
         media: postPlaceholder,
-        mediaAlt: `Placeholder for ${title}`,
+        mediaAlt: "",
         badge: "Custom Badge",
         date: "22.12.23",
         title: "Brand Refresh",

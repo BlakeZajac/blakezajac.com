@@ -25,6 +25,7 @@ const BackgroundCardCollection: React.FC<BackgroundCardCollectionProps> = ({ tit
     return (
         <Section className="card-collection">
             <Container>
+                <h2 className="card-collection__title">{title}</h2>
                 <Swiper
                     breakpoints={{
                         1440: {
