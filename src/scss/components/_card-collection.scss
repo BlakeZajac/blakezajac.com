@@ -1,0 +1,16 @@
+.card-collection {
+}
+
+.card-collection__title {
+    margin-bottom: rem(48px);
+    @include type-style-02;
+    color: $color-brand-black;
+
+    @media (min-width: $break-grid-md) {
+        margin-bottom: rem(64px);
+    }
+
+    @media (min-width: $break-grid-2xl) {
+        margin-bottom: rem(80px);
+    }
+}
