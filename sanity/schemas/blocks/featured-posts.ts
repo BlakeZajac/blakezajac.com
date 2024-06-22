@@ -6,7 +6,7 @@ export const featuredPosts = defineType({
     type: "object",
     fields: [
         defineField({
-            name: "title",
+            name: "heading",
             type: "string",
         }),
     ],

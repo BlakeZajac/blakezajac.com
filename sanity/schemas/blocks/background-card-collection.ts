@@ -6,7 +6,7 @@ export const backgroundCardCollection = defineType({
     type: "object",
     fields: [
         defineField({
-            name: "title",
+            name: "heading",
             type: "string",
         }),
     ],
