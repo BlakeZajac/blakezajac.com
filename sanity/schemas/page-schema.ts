@@ -24,6 +24,11 @@ export const pageType = defineType({
                     title: "Background Card Collection",
                     type: "backgroundCardCollection",
                 }),
+                defineArrayMember({
+                    name: "featuredPosts",
+                    title: "Featured Posts",
+                    type: "featuredPosts",
+                }),
             ],
         }),
     ],
