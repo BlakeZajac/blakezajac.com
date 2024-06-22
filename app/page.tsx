@@ -24,7 +24,7 @@ export default function Home() {
                 />
             </Waypoint>
 
-            {/* <FeaturedProjects /> */}
+            <FeaturedProjects items={featuredPostsData} />
 
             <Waypoint activeClass="theme-black">
                 <FeaturedContent
