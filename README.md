@@ -34,3 +34,4 @@ npx webpack --watch
 -   Migrate email delivery to React Email, set up key templates for marketing
 -   Add an email capture block
 -   Reminder to self that the @ syntax is available for importing. Review ya code.
+-   Move Sanity schemas into their respective blocks as a type.ts
