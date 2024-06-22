@@ -1,10 +1,16 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 
+import { hero } from "./blocks/hero";
+
 export const pageType = defineType({
     name: "page",
     title: "Pages",
     type: "document",
     fields: [
+        defineField({
+            name: "hero",
+            type: "hero",
+        }),
         defineField({
             name: "title",
             type: "string",

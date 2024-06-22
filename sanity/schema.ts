@@ -5,7 +5,8 @@ import { workType } from "./schemas/work-schema";
 
 import { backgroundCardCollection } from "./schemas/blocks/background-card-collection";
 import { featuredPosts } from "./schemas/blocks/featured-posts";
+import { hero } from "./schemas/blocks/hero";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-    types: [pageType, workType, backgroundCardCollection, featuredPosts],
+    types: [pageType, workType, backgroundCardCollection, featuredPosts, hero],
 };
