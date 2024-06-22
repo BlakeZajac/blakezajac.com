@@ -1,38 +1,38 @@
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .site-header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: rem(24px);
-  padding-bottom: rem(24px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: rem(24px);
+    padding-bottom: rem(24px);
 }
 
 .site-header__unit {
-  transition: all $transition-cubic;
+    transition: all $transition-cubic;
 }
 
 .site-header__unit--site-brand {
 }
 
 .site-header__unit--primary-menu {
-  display: none;
+    display: none;
 
-  @media (min-width: $break-grid-sm) {
-    display: block;
-  }
+    @media (min-width: $break-grid-sm) {
+        display: block;
+    }
 
-  .site-offcanvas--active & {
-    transform: translateY(rem(-24px));
-    opacity: 0;
-    pointer-events: none;
-  }
+    .site-offcanvas--active & {
+        transform: translateY(rem(-24px));
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 .site-header__unit--site-offcanvas-trigger {

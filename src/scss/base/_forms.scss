@@ -2,48 +2,50 @@
 //	Inputs
 //---------------------------------------------------------------------------
 
-label {
-    display: block;
-    margin-bottom: rem(12px);
-    @include type-style-09;
-}
-
-.required {
-    color: $color-brand-orange;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    padding: rem(20px);
-    width: 100%;
-    background-color: $color-system-white;
-    border: rem(1px) solid $color-system-border;
-    outline: none;
-    border-radius: $border-radius-md;
-    transition-property: border-color box-shadow;
-    transition: $transition-cubic;
-
-    &:focus {
-        border-color: $color-brand-black;
-        box-shadow: 0 0 0 rem(1px) $color-brand-black;
+.form {
+    label {
+        display: block;
+        margin-bottom: rem(12px);
+        @include type-style-09;
     }
 
-    &::placeholder {
-        opacity: 1;
-        color: $color-system-placeholder;
+    .required {
+        color: $color-brand-orange;
     }
 
-    &.form__input--error {
-        border-color: $color-brand-orange;
-        box-shadow: 0 0 0 rem(1px) $color-brand-orange;
-    }
-}
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: rem(20px);
+        width: 100%;
+        background-color: $color-system-white;
+        border: rem(1px) solid $color-system-border;
+        outline: none;
+        border-radius: $border-radius-md;
+        transition-property: border-color box-shadow;
+        transition: $transition-cubic;
 
-textarea {
-    height: rem(240px);
-    resize: vertical;
+        &:focus {
+            border-color: $color-brand-black;
+            box-shadow: 0 0 0 rem(1px) $color-brand-black;
+        }
+
+        &::placeholder {
+            opacity: 1;
+            color: $color-system-placeholder;
+        }
+
+        &.form__input--error {
+            border-color: $color-brand-orange;
+            box-shadow: 0 0 0 rem(1px) $color-brand-orange;
+        }
+    }
+
+    textarea {
+        height: rem(240px);
+        resize: vertical;
+    }
 }
 
 //---------------------------------------------------------------------------
