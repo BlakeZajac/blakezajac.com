@@ -27,6 +27,12 @@ npm run dev
 npx webpack --watch
 ```
 
+### Accessing the backend
+
+```
+/sanity
+```
+
 ### More general @todos
 
 -   Move components folder into src. Probs use Gulp instead of webpack for compiling assets
