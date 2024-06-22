@@ -1,7 +1,11 @@
 .copy {
-  p {
-    &:not(:last-child) {
-      margin-bottom: rem(32px);
+    .lead {
+        @include type-style-08;
     }
-  }
+
+    p {
+        &:not(:last-child) {
+            margin-bottom: rem(32px);
+        }
+    }
 }

@@ -90,20 +90,17 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
             <Container className="featured-content__container">
                 {title ? <h2 className="featured-content__title">{title}</h2> : ""}
                 <div className={`featured-content__grid l-grid ${gridClass}`}>
-                    <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--25-at-2xl">
+                    <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--33-at-2xl">
                         <div className="featured-content__unit featured-content__unit--copy copy">
-                            <>
-                                {content01 && <p>{content01}</p>}
-                                {content02 && <p>{content02}</p>}
-                            </>
-
+                            {content01 && <p>{content01}</p>}
+                            {content02 && <p>{content02}</p>}
                             {buttonHref && (
                                 <Button buttonHref={buttonHref} buttonLabel={buttonLabel} />
                             )}
                         </div>
                         {isLargeScreen && renderStatistics()}
                     </div>
-                    <div className="featured-content__cell featured-content__cell--media l-grid__cell l-grid__cell--50-at-lg l-grid__cell--75-at-2xl">
+                    <div className="featured-content__cell featured-content__cell--media l-grid__cell l-grid__cell--50-at-lg l-grid__cell--66-at-2xl">
                         {image && (
                             <div className="featured-content__unit featured-content__unit--media">
                                 <Image
