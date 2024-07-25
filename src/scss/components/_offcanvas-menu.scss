@@ -1,0 +1,60 @@
+.offcanvas-menu {
+}
+
+.offcanvas-menu__list {
+}
+
+.offcanvas-menu__item {
+    position: relative;
+}
+
+.offcanvas-menu__link {
+    display: block;
+    padding: rem(32px) 0;
+    border-bottom: rem(1px) solid $color-system-border;
+    transition: all $transition-default;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $color-brand-orange;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: bottom center;
+        pointer-events: none;
+        z-index: -1;
+        transition: all $transition-cubic;
+    }
+
+    &:hover,
+    &:focus-visible {
+        color: $color-system-white;
+
+        &::before {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
+    .offcanvas-menu__item:first-child & {
+        border-top: rem(1px) solid $color-system-border;
+    }
+}
+
+.offcanvas-menu__link--active {
+    color: $color-brand-orange;
+
+    &:hover,
+    &:focus-visible {
+        color: $color-brand-orange;
+
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+
+.offcanvas-menu__label {
+    @include type-style-03;
+}
