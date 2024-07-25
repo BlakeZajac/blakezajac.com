@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import Container from "../layout-container/Container";
+import OffcanvasMenu from "../block-offcanvas-menu/OffcanvasMenu";
 
 const SiteOffcanvas = () => {
-  const [isOffcanvasVisible, setIsOffcanvasVisible] = useState(false);
-
-  const toggleOffCanvas = () => {
-    setIsOffcanvasVisible(!isOffcanvasVisible);
-  };
-
-  return <div className="site-offcanvas">SiteOffcanvas</div>;
+    return (
+        <div className="site-offcanvas">
+            <Container className="site-offcanvas__container">
+                <OffcanvasMenu />
+            </Container>
+        </div>
+    );
 };
 
 export default SiteOffcanvas;

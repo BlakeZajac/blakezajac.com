@@ -1,7 +1,8 @@
 // @todo - Make the same width as the site header when visible
 // @todo - Look into why this isn't hidden on contact page
 .skip {
-    display: flex;
+    // display: flex;
+    display: none;
     justify-content: center;
     position: fixed;
     left: 50%;

@@ -11,7 +11,7 @@ interface FeaturedProjectsProps {
 
 const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
     return (
-        <Section className="l-section--margin-top_none">
+        <Section>
             <Container>
                 <div className="l-grid l-grid--vertical-gap_sm">
                     {items.map((item, index) => (
