@@ -5,6 +5,7 @@ import React from "react";
 import Section from "../layout-section/Section";
 import Container from "../layout-container/Container";
 import Status from "../block-status/Status";
+import Badge from "../block-badge/Badge";
 
 interface Book {
     title: string;
