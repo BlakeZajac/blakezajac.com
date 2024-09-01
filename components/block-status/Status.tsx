@@ -18,11 +18,7 @@ const Status: React.FC<StatusProps> = ({ status }) => {
 
     const displayStatus = status || "In Progress";
 
-    return (
-        <div className={`status ${getStatusClass(status)}`}>
-            <div className="status__title">{displayStatus}</div>
-        </div>
-    );
+    return <div className={`status ${getStatusClass(status)}`}>{status}</div>;
 };
 
 export default Status;

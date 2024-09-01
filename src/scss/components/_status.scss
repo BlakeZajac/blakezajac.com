@@ -1,7 +1,4 @@
 .status {
-}
-
-.status__title {
     padding: rem(4px) rem(8px);
     background-color: $color-brand-grey;
     border: rem(1px) solid $color-brand-grey;
@@ -9,22 +6,22 @@
     color: $color-system-white;
     text-align: center;
     @include type-style-10;
+}
 
-    .status--success & {
-        background-color: $color-system-success-lightest;
-        border-color: $color-system-success-light;
-        color: $color-system-success;
-    }
+.status--success {
+    background-color: $color-system-success-lightest;
+    border-color: $color-system-success-light;
+    color: $color-system-success;
+}
 
-    .status--alert & {
-        background-color: $color-system-alert-lightest;
-        border-color: $color-system-alert-light;
-        color: $color-system-alert;
-    }
+.status--alert {
+    background-color: $color-system-alert-lightest;
+    border-color: $color-system-alert-light;
+    color: $color-system-alert;
+}
 
-    .status--error & {
-        background-color: $color-system-error-lightest;
-        border-color: $color-system-error-light;
-        color: $color-system-error;
-    }
+.status--error {
+    background-color: $color-system-error-lightest;
+    border-color: $color-system-error-light;
+    color: $color-system-error;
 }
