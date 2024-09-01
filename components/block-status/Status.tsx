@@ -20,7 +20,6 @@ const Status: React.FC<StatusProps> = ({ status }) => {
 
     return (
         <div className={`status ${getStatusClass(status)}`}>
-            <div className="status__accessory"></div>
             <div className="status__title">{displayStatus}</div>
         </div>
     );
