@@ -9,8 +9,7 @@ import Status from "../block-status/Status";
 interface Book {
     title: string;
     author: string;
-    status: string;
-    statusTooltip?: string;
+    status: "Complete" | "In Progress" | "Incomplete" | "";
 }
 
 interface Year {
@@ -43,12 +42,7 @@ const ReadingList: React.FC<ReadingListProps> = ({ title, data = [] }) => {
                                         <div className="reading-list__content">
                                             <h4 className="reading-list__title">{book.title}</h4>
                                             <h5 className="reading-list__author">{book.author}</h5>
-                                            {book.status && (
-                                                <Status
-                                                    title={book.status}
-                                                    tooltip={book.statusTooltip}
-                                                />
-                                            )}
+                                            <Status status={book.status} />
                                         </div>
                                     </div>
                                 ))}
