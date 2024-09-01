@@ -30,7 +30,7 @@ npx webpack --watch
 ### Accessing the backend
 
 ```
-/sanity
+/studio
 ```
 
 ### More general @todos
