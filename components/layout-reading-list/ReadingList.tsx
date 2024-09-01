@@ -4,10 +4,13 @@ import React from "react";
 
 import Section from "../layout-section/Section";
 import Container from "../layout-container/Container";
+import Status from "../block-status/Status";
 
 interface Book {
     title: string;
     author: string;
+    status: string;
+    statusTooltip?: string;
 }
 
 interface Year {
@@ -40,6 +43,12 @@ const ReadingList: React.FC<ReadingListProps> = ({ title, data = [] }) => {
                                         <div className="reading-list__content">
                                             <h4 className="reading-list__title">{book.title}</h4>
                                             <h5 className="reading-list__author">{book.author}</h5>
+                                            {book.status && (
+                                                <Status
+                                                    title={book.status}
+                                                    tooltip={book.statusTooltip}
+                                                />
+                                            )}
                                         </div>
                                     </div>
                                 ))}
