@@ -12,6 +12,7 @@ $font-size-base: 16px;
 //	Colors
 //---------------------------------------------------------------------------
 
+// Brand
 $color-brand-yellow: #dbfc0d;
 $color-brand-yellow-light: #f5f9de;
 $color-brand-orange: #fc550d;
@@ -21,11 +22,13 @@ $color-brand-black: #000;
 $color-brand-grey: #4b4b4b;
 $color-brand-light-grey: #f7f7f7;
 
+// System
 $color-system-black: #000;
 $color-system-border: #dddee1;
 $color-system-placeholder: #969696;
 $color-system-white: #fff;
 
+// States
 $color-system-success: #2ecc71;
 $color-system-success-light: rgba($color-system-success, 50%);
 $color-system-success-lightest: #eafaf1;
