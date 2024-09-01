@@ -2,11 +2,7 @@
 }
 
 .status__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: rem(4px);
-    min-width: rem(90px);
+    padding: rem(4px) rem(8px);
     background-color: $color-brand-grey;
     border: rem(1px) solid $color-brand-grey;
     border-radius: $border-radius-md;
