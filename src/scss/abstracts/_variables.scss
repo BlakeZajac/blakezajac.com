@@ -27,11 +27,14 @@ $color-system-placeholder: #969696;
 $color-system-white: #fff;
 
 $color-system-success: #2ecc71;
-$color-system-success-light: #eafaf1;
+$color-system-success-light: rgba($color-system-success, 50%);
+$color-system-success-lightest: #eafaf1;
 $color-system-alert: $color-brand-orange;
-$color-system-alert-light: $color-brand-orange-light;
+$color-system-alert-light: rgba($color-brand-orange, 50%);
+$color-system-alert-lightest: $color-brand-orange-light;
 $color-system-error: #e43333;
-$color-system-error-light: #fce4e4;
+$color-system-error-light: rgba($color-system-error, 50%);
+$color-system-error-lightest: #fce4e4;
 
 $color-page-bg: $color-brand-light-grey;
 

@@ -36,14 +36,17 @@ const readingListData = [
             {
                 title: "No Death, No Fear",
                 author: "Thich Nhat Hanh",
+                status: "Complete",
             },
             {
                 title: "The Mamba Mentality",
                 author: "Kobe Bryant",
+                status: "Complete",
             },
             {
                 title: "Atomic Habits",
                 author: "James Clear",
+                status: "Complete",
             },
         ],
     },
