@@ -1,3 +1,5 @@
+import { Book } from "@/types/book";
+
 export type ReadingList = {
     _id: string;
     _createdAt: string;
