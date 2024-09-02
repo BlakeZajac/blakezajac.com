@@ -53,6 +53,10 @@ export const bookType = defineType({
             name: "link",
             title: "Link",
             type: "url",
+            validation: (Rule) =>
+                Rule.uri({
+                    scheme: ["http", "https"],
+                }),
         }),
     ],
 });

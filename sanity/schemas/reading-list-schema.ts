@@ -2,29 +2,22 @@ import { defineField, defineType } from "sanity";
 
 export const readingListType = defineType({
     name: "readingList",
-    title: "Reading List",
+    title: "Reading List (Year)",
     type: "document",
 
     fields: [
         defineField({
             name: "title",
-            title: "Title",
+            title: "Year",
             type: "string",
-            validation: (Rule) => Rule.required(),
+            validation: (Rule) => Rule.required().regex(/^\d{4}$/, { name: "year", invert: false }),
         }),
 
         defineField({
-            name: "slug",
-            title: "Slug",
-            type: "slug",
-            options: { source: "title" },
-        }),
-
-        defineField({
-            name: "years",
-            title: "Years",
+            name: "books",
+            title: "Books",
             type: "array",
-            of: [{ type: "yearGroup" }],
+            of: [{ type: "book" }],
         }),
     ],
 });
