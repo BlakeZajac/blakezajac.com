@@ -4,11 +4,11 @@ import FeaturedContent from "@/components/layout-featured-content/FeaturedConten
 import FeaturedProjects from "@/components/layout-featured-projects/FeaturedProjects";
 import Hero from "@/components/layout-hero/Hero";
 
-import heroImage from "../src/img/headshots/headshots-1920x1080-01.webp";
-import featuredContentImage from "../src/img/headshots/headshots-1400x1400-1.webp";
+import heroImage from "@/src/img/headshots/headshots-1920x1080-01.webp";
+import featuredContentImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
 import Waypoint from "@/components/block-waypoint/Waypoint";
 
-import featuredPostsData from "../src/data/featured-posts";
+import featuredPostsData from "@/src/data/featured-posts";
 
 export default function Home() {
     return (
