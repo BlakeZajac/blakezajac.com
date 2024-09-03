@@ -7,13 +7,16 @@
 }
 
 .project-card__link {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+    }
 }
 
 .project-card__media {
     aspect-ratio: 4 / 5;
+    background-color: $color-system-placeholder;
     border-radius: $border-radius-2xl;
     overflow: hidden;
 

@@ -12,12 +12,18 @@ const client = createClient({
 export async function getWork(): Promise<Work[]> {
     return client.fetch(
         groq`*[_type == 'work'] {
-            __id,
-            __createdAt,
-            __updatedAt,
+            _id,
+            _createdAt,
+            _updatedAt,
             title,
             "slug": slug.current,
+            shortDescription,
+            liveLink,
             "featuredImage": featuredImage.asset->url,
+            role[],
+            technology[],
+            overviewTitle,
+            overviewDescription
         }`
     );
 }
@@ -25,12 +31,18 @@ export async function getWork(): Promise<Work[]> {
 export async function getWorkItem(slug: string): Promise<Work[]> {
     return client.fetch(
         groq`*[_type == "work" && slug.current == $slug[0]] {
-            __id,
-            __createdAt,
-            __updatedAt,
+            _id,
+            _createdAt,
+            _updatedAt,
             title,
             "slug": slug.current,
+            shortDescription,
+            liveLink,
             "featuredImage": featuredImage.asset->url,
+            role[],
+            technology[],
+            overviewTitle,
+            overviewDescription
         }`,
         { slug }
     );

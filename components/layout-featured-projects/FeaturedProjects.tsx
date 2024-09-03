@@ -1,12 +1,13 @@
 "use client";
 
-import ProjectCard, { ProjectCardProps } from "@/components/block-project-card/ProjectCard";
+import { Work } from "@/types/work";
 
-import Container from "@/components/layout-container/Container";
 import Section from "@/components/layout-section/Section";
+import Container from "@/components/layout-container/Container";
+import ProjectCard from "@/components/block-project-card/ProjectCard";
 
 interface FeaturedProjectsProps {
-    items: ProjectCardProps[];
+    items: Work[];
 }
 
 const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
@@ -16,13 +17,11 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
                 <div className="l-grid l-grid--vertical-gap_sm">
                     {items.map((item, index) => (
                         <ProjectCard
-                            key={index}
-                            className={`l-grid__cell ${
-                                index % 3 !== 0
-                                    ? "project-card--vertical l-grid__cell--50-at-md"
-                                    : "l-grid__cell--100"
-                            }`}
-                            {...item}
+                            key={item._id}
+                            className={`l-grid__cell ${index % 3 !== 0 ? "project-card--vertical l-grid__cell--50-at-md" : "l-grid__cell--100"}`}
+                            link={`/work/${item.slug}`}
+                            media={item.featuredImage}
+                            title={item.title}
                         />
                     ))}
                 </div>

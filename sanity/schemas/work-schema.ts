@@ -17,6 +17,16 @@ export const workType = defineType({
         }),
 
         defineField({
+            name: "shortDescription",
+            type: "string",
+        }),
+
+        defineField({
+            name: "liveLink",
+            type: "url",
+        }),
+
+        defineField({
             name: "featuredImage",
             title: "Featured Image",
             type: "image",
@@ -30,7 +40,24 @@ export const workType = defineType({
         }),
 
         defineField({
-            name: "content",
+            name: "role",
+            type: "array",
+            of: [{ type: "string" }],
+        }),
+
+        defineField({
+            name: "technology",
+            type: "array",
+            of: [{ type: "string" }],
+        }),
+
+        defineField({
+            name: "overviewTitle",
+            type: "string",
+        }),
+
+        defineField({
+            name: "overviewDescription",
             type: "array",
             of: [{ type: "block" }],
         }),
