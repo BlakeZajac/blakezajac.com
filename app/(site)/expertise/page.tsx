@@ -4,7 +4,7 @@ import IconGrid from "@/components/layout-icon-grid/IconGrid";
 import MediaContent from "@/components/layout-media-content/MediaContent";
 
 import heroImage from "../../src/img/headshots/headshots-1920x1080-01.webp";
-import expertiseItems from "../../src/data/expertise";
+import expertiseItems from "../../../src/data/expertise";
 
 const ExpertisePage = () => {
     return (

@@ -7,11 +7,11 @@ import FeaturedContent from "@/components/layout-featured-content/FeaturedConten
 import ReadingList from "@/components/layout-reading-list/ReadingList";
 import FullwidthMedia from "@/components/layout-fullwidth-media/FullwidthMedia";
 
-import visionImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
-import missionImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
-import fullwidthImage from "../../src/img/headshots/headshots-1400x1400-1.webp";
+import visionImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
+import missionImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
+import fullwidthImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
 
-import readingListData from "../../src/data/reading-list";
+import readingListData from "@/src/data/reading-list";
 
 const AboutPage = () => {
     return (
