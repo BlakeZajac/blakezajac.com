@@ -10,7 +10,7 @@ export function useWork() {
         async function fetchWork() {
             const workData = await getWork();
 
-            console.log("Fetched work data:", workData);
+            console.log("Fetched work data:", JSON.stringify(workData, null, 2));
             setWork(workData);
         }
 

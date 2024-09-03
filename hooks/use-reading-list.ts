@@ -10,7 +10,7 @@ export function useReadingList() {
         async function fetchReadingList() {
             const readingListData = await getReadingList();
 
-            console.log("Fetched reading list:", readingListData);
+            console.log("Fetched reading list:", JSON.stringify(readingListData, null, 2));
             setReadingList(readingListData);
         }
 
