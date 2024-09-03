@@ -14,7 +14,6 @@
 /**
  * @type {Year[]}
  * @description An array of reading lists organised by year.
- * @todo        To be managed via Sanity API at some point.
  */
 
 const readingListData = [
