@@ -21,14 +21,14 @@
         width: 100%;
         background-color: $color-system-white;
         border: rem(1px) solid $color-system-border;
-        outline: none;
+        outline: rem(2px) solid transparent;
         border-radius: $border-radius-md;
-        transition-property: border-color box-shadow;
-        transition: $transition-cubic;
+        transition-property: outline-color box-shadow;
+        transition: $transition-default;
 
         &:focus {
-            border-color: $color-brand-black;
-            box-shadow: 0 0 0 rem(1px) $color-brand-black;
+            outline-color: $color-brand-orange;
+            outline-offset: rem(4px);
         }
 
         &::placeholder {
