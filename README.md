@@ -41,3 +41,4 @@ npx webpack --watch
 -   Add an email capture block
 -   Reminder to self that the @ syntax is available for importing. Review ya code.
 -   Move Sanity schemas into their respective blocks as a type.ts
+-   SVG Sprites https://svgsprit.es/
