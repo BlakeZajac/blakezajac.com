@@ -11,8 +11,6 @@ import visionImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
 import missionImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
 import fullwidthImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
 
-import readingListData from "@/src/data/reading-list";
-
 const AboutPage = () => {
     return (
         <>
@@ -47,7 +45,7 @@ const AboutPage = () => {
                 />
             </Waypoint>
 
-            <ReadingList title="What I'm reading" data={readingListData} />
+            <ReadingList title="What I'm reading" />
 
             <FullwidthMedia image={fullwidthImage} imageAlt="Blake Zajac" />
         </>

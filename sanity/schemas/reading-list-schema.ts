@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 export const readingListType = defineType({
     name: "readingList",
-    title: "Reading List (Year)",
+    title: "Reading List",
     type: "document",
 
     fields: [
