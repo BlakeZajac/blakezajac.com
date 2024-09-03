@@ -4,25 +4,23 @@ import logo from "../../src/img/logo/logo.svg";
 import logoWhite from "../../src/img/logo/logo-white.svg";
 
 interface SiteBrandProps {
-  link?: string;
+    link?: string;
 }
 
-const Logo: React.FC = () => (
-  <Image alt="Blake Zajac logo" src={logo} className="site-brand__logo" />
-);
+const Logo: React.FC = () => <Image alt="Blake Zajac logo" src={logo} className="site-brand__logo" />;
 
 const SiteBrand: React.FC<SiteBrandProps> = ({ link }) => {
-  return (
-    <div className="site-brand">
-      {link ? (
-        <a href={link} className="site-brand__link">
-          <Logo />
-        </a>
-      ) : (
-        <Logo />
-      )}
-    </div>
-  );
+    return (
+        <div className="site-brand">
+            {link ? (
+                <a href={link} className="site-brand__link">
+                    <Logo />
+                </a>
+            ) : (
+                <Logo />
+            )}
+        </div>
+    );
 };
 
 export default SiteBrand;
