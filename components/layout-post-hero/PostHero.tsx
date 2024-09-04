@@ -10,9 +10,9 @@ interface PostHeroProps extends Pick<Work, "title" | "shortDescription" | "short
 }
 
 const PostHero: React.FC<PostHeroProps> = ({ className, title, shortDescription, shortDescriptionAlt, liveLink, featuredImage }) => {
-    const linkUrl = liveLink.link ? liveLink.link : false;
-    const linkTitle = liveLink.title ? liveLink.title : false;
-    const linkTarget = liveLink.openInNewTab ? "_blank" : "_self";
+    const liveLinkUrl = liveLink.link ? liveLink.link : false;
+    const liveLinkTitle = liveLink.title ? liveLink.title : false;
+    const liveLinkTarget = liveLink.openInNewTab ? "_blank" : "_self";
 
     return (
         <Section>
@@ -22,9 +22,9 @@ const PostHero: React.FC<PostHeroProps> = ({ className, title, shortDescription,
                         <div className="post-hero__accessory">Accessory</div>
                         <h1 className="post-hero__title">{title}</h1>
                         {shortDescription && <div className="post-hero__description">{shortDescription}</div>}
-                        {linkUrl && (
-                            <a href={linkUrl} target={linkTarget} className="post-hero-link">
-                                <span className="post-hero-link__title">View live: {linkTitle}</span>
+                        {liveLinkUrl && (
+                            <a href={liveLinkUrl} target={liveLinkTarget} className="post-hero-link">
+                                <span className="post-hero-link__title">View live: {liveLinkTitle}</span>
                             </a>
                         )}
                     </div>
