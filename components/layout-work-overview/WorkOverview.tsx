@@ -1,7 +1,7 @@
 "use client";
 
 import { twMerge } from "tailwind-merge";
-import { PortableText, PortableTextBlock } from "next-sanity";
+import { PortableText } from "next-sanity";
 
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
