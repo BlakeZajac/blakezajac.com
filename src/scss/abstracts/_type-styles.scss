@@ -129,6 +129,23 @@
 
 // h4
 @mixin type-style-04 {
+    font-size: rem(20px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.03em;
+
+    @media (min-width: $break-grid-md) {
+        font-size: rem(24px);
+    }
+
+    @media (min-width: $break-grid-xl) {
+        font-size: rem(28px);
+    }
+
+    @media (min-width: $break-grid-3xl) {
+        font-size: rem(32px);
+    }
 }
 
 @mixin type-style-04--project {
@@ -149,6 +166,7 @@
 // h5
 // icon-text__title
 // background-card__title
+// post-hero-content__title
 @mixin type-style-05 {
     font-size: rem(18px);
     font-weight: 500;
@@ -271,4 +289,14 @@
     @media (min-width: $break-grid-lg) {
         font-size: rem(24px);
     }
+}
+
+// post-hero-content__description
+// post-hero-link__title
+@mixin type-style-15 {
+    font-size: rem(10px);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
