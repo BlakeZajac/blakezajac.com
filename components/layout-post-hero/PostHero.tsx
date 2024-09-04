@@ -19,7 +19,7 @@ const PostHero: React.FC<PostHeroProps> = ({ className, title, shortDescription,
     const liveLinkTitle = liveLink.title ? liveLink.title : false;
     const liveLinkTarget = liveLink.openInNewTab ? "_blank" : "_self";
 
-    const hasAltDescriptionOrFeaturedImage = shortDescriptionAlt?.length > 0 || featuredImage?.length > 0;
+    const hasAltDescriptionOrFeaturedImage = shortDescriptionAlt?.length || featuredImage?.length;
 
     return (
         <Section>
