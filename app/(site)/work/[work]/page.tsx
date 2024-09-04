@@ -13,11 +13,17 @@ export default async function WorkItemPage({ params }: Props) {
     const slug = params.work;
     const workItem = await getWorkItem(slug);
 
-    const { title, shortDescription, shortDescriptionAlt, liveLink, overviewTitle, overviewDescription } = workItem;
+    const { title, shortDescription, shortDescriptionAlt, liveLink, featuredImage, overviewTitle, overviewDescription } = workItem;
 
     return (
         <>
-            <PostHero title={title} shortDescription={shortDescription} shortDescriptionAlt={shortDescriptionAlt} liveLink={liveLink} />
+            <PostHero
+                title={title}
+                shortDescription={shortDescription}
+                shortDescriptionAlt={shortDescriptionAlt}
+                liveLink={liveLink}
+                featuredImage={featuredImage}
+            />
 
             <WorkOverview title={overviewTitle} description={overviewDescription} />
         </>
