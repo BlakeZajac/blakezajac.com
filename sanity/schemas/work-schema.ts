@@ -32,8 +32,19 @@ export const workType = defineType({
         }),
 
         defineField({
+            name: "cardImage",
+            type: "image",
+            description: "Optional. Replaces the featured image on cards if one is set.",
+            fields: [
+                {
+                    name: "alt",
+                    type: "string",
+                },
+            ],
+        }),
+
+        defineField({
             name: "featuredImage",
-            title: "Featured Image",
             type: "image",
             options: { hotspot: true },
             fields: [
