@@ -41,8 +41,8 @@ export async function getWorkItem(slug: string): Promise<Work> {
             shortDescriptionAlt,
             liveLink,
             "featuredImage": featuredImage.asset->url,
-            role,
-            technology,
+            role[],
+            technology[],
             overviewTitle,
             overviewDescription
         }`,
