@@ -1,6 +1,7 @@
 "use client";
 
 import { twMerge } from "tailwind-merge";
+import { PortableText, PortableTextBlock } from "next-sanity";
 
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
@@ -8,7 +9,7 @@ import Container from "@/components/layout-container/Container";
 interface WorkOverviewProps {
     className?: string;
     title?: string;
-    description?: string[];
+    description?: PortableTextBlock[];
 }
 
 const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, description }) => {
@@ -26,14 +27,20 @@ const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, descripti
 
                     {descriptionIsArray ? (
                         <div className="l-grid l-grid--spacing l-grid--vertical-gap_sm">
-                            {description.map((item, index) => (
+                            {description.map((block, index) => (
                                 <div key={index} className="l-grid__cell l-grid__cell--spacing l-grid__cell--50-at-lg">
-                                    <div className="overview__description">{item}</div>
+                                    <div className="overview__description">
+                                        <PortableText value={[block]} />
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        description && <div className="overview__description">{description}</div>
+                        description && (
+                            <div className="overview__description">
+                                <PortableText value={description} />
+                            </div>
+                        )
                     )}
                 </div>
             </Container>

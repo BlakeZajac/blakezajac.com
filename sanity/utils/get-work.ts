@@ -29,9 +29,9 @@ export async function getWork(): Promise<Work[]> {
     );
 }
 
-export async function getWorkItem(slug: string): Promise<Work[]> {
-    return client.fetch(
-        groq`*[_type == "work" && slug.current == $slug[0]] {
+export async function getWorkItem(slug: string): Promise<Work> {
+    const result = await client.fetch(
+        groq`*[_type == "work" && slug.current == $slug] {
             _id,
             _createdAt,
             _updatedAt,
@@ -41,11 +41,13 @@ export async function getWorkItem(slug: string): Promise<Work[]> {
             shortDescriptionAlt,
             liveLink,
             "featuredImage": featuredImage.asset->url,
-            role[],
-            technology[],
+            role,
+            technology,
             overviewTitle,
             overviewDescription
         }`,
         { slug }
     );
+
+    return result[0];
 }
