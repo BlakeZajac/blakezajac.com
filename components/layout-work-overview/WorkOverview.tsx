@@ -7,11 +7,15 @@ import Container from "@/components/layout-container/Container";
 
 interface WorkOverviewProps {
     className?: string;
-    title: string;
+    title?: string;
     description?: string[];
 }
 
 const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, description }) => {
+    if (!title || !description) {
+        return;
+    }
+
     const descriptionIsArray = description && description.length > 1;
 
     return (
