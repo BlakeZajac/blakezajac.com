@@ -17,15 +17,15 @@ const PostHero: React.FC<PostHeroProps> = ({ title, shortDescription, shortDescr
     const hasAltDescriptionOrFeaturedImage = shortDescriptionAlt?.length || featuredImage?.length;
 
     return (
-        <Section>
+        <Section className="post-hero">
             <Container>
-                <div className="post-hero">
-                    <div className="post-hero__unit post-hero__unit--01">
-                        <Image src={iconStar} alt="" className="post-hero__accessory" />
+                <div className="post-hero-content">
+                    <div className="post-hero-content__unit post-hero-content__unit--01">
+                        <Image src={iconStar} alt="" className="post-hero-content__accessory" />
 
-                        <h1 className="post-hero__title">{title}</h1>
+                        <h1 className="post-hero-content__title">{title}</h1>
 
-                        {shortDescription && <div className="post-hero__description">{shortDescription}</div>}
+                        {shortDescription && <div className="post-hero-content__description">{shortDescription}</div>}
 
                         {liveLink?.link && (
                             <a href={liveLink?.link} target={liveLink?.openInNewTab ? "_blank" : "_self"} className="post-hero-link">
@@ -35,10 +35,10 @@ const PostHero: React.FC<PostHeroProps> = ({ title, shortDescription, shortDescr
                     </div>
 
                     {hasAltDescriptionOrFeaturedImage && (
-                        <div className="post-hero__unit post-hero__unit--02">
-                            <div className="post-hero__alt-description">{shortDescriptionAlt}</div>
+                        <div className="post-hero-content__unit post-hero-content__unit--02">
+                            <div className="post-hero-content__alt-description">{shortDescriptionAlt}</div>
 
-                            {featuredImage && <Image src={featuredImage} alt={title} className="post-hero__featured-image" />}
+                            {featuredImage && <Image src={featuredImage} alt={title} className="post-hero-content__featured-image" />}
                         </div>
                     )}
                 </div>
