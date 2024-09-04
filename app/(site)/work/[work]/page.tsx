@@ -25,7 +25,7 @@ export default async function WorkItemPage({ params }: Props) {
                 featuredImage={featuredImage}
             />
 
-            <WorkOverview title={overviewTitle} description={overviewDescription} />
+            <WorkOverview overviewTitle={overviewTitle} overviewDescription={overviewDescription} />
         </>
     );
 }
