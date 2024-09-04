@@ -28,7 +28,7 @@ const PostHero: React.FC<PostHeroProps> = ({ title, shortDescription, shortDescr
                         {shortDescription && <div className="post-hero-content__description">{shortDescription}</div>}
 
                         {liveLink?.link && (
-                            <a href={liveLink?.link} target={liveLink?.openInNewTab ? "_blank" : "_self"} className="post-hero-link">
+                            <a href={liveLink?.link} target={liveLink?.openInNewTab ? "_blank" : "_self"} className="post-hero-link underlink">
                                 <span className="post-hero-link__title">{liveLink?.title ? `View live: ${liveLink.title}` : "View live"}</span>
                             </a>
                         )}
