@@ -6,6 +6,7 @@ export type Work = {
     title: string;
     slug: string;
     shortDescription: string;
+    shortDescriptionAlt: string;
     liveLink: string;
     featuredImage: string;
     role: string[];

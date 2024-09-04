@@ -22,6 +22,11 @@ export const workType = defineType({
         }),
 
         defineField({
+            name: "shortDescriptionAlt",
+            type: "string",
+        }),
+
+        defineField({
             name: "liveLink",
             type: "url",
         }),
