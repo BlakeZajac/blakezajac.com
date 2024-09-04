@@ -5,16 +5,14 @@ import { Work } from "@/types/work";
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
 
+import iconStar from "@/src/img/icon/icon-star.svg";
+
 interface PostHeroProps extends Pick<Work, "title" | "shortDescription" | "shortDescriptionAlt" | "liveLink" | "featuredImage"> {}
 
 const PostHero: React.FC<PostHeroProps> = ({ title, shortDescription, shortDescriptionAlt, liveLink, featuredImage }) => {
     if (!title) {
         return;
     }
-
-    const liveLinkUrl = liveLink.link ? liveLink.link : false;
-    const liveLinkTitle = liveLink.title ? liveLink.title : false;
-    const liveLinkTarget = liveLink.openInNewTab ? "_blank" : "_self";
 
     const hasAltDescriptionOrFeaturedImage = shortDescriptionAlt?.length || featuredImage?.length;
 
@@ -23,13 +21,15 @@ const PostHero: React.FC<PostHeroProps> = ({ title, shortDescription, shortDescr
             <Container>
                 <div className="post-hero">
                     <div className="post-hero__unit post-hero__unit--01">
-                        <div className="post-hero__accessory">Accessory</div>
+                        <Image src={iconStar} alt="" className="post-hero__accessory" />
+
                         <h1 className="post-hero__title">{title}</h1>
+
                         {shortDescription && <div className="post-hero__description">{shortDescription}</div>}
 
-                        {liveLinkUrl && (
-                            <a href={liveLinkUrl} target={liveLinkTarget} className="post-hero-link">
-                                <span className="post-hero-link__title">View live: {liveLinkTitle}</span>
+                        {liveLink?.link && (
+                            <a href={liveLink?.link} target={liveLink?.openInNewTab ? "_blank" : "_self"} className="post-hero-link">
+                                <span className="post-hero-link__title">{liveLink?.title ? `View live: ${liveLink.title}` : "View live"}</span>
                             </a>
                         )}
                     </div>
