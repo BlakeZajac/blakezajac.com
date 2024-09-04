@@ -7,7 +7,11 @@ export type Work = {
     slug: string;
     shortDescription: string;
     shortDescriptionAlt: string;
-    liveLink: string;
+    liveLink: {
+        title: string;
+        link: string;
+        openInNewTab: boolean;
+    };
     featuredImage: string;
     role: string[];
     technology: string[];

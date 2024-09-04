@@ -17,14 +17,7 @@ export async function getWork(): Promise<Work[]> {
             _updatedAt,
             title,
             "slug": slug.current,
-            shortDescription,
-            shortDescriptionAlt,
-            liveLink,
             "featuredImage": featuredImage.asset->url,
-            role[],
-            technology[],
-            overviewTitle,
-            overviewDescription
         }`
     );
 }
@@ -39,7 +32,11 @@ export async function getWorkItem(slug: string): Promise<Work> {
             "slug": slug.current,
             shortDescription,
             shortDescriptionAlt,
-            liveLink,
+            liveLink{
+                link,
+                openInNewTab,
+                title,
+            },
             "featuredImage": featuredImage.asset->url,
             role[],
             technology[],

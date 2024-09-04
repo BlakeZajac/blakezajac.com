@@ -28,7 +28,26 @@ export const workType = defineType({
 
         defineField({
             name: "liveLink",
-            type: "url",
+            type: "object",
+            fields: [
+                {
+                    name: "title",
+                    type: "string",
+                    description: "The title to display for the link.",
+                },
+
+                {
+                    name: "link",
+                    type: "url",
+                    description: "The URL of the link.",
+                },
+
+                {
+                    name: "openInNewTab",
+                    type: "boolean",
+                    title: "Open in new tab?",
+                },
+            ],
         }),
 
         defineField({
