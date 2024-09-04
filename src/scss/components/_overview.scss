@@ -1,11 +1,22 @@
 .overview {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px);
+
+    @media (min-width: $break-grid-md) {
+        gap: rem(64px);
+    }
+
+    @media (min-width: $break-grid-lg) {
+        gap: rem(80px);
+    }
 }
 
 .overview__title {
+    @include type-style-01--hero;
+    color: $color-brand-black;
 }
 
 .overview__description {
-}
-
-.overview__description--two-columns {
+    @include type-style-09;
 }

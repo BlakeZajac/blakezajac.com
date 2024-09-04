@@ -1,6 +1,5 @@
 "use client";
 
-import { PortableTextBlock } from "next-sanity";
 import { twMerge } from "tailwind-merge";
 
 import Section from "@/components/layout-section/Section";
@@ -22,10 +21,10 @@ const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, descripti
                     <div className="overview__title">{title}</div>
 
                     {descriptionIsArray ? (
-                        <div className="l-grid">
+                        <div className="l-grid l-grid--vertical-gap_sm">
                             {description.map((item, index) => (
                                 <div key={index} className="l-grid__cell l-grid__cell--50-at-lg">
-                                    <div className="overview__description">{description}</div>
+                                    <div className="overview__description">{item}</div>
                                 </div>
                             ))}
                         </div>
