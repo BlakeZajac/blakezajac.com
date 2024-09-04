@@ -25,9 +25,9 @@ const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, descripti
                     <div className="overview__title">{title}</div>
 
                     {descriptionIsArray ? (
-                        <div className="l-grid l-grid--vertical-gap_sm">
+                        <div className="l-grid l-grid--spacing l-grid--vertical-gap_sm">
                             {description.map((item, index) => (
-                                <div key={index} className="l-grid__cell l-grid__cell--50-at-lg">
+                                <div key={index} className="l-grid__cell l-grid__cell--spacing l-grid__cell--50-at-lg">
                                     <div className="overview__description">{item}</div>
                                 </div>
                             ))}

@@ -54,6 +54,12 @@
     }
 }
 
+.l-grid--spacing {
+    @media (min-width: $break-grid-lg) {
+        margin: 0 (-$l-grid-padding-xl) * 2;
+    }
+}
+
 .l-grid--vertical-gap {
     gap: rem(48px) 0;
 }
@@ -86,6 +92,9 @@
 }
 
 .l-grid__cell--spacing {
+    @media (min-width: $break-grid-lg) {
+        padding: 0 ($l-grid-padding-xl * 2);
+    }
 }
 
 // XS
