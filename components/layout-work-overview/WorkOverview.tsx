@@ -5,29 +5,28 @@ import { PortableText, PortableTextBlock } from "next-sanity";
 
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
+import { Work } from "@/types/work";
 
-interface WorkOverviewProps {
+interface WorkOverviewProps extends Pick<Work, "overviewTitle" | "overviewDescription"> {
     className?: string;
-    title?: string;
-    description?: PortableTextBlock[];
 }
 
-const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, description }) => {
-    if (!title || !description) {
+const WorkOverview: React.FC<WorkOverviewProps> = ({ className, overviewTitle, overviewDescription }) => {
+    if (!overviewTitle || !overviewDescription) {
         return;
     }
 
-    const descriptionIsArray = description && description.length > 1;
+    const descriptionIsArray = overviewDescription?.length > 1;
 
     return (
         <Section>
             <Container>
                 <div className={`overview ${twMerge(className)}`}>
-                    <div className="overview__title">{title}</div>
+                    <div className="overview__title">{overviewTitle}</div>
 
                     {descriptionIsArray ? (
                         <div className="l-grid l-grid--spacing l-grid--vertical-gap_sm">
-                            {description.map((block, index) => (
+                            {overviewDescription.map((block, index) => (
                                 <div key={index} className="l-grid__cell l-grid__cell--spacing l-grid__cell--50-at-lg">
                                     <div className="overview__description">
                                         <PortableText value={[block]} />
@@ -36,9 +35,9 @@ const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, descripti
                             ))}
                         </div>
                     ) : (
-                        description && (
+                        overviewDescription && (
                             <div className="overview__description">
-                                <PortableText value={description} />
+                                <PortableText value={overviewDescription} />
                             </div>
                         )
                     )}
