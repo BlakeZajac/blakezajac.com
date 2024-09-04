@@ -13,20 +13,24 @@ interface WorkOverviewProps {
 }
 
 const WorkOverview: React.FC<WorkOverviewProps> = ({ className, title, description }) => {
-    const descriptionClass =
-        description && description.length > 1 ? "overview__descrtiption overview__description--two-columns" : "overview__description";
+    const descriptionIsArray = description && description.length > 1;
 
     return (
         <Section>
             <Container>
                 <div className={`overview ${twMerge(className)}`}>
                     <div className="overview__title">{title}</div>
-                    {description && (
-                        <div className={descriptionClass}>
+
+                    {descriptionIsArray ? (
+                        <div className="l-grid">
                             {description.map((item, index) => (
-                                <p key={index}>{item}</p>
+                                <div key={index} className="l-grid__cell l-grid__cell--50-at-lg">
+                                    <div className="overview__description">{description}</div>
+                                </div>
                             ))}
                         </div>
+                    ) : (
+                        description && <div className="overview__description">{description}</div>
                     )}
                 </div>
             </Container>
