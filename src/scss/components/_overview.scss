@@ -18,5 +18,6 @@
 }
 
 .overview__description {
-    @include type-style-09;
+    @include type-style-14;
+    color: $color-brand-black;
 }
