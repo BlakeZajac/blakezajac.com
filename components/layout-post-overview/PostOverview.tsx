@@ -7,11 +7,11 @@ import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
 import { Work } from "@/types/work";
 
-interface WorkOverviewProps extends Pick<Work, "overviewTitle" | "overviewDescription"> {
+interface PostOverviewProps extends Pick<Work, "overviewTitle" | "overviewDescription"> {
     className?: string;
 }
 
-const WorkOverview: React.FC<WorkOverviewProps> = ({ className, overviewTitle, overviewDescription }) => {
+const PostOverview: React.FC<PostOverviewProps> = ({ className, overviewTitle, overviewDescription }) => {
     if (!overviewTitle || !overviewDescription) {
         return;
     }
@@ -47,4 +47,4 @@ const WorkOverview: React.FC<WorkOverviewProps> = ({ className, overviewTitle, o
     );
 };
 
-export default WorkOverview;
+export default PostOverview;

@@ -6,6 +6,10 @@
     p {
         &:not(:last-child) {
             margin-bottom: rem(32px);
+
+            @at-root .copy--spacing_sm#{&} {
+                margin-bottom: rem(16px);
+            }
         }
     }
 }

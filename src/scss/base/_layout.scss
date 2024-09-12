@@ -72,8 +72,18 @@
     }
 }
 
-.l-grid--align-items-center {
+.l-grid--inset-below-lg {
+    @media (max-width: max-width($break-grid-lg)) {
+        margin: 0 rem(-20px);
+    }
+}
+
+.l-grid--align-items_center {
     align-items: center;
+}
+
+.l-grid--align-items_flex-end {
+    align-items: flex-end;
 }
 
 .l-grid--row-reverse-at-lg {
@@ -94,6 +104,12 @@
 .l-grid__cell--spacing {
     @media (min-width: $break-grid-lg) {
         padding: 0 ($l-grid-padding-xl * 2);
+    }
+}
+
+.l-grid__cell--inset-below-lg {
+    @media (max-width: max-width($break-grid-lg)) {
+        padding: 0;
     }
 }
 

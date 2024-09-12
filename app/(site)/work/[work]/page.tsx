@@ -1,7 +1,8 @@
 import { getWorkItem } from "@/sanity/utils/get-work";
 
-import WorkOverview from "@/components/layout-work-overview/WorkOverview";
 import PostHero from "@/components/layout-post-hero/PostHero";
+import PostOverview from "@/components/layout-post-overview/PostOverview";
+import PostMediaContent from "@/components/layout-post-media-content/PostMediaContent";
 
 type Props = {
     params: {
@@ -25,7 +26,9 @@ export default async function WorkItemPage({ params }: Props) {
                 featuredImage={featuredImage}
             />
 
-            <WorkOverview overviewTitle={overviewTitle} overviewDescription={overviewDescription} />
+            <PostOverview overviewTitle={overviewTitle} overviewDescription={overviewDescription} />
+
+            <PostMediaContent />
         </>
     );
 }

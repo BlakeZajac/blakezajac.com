@@ -12,13 +12,7 @@ interface ButtonProps {
     buttonLabel?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
-    type,
-    buttonClassname,
-    buttonHref = "#",
-    buttonTarget = "_self",
-    buttonLabel,
-}) => {
+const Button: React.FC<ButtonProps> = ({ type, buttonClassname, buttonHref = "#", buttonTarget = "_self", buttonLabel }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -26,13 +20,7 @@ const Button: React.FC<ButtonProps> = ({
     };
 
     return (
-        <a
-            type={type}
-            href={buttonHref}
-            className={twMerge(buttonClassname, `btn`)}
-            target={buttonTarget}
-            onMouseMove={handleMouseMove}
-        >
+        <a type={type} href={buttonHref} className={twMerge(buttonClassname, `btn`)} target={buttonTarget} onMouseMove={handleMouseMove}>
             <span className="btn__label">{buttonLabel}</span>
             <div className="btn__accessory">
                 <MdArrowForward className="btn__icon btn__icon--arrow" />
