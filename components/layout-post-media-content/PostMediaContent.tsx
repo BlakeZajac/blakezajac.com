@@ -13,12 +13,14 @@ interface PostMediaContentProps {
     content?: string;
 }
 
-const PostMediaContent: React.FC<PostMediaContentProps> = ({ mediaPosition, media, mediaAlt, title, content }) => {
+const PostMediaContent: React.FC<PostMediaContentProps> = ({ mediaPosition = "right", media, mediaAlt, title, content }) => {
+    const gridClasses = "right" === mediaPosition ? "l-grid--row-reverse-at-lg" : "";
+
     return (
         <Section>
             <Container>
                 <div className="post-media-content">
-                    <div className="post-media-content__grid l-grid l-grid--align-items_flex-end l-grid--inset-below-lg">
+                    <div className={`post-media-content__grid l-grid--align-items_flex-end l-grid--inset-below-lg ${gridClasses} `}>
                         <div className="post-media-content__cell post-media-content__cell--media l-grid__cell l-grid__cell--50-at-lg l-grid__cell--60-at-xl l-grid__cell--70-at-2xl l-grid__cell--inset-below-lg">
                             <div className="post-media-content__media"></div>
                         </div>
