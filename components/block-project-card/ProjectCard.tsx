@@ -15,7 +15,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ className, link, media, title
         <div className={twMerge(`project-card`, className)}>
             <div className="project-card__media">
                 <a href={link} className="project-card__link">
-                    {media ? <Image src={media} alt="" className="project-card__image" /> : <div className="project-card__image"></div>}
+                    {media ? (
+                        <Image src={media} alt="" className="project-card__image" width={100} height={100} />
+                    ) : (
+                        <div className="project-card__image"></div>
+                    )}
                 </a>
             </div>
             <div className="project-card__content">

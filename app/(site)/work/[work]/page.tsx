@@ -28,7 +28,7 @@ export default async function WorkItemPage({ params }: Props) {
 
             <PostOverview overviewTitle={overviewTitle} overviewDescription={overviewDescription} />
 
-            <PostMediaContent />
+            <PostMediaContent media="" />
         </>
     );
 }
