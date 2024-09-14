@@ -1,5 +1,4 @@
 import Hero from "@/components/layout-hero/Hero";
-import Waypoint from "@/components/block-waypoint/Waypoint";
 import IconGrid from "@/components/layout-icon-grid/IconGrid";
 import MediaContent from "@/components/layout-media-content/MediaContent";
 
@@ -9,9 +8,7 @@ import expertiseItems from "@/src/data/expertise";
 const ExpertisePage = () => {
     return (
         <>
-            <Waypoint activeClass="theme-orange">
-                <Hero className="hero--bg-orange-light" badge="UX Design" title="Strategic foundations lead to better outcomes" image={heroImage} />
-            </Waypoint>
+            <Hero className="hero--bg-orange-light" badge="UX Design" title="Strategic foundations lead to better outcomes" image={heroImage} />
 
             <IconGrid
                 title="The key to digital success"
