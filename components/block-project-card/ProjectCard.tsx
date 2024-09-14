@@ -15,6 +15,8 @@ export interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ className, link, media, title, width, height }) => {
     return (
         <div className={twMerge(`project-card`, className)}>
+            <div className="project-card__overlay"></div>
+
             <div className="project-card__media">
                 <a href={link} className="project-card__link">
                     {media ? (
@@ -24,6 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ className, link, media, title
                     )}
                 </a>
             </div>
+
             <div className="project-card__content">
                 <div className="project-card__title">{title}</div>
             </div>

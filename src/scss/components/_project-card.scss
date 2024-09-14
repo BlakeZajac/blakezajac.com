@@ -1,9 +1,13 @@
 .project-card {
     position: relative;
     border-radius: $border-radius-2xl;
-    overflow: hidden;
     color: $color-system-white;
+}
 
+.project-card--vertical {
+}
+
+.project-card__overlay {
     &::before {
         content: "";
         display: block;
@@ -18,9 +22,6 @@
         pointer-events: none;
         z-index: 1;
     }
-}
-
-.project-card--vertical {
 }
 
 .project-card__link {
