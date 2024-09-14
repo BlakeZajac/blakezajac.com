@@ -74,9 +74,13 @@
 }
 
 .project-card__title {
-    padding: rem(48px) rem(64px);
+    padding: rem(32px);
     position: sticky;
     bottom: 0;
     z-index: 1;
     @include type-style-04--project;
+
+    @media (min-width: $break-grid-lg) {
+        padding: rem(48px);
+    }
 }
