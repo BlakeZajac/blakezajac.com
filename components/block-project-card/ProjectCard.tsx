@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ className, link, media, title
             <div className="project-card__media">
                 <a href={link} className="project-card__link">
                     {media ? (
-                        <Image src={media} alt="" className="project-card__image" width={100} height={100} />
+                        <Image src={media} alt="" className="project-card__image" width={1920} height={1080} />
                     ) : (
                         <div className="project-card__image"></div>
                     )}

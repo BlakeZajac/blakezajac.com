@@ -22,6 +22,8 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
                             link={`/work/${item.slug}`}
                             media={item.featuredImage}
                             title={item.title}
+                            width={300}
+                            height={300}
                         />
                     ))}
                 </div>
