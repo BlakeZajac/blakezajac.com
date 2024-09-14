@@ -20,7 +20,7 @@ const PostMediaContent: React.FC<PostMediaContentProps> = ({ mediaPosition = "ri
         <Section>
             <Container>
                 <div className="post-media-content">
-                    <div className={`post-media-content__grid l-grid--align-items_flex-end l-grid--inset-below-lg ${gridClasses} `}>
+                    <div className={`post-media-content__grid l-grid l-grid--align-items_flex-end l-grid--inset-below-lg ${gridClasses} `}>
                         <div className="post-media-content__cell post-media-content__cell--media l-grid__cell l-grid__cell--50-at-lg l-grid__cell--60-at-xl l-grid__cell--70-at-2xl l-grid__cell--inset-below-lg">
                             <div className="post-media-content__media"></div>
                         </div>

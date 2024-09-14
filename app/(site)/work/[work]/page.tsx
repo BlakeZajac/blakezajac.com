@@ -18,13 +18,13 @@ export default async function WorkItemPage({ params }: Props) {
 
     return (
         <>
-            <PostHero
+            {/* <PostHero
                 title={title}
                 shortDescription={shortDescription}
                 shortDescriptionAlt={shortDescriptionAlt}
                 liveLink={liveLink}
                 featuredImage={featuredImage}
-            />
+            /> */}
 
             <PostOverview overviewTitle={overviewTitle} overviewDescription={overviewDescription} />
 
