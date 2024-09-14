@@ -18,7 +18,7 @@ const PostHero: React.FC<PostHeroProps> = ({ title, shortDescription, shortDescr
 
     return (
         <Section className="post-hero">
-            <Container>
+            {/* <Container>
                 <div className="post-hero-content">
                     <div className="post-hero-content__unit post-hero-content__unit--01">
                         <Image src={iconStar} alt="" className="post-hero-content__accessory" />
@@ -38,12 +38,15 @@ const PostHero: React.FC<PostHeroProps> = ({ title, shortDescription, shortDescr
                         <div className="post-hero-content__unit post-hero-content__unit--02">
                             <div className="post-hero-content__alt-description">{shortDescriptionAlt}</div>
 
-                            {featuredImage && <Image src={featuredImage} alt={title} className="post-hero-content__featured-image" />}
+                            {featuredImage && (
+                                <Image src={featuredImage} alt={title} className="post-hero-content__featured-image" width={1920} height={1080} />
+                            )}
                         </div>
                     )}
                 </div>
-            </Container>
-            {featuredImage && <Image src={featuredImage} alt={title} className="post-hero__background" />}
+            </Container> */}
+
+            {featuredImage && <Image src={featuredImage} alt={title} className="post-hero__background" width={1920} height={1080} />}
         </Section>
     );
 };

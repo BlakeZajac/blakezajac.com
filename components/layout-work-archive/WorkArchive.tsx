@@ -11,7 +11,7 @@ const WorkArchive = () => {
         <>
             <Hero className="hero--title-primary" title="Exceptional digital products for forward-thinking brands." />
 
-            <pre>{JSON.stringify(work, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(work, null, 2)}</pre> */}
 
             <FeaturedProjects items={work} />
         </>
