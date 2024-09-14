@@ -1,6 +1,23 @@
 .project-card {
     position: relative;
+    border-radius: $border-radius-2xl;
+    overflow: hidden;
     color: $color-system-white;
+
+    &::before {
+        content: "";
+        display: block;
+        width: rem(300px);
+        height: rem(300px);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $color-brand-black;
+        border-radius: $border-radius-full;
+        filter: blur($blur-full);
+        pointer-events: none;
+        z-index: 1;
+    }
 }
 
 .project-card--vertical {

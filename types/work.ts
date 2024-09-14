@@ -12,6 +12,7 @@ export type Work = {
         link: string;
         openInNewTab: boolean;
     };
+    cardImage: string;
     featuredImage: string;
     role: string[];
     technology: string[];
