@@ -7,7 +7,11 @@ interface SiteBrandProps {
     link?: string;
 }
 
-const Logo: React.FC = () => <Image alt="Blake Zajac logo" src={logo} className="site-brand__logo" />;
+const Logo = () => (
+    <svg className="site-brand__logo" role="img" aria-label="Blake Zajac logo">
+        <use xlinkHref="#svg-logo" />
+    </svg>
+);
 
 const SiteBrand: React.FC<SiteBrandProps> = ({ link }) => {
     return (

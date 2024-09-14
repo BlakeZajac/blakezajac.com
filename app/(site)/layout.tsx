@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 import "@/build/css/style.min.css";
 import "@/build/js/main.min.js";
 
+import LenisProvider from "@/providers/LenisProvider";
+import SvgSprite from "@/components/block-svg-sprite/SvgSprite";
+
 import SiteHeader from "@/components/layout-site-header/SiteHeader";
 import SiteFooter from "@/components/layout-site-footer/SiteFooter";
 import SkipToMain from "@/components/layout-skip-to-main/SkipToMain";
 import SiteOffcanvas from "@/components/layout-site-offcanvas/SiteOffcanvas";
-import LenisProvider from "@/providers/LenisProvider";
 
 export const metadata: Metadata = {
     title: "Blake Zajac",
@@ -24,7 +26,9 @@ export default function SiteLayout({
             <head>
                 <link rel="stylesheet" href="https://use.typekit.net/lec4mqw.css" />
             </head>
+
             <body>
+                <SvgSprite />
                 <LenisProvider>
                     <SkipToMain />
                     <SiteHeader />
