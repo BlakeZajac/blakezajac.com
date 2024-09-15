@@ -25,8 +25,8 @@ const RevealImage: React.FC<RevealImageProps> = ({
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-    const backgroundClass = className ? `${className}__background` : "";
-    const imageClass = className ? `${className}__image` : "";
+    const backgroundClass = className && `${className}__background`;
+    const imageClass = className && `${className}__image`;
 
     return (
         <div ref={ref} className={twMerge("reveal-image", className, isRounded && "u-rounded")}>
