@@ -8,6 +8,7 @@ import { useReadingList } from "@/hooks/use-reading-list";
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
 import Status from "@/components/block-status/Status";
+import RevealText from "@/components/block-reveal-text/RevealText";
 
 interface ReadingListProps {
     title?: string;
@@ -26,7 +27,7 @@ const ReadingList: React.FC<ReadingListProps> = ({ title }) => {
         <Section>
             <Container>
                 <div className="reading-list">
-                    {title && <h2 className="reading-list__section-title">{title}</h2>}
+                    {title && <RevealText as="h2" className="reading-list__section-title reveal-text--spacing_sm-below-md" content={title} />}
 
                     {filteredReadingList.map((yearData: ReadingListType) => (
                         <div key={yearData._id} className="reading-list__group">
