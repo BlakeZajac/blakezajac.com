@@ -1,40 +1,40 @@
 .primary-menu {
-  padding: rem(6px);
-  background: rgba($color-system-white, 80%);
-  border-radius: $border-radius-full;
-  backdrop-filter: blur(8px);
+    padding: rem(6px);
+    background: rgba($color-system-white, 80%);
+    border-radius: $border-radius-full;
+    backdrop-filter: blur(8px);
 }
 
 .primary-menu__list {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .primary-menu__item {
 }
 
 .primary-menu__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: rem(8px) rem(12px);
-  background: transparent;
-  border-radius: $border-radius-full;
-  transition: all $transition-cubic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(8px) rem(12px);
+    background: transparent;
+    border-radius: $border-radius-full;
+    transition: all $transition-cubic;
 
-  &:hover,
-  &:focus {
-    background: rgba($color-brand-black, 5%);
-  }
+    &:hover,
+    &:focus {
+        background: rgba($color-brand-black, 5%);
+    }
 }
 
 .primary-menu__link--active,
 .primary-menu__link--active:hover,
 .primary-menu__link--active:focus {
-  background: $color-brand-yellow;
+    background: $color-brand-yellow;
 }
 
 .primary-menu__label {
-  @include type-style-10;
-  color: $color-brand-black;
+    @include type-style-10;
+    color: $color-brand-black;
 }

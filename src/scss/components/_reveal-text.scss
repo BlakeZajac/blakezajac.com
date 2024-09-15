@@ -1,0 +1,13 @@
+.reveal-text {
+}
+
+.reveal-text__word-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.reveal-text__word {
+    display: inline-block;
+    margin-right: rem(16px);
+}

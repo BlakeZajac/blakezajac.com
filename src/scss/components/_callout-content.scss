@@ -1,16 +1,39 @@
 .callout-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100svh;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100svh;
+    text-align: center;
+}
+
+.callout-content:has(.callout-content__background--orange) {
+    color: $color-brand-black;
 }
 
 .callout-content__container {
-  padding-top: rem(128px);
-  padding-bottom: rem(128px);
+    padding-top: rem(128px);
+    padding-bottom: rem(128px);
+}
+
+.callout-content__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.callout-content__background--black {
+    background-color: $color-brand-black;
+}
+
+.callout-content__background--orange {
+    background-color: $color-brand-orange;
 }
 
 .callout-content__content {
-  @include type-style-02--featured;
+    position: relative;
+    z-index: 1;
+    @include type-style-02--featured;
 }

@@ -14,10 +14,7 @@ export default function Home() {
         <>
             <Hero title="Extraordinary Digital Experiences" image={heroImage} />
 
-            <CalloutContent
-                className="l-section--background_orange"
-                content="I design, develop and deliver exceptional digital products for forward-thinking brands."
-            />
+            <CalloutContent content="I design, develop and deliver exceptional digital products for forward-thinking brands." />
 
             <FeaturedProjects items={featuredPostsData} />
 
