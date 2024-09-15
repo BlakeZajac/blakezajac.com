@@ -67,6 +67,13 @@
     display: none;
 }
 
-.hero__media {
+.hero-media {
     margin-top: rem(64px);
+}
+
+.hero-media__background {
+    background-color: $color-system-white;
+}
+
+.hero-media__image {
 }

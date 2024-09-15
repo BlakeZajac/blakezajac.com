@@ -20,26 +20,6 @@ const CalloutContent: React.FC<CalloutContentProps> = ({ className, content }) =
     return (
         <Section ref={ref} className={twMerge(`callout-content`, className)}>
             <Container className="callout-content__container">
-                <motion.div
-                    initial={{ scaleY: 0, originY: 0 }}
-                    animate={isInView ? { scaleY: 1 } : {}}
-                    transition={{
-                        duration: 2,
-                        ease: [0.16, 1.08, 0.38, 0.98],
-                    }}
-                    className="callout-content__background callout-content__background--black"
-                ></motion.div>
-                <motion.div
-                    initial={{ scaleY: 0, originY: 0 }}
-                    animate={isInView ? { scaleY: 1 } : {}}
-                    transition={{
-                        duration: 2,
-                        ease: [0.16, 1.08, 0.38, 0.98],
-                        delay: 0.1,
-                    }}
-                    className="callout-content__background callout-content__background--orange"
-                ></motion.div>
-
                 <RevealText content={content} className="callout-content__content" />
             </Container>
         </Section>
