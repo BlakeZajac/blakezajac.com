@@ -21,7 +21,6 @@
         background-color: $color-brand-orange;
         opacity: 0;
         transform: scaleY(0);
-        transform-origin: bottom center;
         pointer-events: none;
         z-index: -1;
         transition: all $transition-cubic;
