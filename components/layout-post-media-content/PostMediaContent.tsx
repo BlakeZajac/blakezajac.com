@@ -1,6 +1,6 @@
 "use client";
 
-import { Image, StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
