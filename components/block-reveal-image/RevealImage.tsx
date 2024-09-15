@@ -20,7 +20,7 @@ const RevealImage: React.FC<RevealImageProps> = ({ className, duration = 2, dela
     const imageClass = className ? `${className}__image` : "";
 
     return (
-        <div className={twMerge("reveal-image", className)}>
+        <div ref={ref} className={twMerge("reveal-image", className)}>
             <motion.div
                 initial={{ scaleY: 1, originY: "100%" }}
                 animate={isInView ? { scaleY: 0 } : {}}

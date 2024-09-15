@@ -41,11 +41,7 @@ const OffcanvasMenuItem: React.FC<OffcanvasMenuItemProps> = ({ label, href }) =>
 
     return (
         <li className="offcanvas-menu__item">
-            <a
-                href={href}
-                className={`offcanvas-menu__link ${isActive ? "offcanvas-menu__link--active" : ""}`}
-                itemProp="url"
-            >
+            <a href={href} className={`offcanvas-menu__link ${isActive ? "offcanvas-menu__link--active" : ""}`} itemProp="url">
                 <span className="offcanvas-menu__label">{label}</span>
                 <meta content={label} itemProp="name" />
             </a>
@@ -56,11 +52,7 @@ const OffcanvasMenuItem: React.FC<OffcanvasMenuItemProps> = ({ label, href }) =>
 const OffcanvasMenu = () => {
     return (
         <nav className="offcanvas-menu">
-            <ul
-                itemType="http://schema.org/SiteNavigationElement"
-                itemScope={true}
-                className="offcanvas-menu__list"
-            >
+            <ul itemType="http://schema.org/SiteNavigationElement" itemScope={true} className="offcanvas-menu__list">
                 {offcanvasMenuItems.map((menuItem, index) => (
                     <OffcanvasMenuItem key={index} label={menuItem.label} href={menuItem.href} />
                 ))}

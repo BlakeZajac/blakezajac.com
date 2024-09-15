@@ -1,13 +1,11 @@
 "use client";
 
-import { useRef } from "react";
-import Image, { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
-import { motion, useInView } from "framer-motion";
 
 import Container from "@/components/layout-container/Container";
 import Badge from "@/components/block-badge/Badge";
 import RevealText from "@/components/block-reveal-text/RevealText";
+import RevealImage from "@/components/block-reveal-image/RevealImage";
 
 // @todo - Load from Sanity CMS
 interface HeroProps {
@@ -16,17 +14,15 @@ interface HeroProps {
     title?: string;
     description01?: string;
     description02?: string;
-    image?: StaticImageData | string;
+    image?: string;
     imageAlt?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({ className, badge, title, description01, description02, image, imageAlt = "" }) => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.1 });
     const componentClasses = `hero ${badge ? "hero--has-badge" : ""} ${image ? "hero--has-image" : ""}`;
 
     return (
-        <div ref={ref} className={twMerge(componentClasses, className)}>
+        <div className={twMerge(componentClasses, className)}>
             <Container className="hero__container">
                 {badge && <Badge label={badge} />}
 
@@ -39,27 +35,7 @@ const Hero: React.FC<HeroProps> = ({ className, badge, title, description01, des
                     </div>
                 )}
 
-                {image && (
-                    <div className="hero-media u-rounded">
-                        <motion.div
-                            initial={{ scaleY: 1, originY: "100%" }}
-                            animate={isInView ? { scaleY: 0 } : {}}
-                            transition={{
-                                duration: 2,
-                                ease: [0.16, 1.08, 0.38, 0.98],
-                            }}
-                            className="hero-media__background"
-                        ></motion.div>
-
-                        <motion.div
-                            initial={{ scale: 1.25 }}
-                            animate={isInView ? { scale: 1 } : {}}
-                            transition={{ duration: 2.5, ease: [0.16, 1.08, 0.38, 0.98] }}
-                        >
-                            <Image className="hero-media__image" src={image} alt={imageAlt} />
-                        </motion.div>
-                    </div>
-                )}
+                {image && <RevealImage className="hero-media" image={image} imageAlt={imageAlt} />}
             </Container>
         </div>
     );
