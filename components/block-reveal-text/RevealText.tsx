@@ -6,28 +6,41 @@ interface RevealTextProps {
     className?: string;
     content: string;
     as?: React.ElementType;
+    animateBy?: "word" | "line";
+    duration?: number;
+    delay?: number | ((index: number) => number);
 }
 
-const RevealText: React.FC<RevealTextProps> = ({ className, content, as: Component = "div" }) => {
+const RevealText: React.FC<RevealTextProps> = ({ className, content, as: Component = "div", animateBy = "word", duration = 1.2, delay }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.1 });
-    const words = content.split(" ");
+    const items = animateBy === "word" ? content.split(" ") : content.split("\n");
+
+    const getDelay = (index: number) => {
+        if (typeof delay === "number") {
+            return delay;
+        } else if (typeof delay === "function") {
+            return delay(index);
+        }
+
+        return index * 0.05;
+    };
 
     return (
         <Component ref={ref} className={twMerge(`reveal-text`, className)}>
-            {words.map((word, index) => (
-                <span key={index} className="reveal-text__word-wrapper">
+            {items.map((item, index) => (
+                <span key={index} className="reveal-text__item-wrapper">
                     <motion.span
                         initial={{ opacity: 0, y: "100%" }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{
-                            duration: 1.2,
+                            duration: duration,
                             ease: [0.16, 1.08, 0.38, 0.98],
-                            delay: index * 0.05,
+                            delay: getDelay(index),
                         }}
-                        className="reveal-text__word"
+                        className="reveal-text__item"
                     >
-                        {word}
+                        {item}
                     </motion.span>
                 </span>
             ))}

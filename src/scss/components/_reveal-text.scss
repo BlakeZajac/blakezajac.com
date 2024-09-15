@@ -1,13 +1,17 @@
 .reveal-text {
 }
 
-.reveal-text__word-wrapper {
+.reveal-text__item-wrapper {
     display: inline-block;
     overflow: hidden;
     vertical-align: top;
 }
 
-.reveal-text__word {
+.reveal-text__item {
     display: inline-block;
     margin-right: rem(16px);
+
+    .reveal-text--spacing_sm & {
+        margin-right: rem(8px);
+    }
 }
