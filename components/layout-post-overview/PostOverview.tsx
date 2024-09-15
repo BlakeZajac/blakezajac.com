@@ -3,9 +3,11 @@
 import { twMerge } from "tailwind-merge";
 import { PortableText } from "next-sanity";
 
+import { Work } from "@/types/work";
+
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
-import { Work } from "@/types/work";
+import RevealText from "@/components/block-reveal-text/RevealText";
 
 interface PostOverviewProps extends Pick<Work, "overviewTitle" | "overviewDescription"> {
     className?: string;
@@ -22,7 +24,7 @@ const PostOverview: React.FC<PostOverviewProps> = ({ className, overviewTitle, o
         <Section>
             <Container>
                 <div className={`overview ${twMerge(className)}`}>
-                    <div className="overview__title">{overviewTitle}</div>
+                    <RevealText as="h2" className="overview__title" content={overviewTitle} />
 
                     {descriptionIsArray ? (
                         <div className="l-grid l-grid--spacing l-grid--vertical-gap_sm">
