@@ -33,20 +33,27 @@ const Hero: React.FC<HeroProps> = ({ className, badge, title, description01, des
                 {title && <RevealText as="h1" className="hero__title" content={title} />}
 
                 <div className="hero__content copy">
-                    {description01 ? <p>{description01}</p> : ""}
+                    {description01 && <RevealText as="p" content={description01} />}
                     {description02 ? <p>{description02}</p> : ""}
                 </div>
 
                 {image && (
                     <div className="hero-media u-rounded">
                         <motion.div
-                            initial={{ scaleY: 0, originY: 0 }}
-                            animate={isInView ? { scaleY: 1 } : {}}
+                            initial={{ scaleY: 1, originY: "100%" }}
+                            animate={isInView ? { scaleY: 0 } : {}}
                             transition={{
                                 duration: 2,
                                 ease: [0.16, 1.08, 0.38, 0.98],
+                                delay: 0.5,
                             }}
-                            className="hero-media__background "
+                            className="hero-media__background"
+                        ></motion.div>
+
+                        <motion.div
+                            initial={{ scale: 1.25 }}
+                            animate={isInView ? { scale: 1 } : {}}
+                            transition={{ duration: 2.5, ease: [0.16, 1.08, 0.38, 0.98], delay: 0.5 }}
                         >
                             <Image className="hero-media__image" src={image} alt={imageAlt} />
                         </motion.div>
