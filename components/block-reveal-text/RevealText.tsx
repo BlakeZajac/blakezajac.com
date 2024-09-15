@@ -32,7 +32,7 @@ const RevealText: React.FC<RevealTextProps> = ({ className, content, as: Compone
                 <span key={index} className="reveal-text__item-wrapper">
                     <motion.span
                         initial={{ opacity: 0, y: "100%" }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        animate={isInView && { opacity: 1, y: 0 }}
                         transition={{
                             duration: duration,
                             ease: [0.16, 1.08, 0.38, 0.98],
