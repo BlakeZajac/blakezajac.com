@@ -11,7 +11,17 @@
     display: inline-block;
     margin-right: rem(16px);
 
+    .reveal-text--spacing_xs & {
+        margin-right: rem(4px);
+    }
+
     .reveal-text--spacing_sm & {
         margin-right: rem(8px);
+    }
+
+    .reveal-text--spacing_sm-below-md & {
+        @media (max-width: max-width($break-grid-md)) {
+            margin-right: rem(8px);
+        }
     }
 }

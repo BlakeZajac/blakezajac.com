@@ -20,7 +20,7 @@ const CalloutContent: React.FC<CalloutContentProps> = ({ className, content }) =
     return (
         <Section ref={ref} className={twMerge(`callout-content`, className)}>
             <Container className="callout-content__container">
-                <RevealText content={content} className="callout-content__content" />
+                <RevealText content={content} className="reveal-text--spacing_sm-below-md callout-content__content" />
             </Container>
         </Section>
     );

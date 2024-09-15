@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ className, badge, title, description01, des
             <Container className="hero__container">
                 {badge && <Badge label={badge} />}
 
-                {title && <RevealText as="h1" className="hero__title" content={title} />}
+                {title && <RevealText as="h1" className="reveal-text--spacing_sm-below-md hero__title" content={title} />}
 
                 {(description01 || description02) && (
                     <div className="hero__content copy">

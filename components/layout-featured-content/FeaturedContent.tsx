@@ -75,13 +75,13 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
     return (
         <Section className={`featured-content ${componentClass}`}>
             <Container className="featured-content__container">
-                {title ? <RevealText as="h2" className="featured-content__title" content={title} /> : ""}
+                {title ? <RevealText as="h2" className="reveal-text--spacing_sm-below-md featured-content__title" content={title} /> : ""}
 
                 <div className={`featured-content__grid l-grid ${gridClass}`}>
                     <div className="featured-content__cell featured-content__cell--content l-grid__cell l-grid__cell--50-at-lg l-grid__cell--33-at-2xl">
                         <div className="featured-content__unit featured-content__unit--copy copy">
-                            {content01 && <RevealText className="reveal-text--spacing_sm" as="p" content={content01} duration={2} delay={0.125} />}
-                            {content02 && <RevealText className="reveal-text--spacing_sm" as="p" content={content02} duration={2} delay={0.25} />}
+                            {content01 && <RevealText className="reveal-text--spacing_xs" as="p" content={content01} duration={2} delay={0.125} />}
+                            {content02 && <RevealText className="reveal-text--spacing_xs" as="p" content={content02} duration={2} delay={0.25} />}
                             {buttonHref && <Button buttonHref={buttonHref} buttonLabel={buttonLabel} />}
                         </div>
                         {isLargeScreen && renderStatistics()}
