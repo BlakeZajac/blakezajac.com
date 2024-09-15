@@ -1,8 +1,18 @@
 .primary-menu {
     padding: rem(6px);
-    background: rgba($color-system-white, 80%);
+    position: relative;
     border-radius: $border-radius-full;
-    backdrop-filter: blur(8px);
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        background: rgba($color-system-white, 80%);
+        border-radius: inherit;
+        backdrop-filter: blur(8px);
+        z-index: -1;
+    }
 }
 
 .primary-menu__list {
