@@ -19,7 +19,7 @@ export default function Home() {
                 content="I design, develop and deliver exceptional digital products for forward-thinking brands."
             />
 
-            <FeaturedProjects items={featuredPostsData} />
+            {/* <FeaturedProjects items={featuredPostsData} /> */}
 
             <FeaturedContent
                 title="A little about me"
@@ -35,7 +35,7 @@ export default function Home() {
                 image={featuredContentImage}
             />
 
-            <BackgroundCardCollection title="Latest" items={featuredPostsData} />
+            {/* <BackgroundCardCollection title="Latest" items={featuredPostsData} /> */}
         </>
     );
 }
