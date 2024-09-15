@@ -13,7 +13,7 @@ const WorkArchive = () => {
 
             {/* <pre>{JSON.stringify(work, null, 2)}</pre> */}
 
-            <FeaturedProjects items={work} />
+            <FeaturedProjects className="l-section--margin-top_none" items={work} />
         </>
     );
 };

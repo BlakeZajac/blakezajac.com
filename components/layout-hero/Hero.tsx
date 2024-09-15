@@ -32,10 +32,12 @@ const Hero: React.FC<HeroProps> = ({ className, badge, title, description01, des
 
                 {title && <RevealText as="h1" className="hero__title" content={title} />}
 
-                <div className="hero__content copy">
-                    {description01 && <RevealText as="p" className="reveal-text--spacing_sm" animateBy="line" content={description01} delay={0.25} />}
-                    {description02 && <RevealText as="p" className="reveal-text--spacing_sm" animateBy="line" content={description02} delay={0.5} />}
-                </div>
+                {(description01 || description02) && (
+                    <div className="hero__content copy">
+                        {description01 && <RevealText as="p" className="reveal-text--spacing_sm" animateBy="line" content={description01} delay={0.25} />}
+                        {description02 && <RevealText as="p" className="reveal-text--spacing_sm" animateBy="line" content={description02} delay={0.5} />}
+                    </div>
+                )}
 
                 {image && (
                     <div className="hero-media u-rounded">

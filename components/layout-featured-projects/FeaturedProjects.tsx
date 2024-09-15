@@ -7,10 +7,11 @@ import Container from "@/components/layout-container/Container";
 import ProjectCard from "@/components/block-project-card/ProjectCard";
 
 interface FeaturedProjectsProps {
+    className?: string;
     items: Work[];
 }
 
-const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
+const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ className, items }) => {
     const getCardImage = (item: Work) => {
         if (item.cardImage) {
             return item.cardImage;
@@ -21,7 +22,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ items }) => {
     };
 
     return (
-        <Section>
+        <Section className={className}>
             <Container>
                 <div className="l-grid l-grid--vertical-gap_sm">
                     {items.map((item, index) => (
