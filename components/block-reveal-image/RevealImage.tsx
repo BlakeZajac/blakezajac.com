@@ -10,9 +10,18 @@ interface RevealImageProps {
     delay?: number;
     image: string;
     imageAlt: string;
+    isRounded?: boolean;
 }
 
-const RevealImage: React.FC<RevealImageProps> = ({ className, duration = 2, delay = 0, image, imageAlt = "", ease = [0.16, 1.08, 0.38, 0.98] }) => {
+const RevealImage: React.FC<RevealImageProps> = ({
+    className,
+    duration = 2,
+    delay = 0,
+    image,
+    imageAlt = "",
+    ease = [0.16, 1.08, 0.38, 0.98],
+    isRounded = true,
+}) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -20,7 +29,7 @@ const RevealImage: React.FC<RevealImageProps> = ({ className, duration = 2, dela
     const imageClass = className ? `${className}__image` : "";
 
     return (
-        <div ref={ref} className={twMerge("reveal-image", className)}>
+        <div ref={ref} className={twMerge("reveal-image", className, isRounded && "u-rounded")}>
             <motion.div
                 initial={{ scaleY: 1, originY: "100%" }}
                 animate={isInView ? { scaleY: 0 } : {}}

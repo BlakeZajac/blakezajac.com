@@ -8,6 +8,7 @@ import Container from "@/components/layout-container/Container";
 import Button from "@/components/block-button/Button";
 import Statistic from "@/components/block-statistic/Statistic";
 import RevealText from "@/components/block-reveal-text/RevealText";
+import RevealImage from "../block-reveal-image/RevealImage";
 
 interface FeaturedContentProps {
     mediaPosition?: "left" | "right";
@@ -22,7 +23,7 @@ interface FeaturedContentProps {
     statisticNumber02?: string;
     statisticNumberSuffix02?: string;
     statisticContent02?: string;
-    image?: StaticImageData | string;
+    image?: string;
     imageAlt?: string;
 }
 
@@ -43,7 +44,7 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
     imageAlt = "",
 }) => {
     const componentClass = `${mediaPosition === "left" ? "featured-content--media-left" : "featured-content--media-right"}`;
-    const gridClass = `${mediaPosition === "left" ? "l-grid--row-reverse-at-lg" : ""}`;
+    const gridClass = `${mediaPosition === "left" && "l-grid--row-reverse-at-lg"}`;
 
     const [windowWidth, setWindowWidth] = useState<number>(0);
 
@@ -86,10 +87,11 @@ const FeaturedContent: React.FC<FeaturedContentProps> = ({
                         </div>
                         {isLargeScreen && renderStatistics()}
                     </div>
+
                     <div className="featured-content__cell featured-content__cell--media l-grid__cell l-grid__cell--50-at-lg l-grid__cell--66-at-2xl">
                         {image && (
                             <div className="featured-content__unit featured-content__unit--media">
-                                <Image src={image} alt={imageAlt} className="featured-content__media u-rounded" />
+                                <RevealImage image={image} imageAlt={imageAlt} />
                             </div>
                         )}
                         {!isLargeScreen && renderStatistics()}

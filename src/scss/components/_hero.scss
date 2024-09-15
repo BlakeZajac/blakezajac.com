@@ -61,14 +61,13 @@
 
 .hero-media {
     margin-top: rem(64px);
-    @extend .u-rounded;
 }
 
 .hero-media__background {
-    background-color: $color-brand-yellow;
+    background-color: $color-brand-yellow !important;
 
     .hero--bg-orange-light & {
-        background: $color-brand-orange-light;
+        background: $color-brand-orange-light !important;
     }
 }
 

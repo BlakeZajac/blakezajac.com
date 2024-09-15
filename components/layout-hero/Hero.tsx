@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ className, badge, title, description01, des
                     </div>
                 )}
 
-                {image && <RevealImage className="hero-media" image={image} imageAlt={imageAlt} />}
+                {image && <RevealImage className="hero-media" image={image} imageAlt={imageAlt} isRounded />}
             </Container>
         </div>
     );
