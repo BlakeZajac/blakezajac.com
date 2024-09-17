@@ -18,7 +18,7 @@ const ExpertisePage = () => {
             />
 
             <MediaContent
-                media={heroImage}
+                image={heroImage}
                 title="Reimaged user experiences"
                 content="We work with forward-thinking organisations to reimagine what good looks like. From simplifying complex user journeys to improving onboarding, we've helped solve a wide array of business problems through a strategic approach to UX."
                 linkUrl="#"
@@ -27,13 +27,13 @@ const ExpertisePage = () => {
 
             <MediaContent
                 mediaPosition="right"
-                media={heroImage}
+                image={heroImage}
                 title="Optimised for conversion"
                 content="Utilising an analytical approach combined with our best practice methodologies, we convert interest into action. By focusing on streamlined pathways and clear calls to action, we capture user attention and drive them towards desired outcomes, be it sales, sign-ups, or engagement."
             />
 
             <MediaContent
-                media={heroImage}
+                image={heroImage}
                 title="Set for the future"
                 content="Our digital strategies are designed to not only meet current demands but also anticipate future trends and challenges. We focus on scalability, flexibility, and innovation to keep your business at the forefront, ready to embrace new opportunities and technologies as they arise."
             />

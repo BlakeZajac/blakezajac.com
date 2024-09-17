@@ -1,5 +1,6 @@
 "use client";
 
+import { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 
 import Section from "@/components/layout-section/Section";
@@ -10,7 +11,7 @@ import RevealText from "@/components/block-reveal-text/RevealText";
 
 interface MediaContentProps {
     mediaPosition?: "left" | "right";
-    image: string;
+    image: StaticImageData | string;
     imageAlt?: string;
     title?: string;
     content?: string;
