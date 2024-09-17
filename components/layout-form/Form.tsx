@@ -5,6 +5,7 @@ import React from "react";
 import Section from "../layout-section/Section";
 import Container from "../layout-container/Container";
 import ContactForm from "../block-contact-form/ContactForm";
+import RevealText from "../block-reveal-text/RevealText";
 
 interface FormProps {
     phoneNumber?: string;
@@ -29,33 +30,37 @@ const Form: React.FC<FormProps> = ({ phoneNumber, email, title, description, des
                         {(sanitisedPhoneNumber || email) && (
                             <div className="form-links">
                                 {sanitisedPhoneNumber && (
-                                    <a
-                                        href={`tel:${sanitisedPhoneNumber}`}
-                                        className="form-links__item underlink"
-                                    >
+                                    <a href={`tel:${sanitisedPhoneNumber}`} className="form-links__item underlink">
                                         {phoneNumber}
                                     </a>
                                 )}
                                 {email && (
-                                    <a
-                                        href={`mailto:${email}`}
-                                        className="form-links__item underlink"
-                                    >
+                                    <a href={`mailto:${email}`} className="form-links__item underlink">
                                         {email}
                                     </a>
                                 )}
                             </div>
                         )}
-                        <h1 className="form__title">{title}</h1>
+
+                        <RevealText className="form__title" as="h1" content={title} />
+
                         {(description || descriptionTwo) && (
                             <div className="form-description">
                                 {description && (
-                                    <div className="form-description__item">{description}</div>
+                                    <RevealText
+                                        className="reveal-text--spacing_xs form-description__item"
+                                        content={description}
+                                        animateBy="line"
+                                        delay={0.125}
+                                    />
                                 )}
                                 {descriptionTwo && (
-                                    <div className="form-description__item form-description__item--alt">
-                                        {descriptionTwo}
-                                    </div>
+                                    <RevealText
+                                        className="reveal-text--spacing_xs form-description__item--alt"
+                                        content={descriptionTwo}
+                                        animateBy="line"
+                                        delay={0.25}
+                                    />
                                 )}
                             </div>
                         )}
