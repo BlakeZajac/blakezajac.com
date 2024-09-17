@@ -18,13 +18,7 @@ export default async function WorkItemPage({ params }: Props) {
 
     return (
         <>
-            <PostHero
-                title={title}
-                shortDescription={shortDescription}
-                shortDescriptionAlt={shortDescriptionAlt}
-                liveLink={liveLink}
-                featuredImage={featuredImage}
-            />
+            <PostHero title={title} featuredImage={featuredImage} />
 
             <PostOverview overviewTitle={overviewTitle} overviewDescription={overviewDescription} />
 

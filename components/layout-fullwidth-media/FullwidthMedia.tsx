@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 
 import Section from "@/components/layout-section/Section";
@@ -5,7 +6,7 @@ import RevealImage from "@/components/block-reveal-image/RevealImage";
 
 interface FullwidthMediaProps {
     className?: string;
-    image: string;
+    image: StaticImageData | string;
     imageAlt: string;
 }
 

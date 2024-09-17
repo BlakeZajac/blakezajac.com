@@ -23,7 +23,7 @@ interface FeaturedContentProps {
     statisticNumber02?: string;
     statisticNumberSuffix02?: string;
     statisticContent02?: string;
-    image?: string;
+    image?: StaticImageData | string;
     imageAlt?: string;
 }
 
