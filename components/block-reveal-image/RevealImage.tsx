@@ -11,6 +11,8 @@ interface RevealImageProps {
     image: string;
     imageAlt: string;
     isRounded?: boolean;
+    width?: number;
+    height?: number;
 }
 
 const RevealImage: React.FC<RevealImageProps> = ({
@@ -21,6 +23,8 @@ const RevealImage: React.FC<RevealImageProps> = ({
     imageAlt = "",
     ease = [0.16, 1.08, 0.38, 0.98],
     isRounded = true,
+    width = 1920,
+    height = 1080,
 }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.1 });
@@ -45,7 +49,7 @@ const RevealImage: React.FC<RevealImageProps> = ({
                 animate={isInView && { scale: 1 }}
                 transition={{ duration: 2.5, ease: [0.16, 1.08, 0.38, 0.98], delay: delay }}
             >
-                <Image className={`reveal-image__image ${imageClass}`} src={image} alt={imageAlt} />
+                <Image className={`reveal-image__image ${imageClass}`} src={image} alt={imageAlt} width={width} height={height} />
             </motion.div>
         </div>
     );
