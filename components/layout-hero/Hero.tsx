@@ -1,5 +1,6 @@
 "use client";
 
+import { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 
 import Container from "@/components/layout-container/Container";
@@ -14,7 +15,7 @@ interface HeroProps {
     title?: string;
     description01?: string;
     description02?: string;
-    image?: string;
+    image?: StaticImageData | string;
     imageAlt?: string;
 }
 
