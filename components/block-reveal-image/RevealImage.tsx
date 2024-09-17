@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 import { motion, useInView } from "framer-motion";
 
@@ -8,7 +8,7 @@ interface RevealImageProps {
     duration?: number;
     ease?: number[];
     delay?: number;
-    image: string;
+    image: StaticImageData | string;
     imageAlt: string;
     isRounded?: boolean;
     width?: number;
