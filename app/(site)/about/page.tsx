@@ -6,6 +6,7 @@ import FeaturedContent from "@/components/layout-featured-content/FeaturedConten
 import ReadingList from "@/components/layout-reading-list/ReadingList";
 import FullwidthMedia from "@/components/layout-fullwidth-media/FullwidthMedia";
 
+import photographyItems from "@/src/data/photography";
 import visionImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
 import missionImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
 import fullwidthImage from "@/src/img/headshots/headshots-1400x1400-1.webp";
@@ -20,7 +21,7 @@ const AboutPage = () => {
                 description02="I'm a lifelong learner, endurance runner, cyclist, and self-proclaimed crappy pianist. I'm currently residing in Newcastle, Australia where I work for Redback Solutions as a full stack designer."
             />
 
-            <ImageGallery />
+            <ImageGallery images={photographyItems} />
 
             <FeaturedContent
                 title="Vision"

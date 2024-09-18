@@ -1,22 +1,22 @@
 .image-gallery {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .image-gallery .swiper-wrapper {
-  align-items: center;
+    align-items: center;
 }
 
 .image-gallery__item {
 }
 
 .image-gallery__image {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: center;
-  border-radius: rem(30px);
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: rem(30px);
 }
 
-.image-gallery__image--alt {
-  aspect-ratio: 5 / 3.75;
+.image-gallery__image--portrait {
+    aspect-ratio: 5 / 3.75;
 }
