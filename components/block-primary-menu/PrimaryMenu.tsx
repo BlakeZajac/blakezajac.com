@@ -17,8 +17,8 @@ const menuItems = [
         href: "/work",
     },
     {
-        label: "Expertise",
-        href: "/expertise",
+        label: "Journal",
+        href: "/journal",
     },
     {
         label: "Contact",
