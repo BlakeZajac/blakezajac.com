@@ -17,12 +17,14 @@ interface ImageGalleryProps {
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
     const [alternatingImages, setAlternatingImages] = useState(images);
-    const [loopEnabled, setLoopEnabled] = useState(true);
 
     useEffect(() => {
         // Split the images into landscape and portrait
         const landscapeImages = images.filter((image) => image.orientation === "landscape");
         const portraitImages = images.filter((image) => image.orientation === "portrait");
+
+        // Determine the number of images to use from each orientation
+        const count = Math.min(landscapeImages.length, portraitImages.length);
 
         // Randomise each array
         const shuffleLandscape = [...landscapeImages].sort(() => Math.random() - 0.5);
@@ -30,20 +32,17 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
         // Merge the two arrays in an alternating fashion
         const alternating = [];
-        const maxLength = Math.max(shuffleLandscape.length, shufflePortrait.length);
 
-        for (let i = 0; i < maxLength; i++) {
-            if (shuffleLandscape[i]) alternating.push(shuffleLandscape[i]);
-            if (shufflePortrait[i]) alternating.push(shufflePortrait[i]);
+        for (let i = 0; i < count; i++) {
+            alternating.push(shuffleLandscape[i], shufflePortrait[i]);
         }
 
         setAlternatingImages(alternating);
-        setLoopEnabled(alternating.length > 5);
     }, [images]);
 
     return (
         <Section className="image-gallery">
-            <Container className="u-overflow-right">
+            <Container>
                 <Swiper
                     breakpoints={{
                         1440: {
@@ -59,7 +58,6 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                             spaceBetween: 30,
                         },
                     }}
-                    loop={loopEnabled}
                     grabCursor={true}
                 >
                     {alternatingImages.map((image, index) => (

@@ -11,12 +11,12 @@
 
 .image-gallery__image {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 0.85;
     object-fit: cover;
     object-position: center;
     border-radius: rem(30px);
 }
 
 .image-gallery__image--landscape {
-    aspect-ratio: 5 / 3.75;
+    aspect-ratio: 1.25;
 }

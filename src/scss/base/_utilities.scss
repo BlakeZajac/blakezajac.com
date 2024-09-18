@@ -84,33 +84,41 @@
 }
 
 .u-overflow-x {
+    padding: 0 $l-container-padding-xs;
     margin: 0 (-$l-container-padding-xs);
 
     @media (min-width: $break-grid-lg) {
+        padding: 0 $l-container-padding-lg;
         margin: 0 (-$l-container-padding-lg);
     }
 
     @media (min-width: $break-grid-xl) {
+        padding: 0 $l-container-padding-xl;
         margin: 0 (-$l-container-padding-xl);
     }
 
     @media (min-width: $break-grid-2xl) {
+        padding: 0 $l-container-padding-2xl;
         margin: 0 (-$l-container-padding-2xl);
     }
 }
 
 .u-overflow-right {
+    padding-right: $l-container-padding-xs;
     margin-right: (-$l-container-padding-xs);
 
     @media (min-width: $break-grid-lg) {
+        padding-right: $l-container-padding-lg;
         margin-right: (-$l-container-padding-lg);
     }
 
     @media (min-width: $break-grid-xl) {
+        padding-right: $l-container-padding-xl;
         margin-right: (-$l-container-padding-xl);
     }
 
     @media (min-width: $break-grid-2xl) {
+        padding-right: $l-container-padding-2xl;
         margin-right: (-$l-container-padding-2xl);
     }
 }
