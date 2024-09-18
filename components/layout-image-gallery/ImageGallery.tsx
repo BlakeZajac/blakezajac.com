@@ -67,7 +67,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                             <Image
                                 src={image.src}
                                 alt={image.alt}
-                                className={`image-gallery__image ${image.orientation === "portrait" ? "image-gallery__image--portrait" : ""}`}
+                                className={`image-gallery__image ${image.orientation === "portrait" && "image-gallery__image--portrait"}`}
                             />
                         </SwiperSlide>
                     ))}
