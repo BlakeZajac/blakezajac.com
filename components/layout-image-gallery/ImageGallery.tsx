@@ -46,7 +46,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
     return (
         <Section className={`image-gallery ${isDragging ? "image-gallery--dragging" : ""}`}>
-            <Container className="l-container--padding_none">
+            <Container>
                 <Swiper
                     modules={[FreeMode]}
                     freeMode={true}
@@ -65,7 +65,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                         },
                     }}
                     grabCursor={true}
-                    className="u-overflow-x"
+                    className="u-overflow-x--important"
                     onSliderMove={() => setIsDragging(true)}
                     onTouchEnd={() => setIsDragging(false)}
                     onTouchStart={() => setIsDragging(false)}
