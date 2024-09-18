@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper/modules";
+
 import "swiper/css";
+import "swiper/css/free-mode";
 
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
@@ -17,6 +20,7 @@ interface ImageGalleryProps {
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
     const [alternatingImages, setAlternatingImages] = useState(images);
+    const [isDragging, setIsDragging] = useState(false);
 
     useEffect(() => {
         // Split the images into landscape and portrait
@@ -41,9 +45,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
     }, [images]);
 
     return (
-        <Section className="image-gallery">
+        <Section className={`image-gallery ${isDragging ? "image-gallery--dragging" : ""}`}>
             <Container className="l-container--padding_none">
                 <Swiper
+                    modules={[FreeMode]}
+                    freeMode={true}
                     breakpoints={{
                         1440: {
                             slidesPerView: 3.125,
@@ -60,6 +66,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                     }}
                     grabCursor={true}
                     className="u-overflow-x"
+                    onSliderMove={() => setIsDragging(true)}
+                    onTouchEnd={() => setIsDragging(false)}
+                    onTouchStart={() => setIsDragging(false)}
                 >
                     {alternatingImages.map((image, index) => (
                         <SwiperSlide key={index} className="image-gallery__item">

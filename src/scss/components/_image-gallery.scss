@@ -7,6 +7,11 @@
 }
 
 .image-gallery__item {
+    transition: transform $transition-cubic;
+
+    .image-gallery--dragging & {
+        transform: scale(0.9);
+    }
 }
 
 .image-gallery__image {
