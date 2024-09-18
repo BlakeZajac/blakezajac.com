@@ -42,7 +42,7 @@ const Form: React.FC<FormProps> = ({ phoneNumber, email, title, description, des
                             </div>
                         )}
 
-                        <RevealText className="form__title" as="h1" content={title} />
+                        <RevealText className="reveal-text--spacing_sm-below-md form__title" as="h1" content={title} />
 
                         {(description || descriptionTwo) && (
                             <div className="form-description">
