@@ -42,7 +42,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
     return (
         <Section className="image-gallery">
-            <Container>
+            <Container className="l-container--padding_none">
                 <Swiper
                     breakpoints={{
                         1440: {
@@ -59,6 +59,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                         },
                     }}
                     grabCursor={true}
+                    className="u-overflow-x"
                 >
                     {alternatingImages.map((image, index) => (
                         <SwiperSlide key={index} className="image-gallery__item">
