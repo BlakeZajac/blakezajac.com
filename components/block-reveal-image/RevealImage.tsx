@@ -48,6 +48,7 @@ const RevealImage: React.FC<RevealImageProps> = ({
                 initial={{ scale: 1.25 }}
                 animate={isInView && { scale: 1 }}
                 transition={{ duration: 2.5, ease: [0.16, 1.08, 0.38, 0.98], delay: delay }}
+                className="reveal-image__image-wrapper"
             >
                 <Image className={`reveal-image__image ${imageClass}`} src={image} alt={imageAlt} width={width} height={height} />
             </motion.div>
