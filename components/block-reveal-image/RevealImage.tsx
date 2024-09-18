@@ -50,7 +50,13 @@ const RevealImage: React.FC<RevealImageProps> = ({
                 transition={{ duration: 2.5, ease: [0.16, 1.08, 0.38, 0.98], delay: delay }}
                 className="reveal-image__image-wrapper"
             >
-                <Image className={`reveal-image__image ${imageClass}`} src={image} alt={imageAlt} width={width} height={height} />
+                <Image
+                    className={`reveal-image__image ${imageClass}`}
+                    src={typeof image === "string" ? image : image.src}
+                    alt={imageAlt}
+                    width={typeof image === "string" ? width : image.width}
+                    height={typeof image === "string" ? height : image.height}
+                />
             </motion.div>
         </div>
     );
