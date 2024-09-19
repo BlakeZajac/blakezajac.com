@@ -50,7 +50,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
             <Container>
                 <Swiper
                     modules={[FreeMode]}
-                    freeMode={true}
+                    freeMode={{
+                        enabled: true,
+                        momentumRatio: 0.8,
+                        momentumVelocityRatio: 0.75,
+                    }}
                     breakpoints={{
                         1440: {
                             slidesPerView: 3.125,
