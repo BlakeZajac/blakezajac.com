@@ -13,10 +13,11 @@ import { featuredContent } from "@/sanity/schemas/blocks/featured-content";
 import { featuredPosts } from "@/sanity/schemas/blocks/featured-posts";
 import { fullwidthMedia } from "@/sanity/schemas/blocks/fullwidth-media";
 import { hero } from "@/sanity/schemas/blocks/hero";
+import { iconGrid } from "@/sanity/schemas/blocks/icon-grid";
 import { imageGallery } from "@/sanity/schemas/blocks/image-gallery";
 
 const schemas = [bookType, journalType, pageType, readingListType, workType];
-const blocks = [backgroundCardCollection, featuredContent, featuredPosts, fullwidthMedia, hero, imageGallery];
+const blocks = [backgroundCardCollection, featuredContent, featuredPosts, fullwidthMedia, hero, imageGallery, iconGrid];
 
 export const schema: { types: SchemaTypeDefinition[] } = {
     types: [...schemas, ...blocks],
