@@ -20,7 +20,7 @@ interface MediaContentProps {
 }
 
 const MediaContent: React.FC<MediaContentProps> = ({ mediaPosition = "left", image, imageAlt = "", title, content, linkUrl, linkTitle }) => {
-    const gridClasses = "right" === mediaPosition && "l-grid--row-reverse-at-lg";
+    const gridClasses = "right" === mediaPosition ? "l-grid--row-reverse-at-lg" : "";
 
     return (
         <Section className={twMerge(`media-content media-content--media-${mediaPosition}`)}>
