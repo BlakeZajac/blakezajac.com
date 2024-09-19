@@ -12,11 +12,11 @@ import featuredPostsData from "@/src/data/featured-posts";
 export default function Home() {
     return (
         <>
-            <Hero title="Extraordinary Digital Experiences" image={heroImage} />
+            <Hero title="Architecting Bespoke Experiences" image={heroImage} />
 
             <CalloutContent
                 className="l-section--background_orange"
-                content="I design, develop and deliver exceptional digital products for forward-thinking brands."
+                content="Merging design, technology, and strategy to build digital products for visionary brands."
             />
 
             {/* <FeaturedProjects items={featuredPostsData} /> */}
