@@ -11,9 +11,10 @@ import { workType } from "@/sanity/schemas/work-schema";
 import { backgroundCardCollection } from "@/sanity/schemas/blocks/background-card-collection";
 import { featuredPosts } from "@/sanity/schemas/blocks/featured-posts";
 import { hero } from "@/sanity/schemas/blocks/hero";
+import { imageGallery } from "@/sanity/schemas/blocks/image-gallery";
 
 const schemas = [bookType, journalType, pageType, readingListType, workType];
-const blocks = [backgroundCardCollection, featuredPosts, hero];
+const blocks = [backgroundCardCollection, featuredPosts, hero, imageGallery];
 
 export const schema: { types: SchemaTypeDefinition[] } = {
     types: [...schemas, ...blocks],
