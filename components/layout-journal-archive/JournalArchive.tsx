@@ -8,7 +8,7 @@ const JournalArchive = () => {
 
     return (
         <>
-            <Hero title="Journal" description01="Self improvement, reflections, programming, design, and more." />
+            <Hero title="Journal" description01="Reflections, programming, design, and more." />
 
             {/* <pre>{JSON.stringify(journal, null, 2)}</pre> */}
         </>
