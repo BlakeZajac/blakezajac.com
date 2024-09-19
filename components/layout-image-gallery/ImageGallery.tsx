@@ -34,9 +34,10 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         const shuffleLandscape = [...landscapeImages].sort(() => Math.random() - 0.5);
         const shufflePortrait = [...portraitImages].sort(() => Math.random() - 0.5);
 
-        // Merge the two arrays in an alternating fashion
+        // Create an array to hold the alternating images
         const alternating = [];
 
+        // Merge the two arrays in an alternating fashion
         for (let i = 0; i < count; i++) {
             alternating.push(shuffleLandscape[i], shufflePortrait[i]);
         }
