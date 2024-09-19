@@ -32,8 +32,8 @@ const AboutPage = () => {
             <FeaturedContent
                 mediaPosition="left"
                 title="Mission"
-                content01="I'm committed to crafting intuitive, user-centric digital solutions that go beyond expectations. Through UX design, I unravel intricate business challenges, transforming them into user-friendly and functional experiences. My passion for web development ensures that these concepts materialise into fully responsive, dynamic applications."
-                content02="I embrace a culture of continuous learning, remaining dedicated to personal and professional growth, striving to get better at least 1% every day. With every project, I nurture a mindset of perpetual improvement, both inside and outside of work."
+                content01="I don't adhere to the norm and always strive to deliver something that stands out and exceeds standards. I'm dedicated to creating user-friendly digital solutions that exceed expectations. Through UX design, I solve and transform business challenges into intuitive and functional experiences."
+                content02="I believe in continuous learning and am commited to personal and professional growth, striving to improve 1% every day. With each project, I maintain a mindset of ongoing improvement, both in and out of work."
                 image={missionImage}
                 buttonHref="/contact"
                 buttonLabel="Let's work together"
