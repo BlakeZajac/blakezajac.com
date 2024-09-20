@@ -25,15 +25,16 @@ const AboutPage = () => {
 
             <FeaturedContent
                 title="Vision"
-                content01="I strive to create an impactful digital landscape where every interaction leaves a lasting impression. By seamlessly blending cutting-edge UX design and accessible web development, I simplify complexities and enhance user engagement at every touchpoint."
+                content01="I'm passionate about building websites that truly connect with people. I strive to create digital experiences that are both beautiful and easy to use."
+                content02="I combine modern design with clean code to make sure every part of a website is engaging and works for everyone. By focusing on what users really need, I turn complicated ideas into simple, powerful online experiences."
                 image={visionImage}
             />
 
             <FeaturedContent
                 mediaPosition="left"
                 title="Mission"
-                content01="I don't adhere to the norm and always strive to deliver something that stands out and exceeds standards. I'm dedicated to creating user-friendly digital solutions that exceed expectations. Through UX design, I solve and transform business challenges into intuitive and functional experiences."
-                content02="I believe in continuous learning and am commited to personal and professional growth, striving to improve 1% every day. With each project, I maintain a mindset of ongoing improvement, both in and out of work."
+                content01="I consistently strive to deliver exceptional work that exceeds standards and stands out from the norm. I'm dedicated to creating user-friendly digital solutions that exceed expectations. Through UX design, I solve and transform business challenges into intuitive and functional experiences."
+                content02="I believe in continuous learning and am commited to personal and professional growth, striving to improve 1% every day. With each project, I maintain a mindset of ongoing improvement, both inside and outside of work."
                 image={missionImage}
                 buttonHref="/contact"
                 buttonLabel="Let's work together"
