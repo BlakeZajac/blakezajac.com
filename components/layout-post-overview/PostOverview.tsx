@@ -30,18 +30,12 @@ const PostOverview: React.FC<PostOverviewProps> = ({ className, overviewTitle, o
                         <div className="l-grid l-grid--spacing l-grid--vertical-gap_sm">
                             {overviewDescription.map((block, index) => (
                                 <div key={index} className="l-grid__cell l-grid__cell--spacing l-grid__cell--50-at-lg">
-                                    <div className="overview__description">
-                                        <PortableText value={[block]} />
-                                    </div>
+                                    <RevealText className="overview__description" content={<PortableText value={[block]} />} delay={index * 0.125} />
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        overviewDescription && (
-                            <div className="overview__description">
-                                <PortableText value={overviewDescription} />
-                            </div>
-                        )
+                        overviewDescription && <RevealText className="overview__description" content={<PortableText value={overviewDescription} />} />
                     )}
                 </div>
             </Container>
