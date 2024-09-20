@@ -31,6 +31,7 @@ const RevealImage: React.FC<RevealImageProps> = ({
 
     const backgroundClass = className && `${className}__background`;
     const imageClass = className && `${className}__image`;
+    const imageSrc = typeof image === "string" ? image : (image.src as any)?.default?.src || image.src || image;
 
     return (
         <div ref={ref} className={twMerge("reveal-image", className, isRounded && "u-rounded")}>
@@ -52,7 +53,7 @@ const RevealImage: React.FC<RevealImageProps> = ({
             >
                 <Image
                     className={`reveal-image__image ${imageClass}`}
-                    src={typeof image === "string" ? image : image.src}
+                    src={imageSrc}
                     alt={imageAlt}
                     width={typeof image === "string" ? width : image.width}
                     height={typeof image === "string" ? height : image.height}

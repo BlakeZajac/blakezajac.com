@@ -11,8 +11,11 @@
     background-color: $color-page-bg;
 }
 
-.reveal-image__image-wrapper {}
+.reveal-image__image-wrapper {
+    height: 100%;
+}
 
 .reveal-image__image {
+    height: 100%;
     object-fit: cover;
 }

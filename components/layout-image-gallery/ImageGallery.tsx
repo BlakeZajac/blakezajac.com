@@ -9,6 +9,7 @@ import "swiper/css/free-mode";
 
 import Section from "@/components/layout-section/Section";
 import Container from "@/components/layout-container/Container";
+import RevealImage from "@/components/block-reveal-image/RevealImage";
 
 interface ImageGalleryProps {
     images: Array<{
@@ -77,10 +78,12 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                 >
                     {alternatingImages.map((image, index) => (
                         <SwiperSlide key={index} className="image-gallery__item">
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
+                            <RevealImage
+                                image={image.src}
+                                imageAlt={image.alt}
                                 className={`image-gallery__image ${image.orientation === "landscape" ? "image-gallery__image--landscape" : ""}`}
+                                width={image.orientation === "landscape" ? 1000 : 700}
+                                height={image.orientation === "landscape" ? 700 : 1000}
                             />
                         </SwiperSlide>
                     ))}
