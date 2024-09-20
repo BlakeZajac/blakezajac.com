@@ -34,9 +34,39 @@ export const pageType = defineType({
                 }),
 
                 defineArrayMember({
+                    name: "featuredContent",
+                    title: "Featured Content",
+                    type: "featuredContent",
+                }),
+
+                defineArrayMember({
                     name: "featuredPosts",
                     title: "Featured Posts",
                     type: "featuredPosts",
+                }),
+
+                defineArrayMember({
+                    name: "fullwidthMedia",
+                    title: "Fullwidth Media",
+                    type: "fullwidthMedia",
+                }),
+
+                defineArrayMember({
+                    name: "iconGrid",
+                    title: "Icon Grid",
+                    type: "iconGrid",
+                }),
+
+                defineArrayMember({
+                    name: "imageGallery",
+                    title: "Image Gallery",
+                    type: "imageGallery",
+                }),
+
+                defineArrayMember({
+                    name: "mediaContent",
+                    title: "Media Content",
+                    type: "mediaContent",
                 }),
             ],
         }),
