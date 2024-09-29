@@ -32,9 +32,9 @@ export const mediaContent = defineType({
             of: [{ type: "block" }],
         }),
 
-        defineField({
-            name: "link",
-            type: "link",
-        }),
+        // defineField({
+        //     name: "link",
+        //     type: "link",
+        // }),
     ],
 });
