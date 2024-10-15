@@ -43,3 +43,4 @@ npx webpack --watch
 - Move Sanity schemas into their respective blocks as a type.ts
 - SVG Sprites https://svgsprit.es/
 - Update <Image /> width and height on background and article cards
+- Update article cards to look like background cards, can probs just use background cards instead of article cards and add a grid modifier to the background card collection
