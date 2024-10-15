@@ -5,8 +5,14 @@ export type Journal = {
   _createdAt: string;
   title: string;
   slug: string;
-  cardImage: object;
-  featuredImage: object;
+  cardImage: {
+    url: string;
+    alt: string;
+  };
+  featuredImage: {
+    url: string;
+    alt: string;
+  };
   excerpt: string;
   content: PortableTextBlock[];
 };

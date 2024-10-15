@@ -3,16 +3,18 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Section from "../layout-section/Section";
-import Container from "../layout-container/Container";
-import BackgroundCard, {
-  BackgroundCardProps,
-} from "../block-background-card/BackgroundCard";
+import { Journal } from "@/types/journal";
+import { getCardImage, getCardImageAlt } from "@/hooks/get-card-image";
+
+import Section from "@/components/layout-section/Section";
+import Container from "@/components/layout-container/Container";
+import BackgroundCard from "@/components/block-background-card/BackgroundCard";
 
 import "swiper/css";
+
 interface BackgroundCardCollectionProps {
   title?: string;
-  items: BackgroundCardProps[];
+  items: Journal[];
 }
 
 const BackgroundCardCollection: React.FC<BackgroundCardCollectionProps> = ({
@@ -60,8 +62,18 @@ const BackgroundCardCollection: React.FC<BackgroundCardCollectionProps> = ({
           grabCursor={true}
         >
           {items.map((item, index) => (
-            <SwiperSlide key={index} className="card-collection__slide">
-              <BackgroundCard {...item} />
+            <SwiperSlide key={item._id} className="card-collection__slide">
+              <BackgroundCard
+                type="post"
+                media={getCardImage(item)}
+                mediaAlt={getCardImageAlt(item)}
+                badge="Journal"
+                date={new Date(item._createdAt).toLocaleDateString("en-AU")}
+                title={item.title}
+                description={item.excerpt}
+                buttonHref={`/journal/${item.slug}`}
+                buttonLabel="Read more"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
