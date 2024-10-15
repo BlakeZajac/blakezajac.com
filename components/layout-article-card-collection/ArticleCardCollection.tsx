@@ -18,11 +18,11 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   return (
     <Section className={`article-card-collection ${className}`}>
       <Container>
-        <div className="l-grid l-grid--vertical-gap_sm">
+        <div className="l-grid l-grid--vertical-gap">
           {items.map((item, index) => (
             <div
               key={item._id}
-              className="l-grid__cell l-grid__cell--50-at-md l-grid__cell--33-at-lg l-grid__cell--25-at-xl"
+              className="l-grid__cell l-grid__cell--50-at-md l-grid__cell--33-at-lg l-grid__cell--25-at-3xl"
             >
               <ArticleCard item={item} />
             </div>
