@@ -26,6 +26,7 @@ const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
     offset: ["start start", "end end"],
   });
 
+  // number represents percentage * 100 e.g. 2 = 200%
   const scale2 = useTransform(scrollYProgress, [0, 1], [1, 2]);
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
@@ -98,7 +99,7 @@ const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
             transition={{
               duration: 1.2,
               ease: [0.16, 1.08, 0.38, 0.98],
-              delay: index * 0.1,
+              delay: index * 0.05,
             }}
           >
             <div className="zoom-parallax__media">
