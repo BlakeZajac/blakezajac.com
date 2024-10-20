@@ -90,10 +90,7 @@ const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
           <motion.div
             key={index}
             style={{
-              scale:
-                typeof window !== "undefined" && window.innerWidth < 768
-                  ? mobileScale
-                  : scale,
+              scale: isMobile ? mobileScale : scale,
             }}
             className="zoom-parallax__item"
             initial={{ y: 100, opacity: 0 }}
