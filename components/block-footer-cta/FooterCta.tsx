@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useRouter } from "next/navigation";
 
 import Text3d from "@/components/block-text-3d/Text3d";
 
