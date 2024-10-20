@@ -12,7 +12,7 @@ const SiteLegal = () => {
         <Image src={logo} alt="Blake Zajac logo" className="site-legal__logo" />
       </div>
       <div className="site-legal__unit site-legal__unit--copyright">
-        © {currentYear} Blake Zajac
+        &copy; {currentYear} Blake Zajac
       </div>
       <div className="site-legal__unit site-legal__unit--acknowledgement">
         <Acknowledgement />
