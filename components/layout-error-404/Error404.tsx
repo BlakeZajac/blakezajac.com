@@ -16,7 +16,7 @@ const Error404 = () => {
         </div>
         <div className="error__unit error__unit--actions">
           <Button
-            buttonClassname="error__btn"
+            buttonClassName="error__btn"
             buttonHref="/"
             buttonLabel="Back to home"
           />
