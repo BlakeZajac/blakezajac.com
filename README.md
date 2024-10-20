@@ -42,3 +42,14 @@ npx webpack --watch
 -   Reminder to self that the @ syntax is available for importing. Review ya code.
 -   Move Sanity schemas into their respective blocks as a type.ts
 -   SVG Sprites https://svgsprit.es/
+
+### Inspiration
+
+-   https://blog.olivierlarose.com/demos/zoom-parallax for the post hero component.
+-   https://blog.olivierlarose.com/demos/3d-perspective-text to replace the footer cta.
+-   https://blog.olivierlarose.com/demos/mouse-image-gallery for the photography.
+-   https://blog.olivierlarose.com/demos/project-gallery-mouse-hover for the reading list.
+-   https://blog.olivierlarose.com/demos/navigation-menu for the offcanvas.
+-   https://blog.olivierlarose.com/demos/curved-menu offcanvas alternative.
+-   https://blog.olivierlarose.com/demos/smooth-parallax-scroll single project component.
+-   https://blog.olivierlarose.com/demos/3d-glass-effect contact or 404 page.
