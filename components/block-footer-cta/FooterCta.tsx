@@ -3,7 +3,6 @@ import { useRef } from "react";
 import Text3d from "@/components/block-text-3d/Text3d";
 
 const FooterCta = () => {
-  const router = useRouter();
   const plane = useRef<HTMLDivElement>(null);
   const maxRotate = 45;
 
