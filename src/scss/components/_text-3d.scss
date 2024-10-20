@@ -1,0 +1,45 @@
+.text-3d {
+  position: relative;
+  cursor: pointer;
+  transition: transform $transition-cubic;
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: rotateX(90deg);
+  }
+}
+
+.text-3d__item {
+  margin: 0;
+  font-size: 6dvw;
+  line-height: 6dvw;
+  color: $color-brand-black;
+  transition:
+    color $transition-default,
+    transform $transition-cubic,
+    opacity $transition-cubic;
+
+  .text-3d:hover & {
+    color: $color-brand-orange;
+  }
+}
+
+.text-3d__item--primary {
+  .text-3d:hover & {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.text-3d__item--secondary {
+  position: absolute;
+  top: 0;
+  color: $color-brand-black;
+  opacity: 0;
+  transform: rotateX(-90deg) translateY(3.5dvw);
+  transform-origin: bottom center;
+
+  .text-3d:hover & {
+    opacity: 1;
+  }
+}
