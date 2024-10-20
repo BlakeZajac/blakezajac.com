@@ -11,13 +11,18 @@
 
 .text-3d__item {
   margin: 0;
-  font-size: 6dvw;
-  line-height: 6dvw;
+  font-size: 12dvw;
+  line-height: 12dvw;
   color: $color-brand-black;
   transition:
     color $transition-default,
     transform $transition-cubic,
     opacity $transition-cubic;
+
+  @media (min-width: $break-grid-md) {
+    font-size: 8dvw;
+    line-height: 8dvw;
+  }
 
   .text-3d:hover & {
     color: $color-brand-orange;
