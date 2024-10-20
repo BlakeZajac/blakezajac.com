@@ -48,7 +48,6 @@ npx webpack --watch
 
 ### Inspiration
 
-- https://blog.olivierlarose.com/demos/zoom-parallax for the post hero component.
 - https://blog.olivierlarose.com/demos/3d-perspective-text to replace the footer cta.
 - https://blog.olivierlarose.com/demos/mouse-image-gallery for the photography.
 - https://blog.olivierlarose.com/demos/project-gallery-mouse-hover for the reading list.
