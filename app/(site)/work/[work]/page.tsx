@@ -3,26 +3,39 @@ import { getWorkItem } from "@/sanity/utils/get-work";
 import PostHero from "@/components/layout-post-hero/PostHero";
 import PostOverview from "@/components/layout-post-overview/PostOverview";
 import PostMediaContent from "@/components/layout-post-media-content/PostMediaContent";
+import ZoomParallax from "@/components/layout-zoom-parallax/ZoomParallax";
 
 type Props = {
-    params: {
-        work: string;
-    };
+  params: {
+    work: string;
+  };
 };
 
 export default async function WorkItemPage({ params }: Props) {
-    const slug = params.work;
-    const workItem = await getWorkItem(slug);
+  const slug = params.work;
+  const workItem = await getWorkItem(slug);
 
-    const { title, shortDescription, shortDescriptionAlt, liveLink, featuredImage, overviewTitle, overviewDescription } = workItem;
+  const {
+    title,
+    shortDescription,
+    shortDescriptionAlt,
+    liveLink,
+    featuredImage,
+    overviewTitle,
+    overviewDescription,
+  } = workItem;
 
-    return (
-        <>
-            <PostHero title={title} featuredImage={featuredImage} />
+  return (
+    <>
+      <ZoomParallax />
+      {/* <PostHero title={title} featuredImage={featuredImage} /> */}
 
-            <PostOverview overviewTitle={overviewTitle} overviewDescription={overviewDescription} />
+      <PostOverview
+        overviewTitle={overviewTitle}
+        overviewDescription={overviewDescription}
+      />
 
-            {/* <PostMediaContent media="" /> */}
-        </>
-    );
+      {/* <PostMediaContent media="" /> */}
+    </>
+  );
 }
