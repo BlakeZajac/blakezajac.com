@@ -21,21 +21,15 @@ const FooterCta = () => {
     }
   };
 
-  const handleClick = () => {
-    router.push("/contact");
-  };
-
   return (
-    <div
-      onMouseMove={(e) => handleMouseMove(e)}
-      onClick={handleClick}
-      className="footer-cta"
-    >
+    <div onMouseMove={(e) => handleMouseMove(e)} className="footer-cta">
       <div ref={plane} className="footer-cta__plane">
-        <Text3d primary="Let's" secondary="Let's" />
-        <Text3d primary="make" secondary="make" />
-        <Text3d primary="something" secondary="something" />
-        <Text3d primary="exciting" secondary="exciting" />
+        <a href="/contact" className="footer-cta__link">
+          <Text3d primary="Let's" secondary="Let's" />
+          <Text3d primary="make" secondary="make" />
+          <Text3d primary="something" secondary="something" />
+          <Text3d primary="exciting" secondary="exciting" />
+        </a>
       </div>
     </div>
   );
