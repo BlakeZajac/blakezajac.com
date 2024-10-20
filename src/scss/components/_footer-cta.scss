@@ -3,7 +3,7 @@
   height: calc(12dvw * var(--text-3d-count, 1));
 
   @media (min-width: $break-grid-md) {
-    height: calc(8dvw * var(--text-3d-count, 1));
+    height: calc(6dvw * var(--text-3d-count, 1));
   }
 }
 
