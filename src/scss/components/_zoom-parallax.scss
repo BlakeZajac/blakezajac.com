@@ -18,55 +18,80 @@
   height: 100%;
   position: absolute;
   top: 0;
+
+  &:not(:first-child) {
+    @media (max-width: max-width($break-grid-md)) {
+      display: none;
+    }
+  }
 }
 
 .zoom-parallax__media {
-  width: 25dvw;
-  height: 25svh;
+  width: 100dvw;
+  height: 50svh;
   position: relative;
 
+  @media (min-width: $break-grid-md) {
+    width: 25dvw;
+    height: 25svh;
+  }
+
   .zoom-parallax__item:nth-of-type(2) & {
-    width: 35dvw;
-    height: 30svh;
-    top: -30svh;
-    left: 5dvw;
+    @media (min-width: $break-grid-md) {
+      width: 35dvw;
+      height: 30svh;
+      top: -30svh;
+      left: 5dvw;
+    }
   }
 
   .zoom-parallax__item:nth-of-type(3) & {
-    width: 20dvw;
-    height: 45svh;
-    top: -10svh;
-    left: -25dvw;
+    @media (min-width: $break-grid-md) {
+      width: 20dvw;
+      height: 45svh;
+      top: -10svh;
+      left: -25dvw;
+    }
   }
 
   .zoom-parallax__item:nth-of-type(4) & {
-    width: 25dvw;
-    height: 25svh;
-    left: 27.5dvw;
+    @media (min-width: $break-grid-md) {
+      width: 25dvw;
+      height: 25svh;
+      left: 27.5dvw;
+    }
   }
 
   .zoom-parallax__item:nth-of-type(5) & {
-    width: 20dvw;
-    height: 25svh;
-    left: 5dvw;
-    top: 27.5svh;
+    @media (min-width: $break-grid-md) {
+      width: 20dvw;
+      height: 25svh;
+      left: 5dvw;
+      top: 27.5svh;
+    }
   }
 
   .zoom-parallax__item:nth-of-type(6) & {
-    width: 30dvw;
-    height: 25svh;
-    top: 27.5svh;
-    left: -22.5dvw;
+    @media (min-width: $break-grid-md) {
+      width: 30dvw;
+      height: 25svh;
+      top: 27.5svh;
+      left: -22.5dvw;
+    }
   }
 
   .zoom-parallax__item:nth-of-type(7) & {
-    width: 15dvw;
-    height: 15svh;
-    top: 22.5svh;
-    left: 25dvw;
+    @media (min-width: $break-grid-md) {
+      width: 15dvw;
+      height: 15svh;
+      top: 22.5svh;
+      left: 25dvw;
+    }
   }
 }
 
 .zoom-parallax__image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }

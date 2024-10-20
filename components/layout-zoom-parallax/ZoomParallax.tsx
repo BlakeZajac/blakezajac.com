@@ -2,7 +2,7 @@
 
 // @todo - update to work with sanity images
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { useInView, useScroll, useTransform, motion } from "framer-motion";
 
@@ -18,6 +18,7 @@ interface ZoomParallaxProps {}
 
 const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
   const container = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   const isInView = useInView(container, { once: true, amount: 0.2 });
 
   const { scrollYProgress } = useScroll({
@@ -25,16 +26,36 @@ const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
     offset: ["start start", "end end"],
   });
 
+  const scale2 = useTransform(scrollYProgress, [0, 1], [1, 2]);
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", () =>
+      setTimeout(() => checkMobile(), 200)
+    );
+
+    return () => {
+      window.removeEventListener("resize", () =>
+        setTimeout(() => checkMobile(), 200)
+      );
+    };
+  }, []);
+
   const pictures = [
     {
       src: Picture1,
       scale: scale4,
+      mobileScale: scale2,
     },
     {
       src: Picture2,
@@ -65,10 +86,15 @@ const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
   return (
     <div ref={container} className="zoom-parallax">
       <div className="zoom-parallax__container">
-        {pictures.map(({ src, scale }, index) => (
+        {pictures.map(({ src, scale, mobileScale }, index) => (
           <motion.div
             key={index}
-            style={{ scale }}
+            style={{
+              scale:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? mobileScale
+                  : scale,
+            }}
             className="zoom-parallax__item"
             initial={{ y: 100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
