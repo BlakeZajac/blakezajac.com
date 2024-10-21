@@ -1,6 +1,7 @@
 "use client";
 
 // @todo - update to work with sanity images
+
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -44,7 +45,7 @@ const ParallaxScroll: React.FC<ParallaxScrollProps> = () => {
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end start"],
+    offset: ["start end", "end start"],
   });
   const { height } = dimensions;
   const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
@@ -69,13 +70,15 @@ const ParallaxScroll: React.FC<ParallaxScrollProps> = () => {
   }, []);
 
   return (
-    <Section>
+    <Section className="parallax-scroll">
       <Container>
-        <div ref={container} className="parallax-scroll">
-          <Column images={[images[0], images[1], images[2]]} y={y} />
-          <Column images={[images[3], images[4], images[5]]} y={y2} />
-          <Column images={[images[6], images[7], images[8]]} y={y3} />
-          <Column images={[images[9], images[10], images[11]]} y={y4} />
+        <div ref={container} className="parallax-scroll__items">
+          <div className="parallax-scroll__columns">
+            <Column images={[images[0], images[1], images[2]]} y={y} />
+            <Column images={[images[3], images[4], images[5]]} y={y2} />
+            <Column images={[images[6], images[7], images[8]]} y={y3} />
+            <Column images={[images[9], images[10], images[11]]} y={y4} />
+          </div>
         </div>
       </Container>
     </Section>
