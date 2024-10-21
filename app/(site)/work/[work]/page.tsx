@@ -4,6 +4,7 @@ import PostHero from "@/components/layout-post-hero/PostHero";
 import PostOverview from "@/components/layout-post-overview/PostOverview";
 import PostMediaContent from "@/components/layout-post-media-content/PostMediaContent";
 import ParallaxZoom from "@/components/layout-parallax-zoom/ParallaxZoom";
+import ParallaxScroll from "@/components/layout-parallax-scroll/ParallaxScroll";
 
 type Props = {
   params: {
@@ -34,6 +35,8 @@ export default async function WorkItemPage({ params }: Props) {
         overviewTitle={overviewTitle}
         overviewDescription={overviewDescription}
       />
+
+      <ParallaxScroll />
 
       {/* <PostMediaContent media="" /> */}
     </>
