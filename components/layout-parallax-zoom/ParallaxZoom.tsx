@@ -14,9 +14,9 @@ import Picture5 from "@/src/img/headshots/headshots-1920x1080-01.webp";
 import Picture6 from "@/src/img/headshots/headshots-1920x1080-01.webp";
 import Picture7 from "@/src/img/headshots/headshots-1920x1080-01.webp";
 
-interface ZoomParallaxProps {}
+interface ParallaxZoomProps {}
 
-const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
+const ParallaxZoom: React.FC<ParallaxZoomProps> = () => {
   const container = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   const isInView = useInView(container, { once: true, amount: 0.2 });
@@ -118,4 +118,4 @@ const ZoomParallax: React.FC<ZoomParallaxProps> = () => {
   );
 };
 
-export default ZoomParallax;
+export default ParallaxZoom;

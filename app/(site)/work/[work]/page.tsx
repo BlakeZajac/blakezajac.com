@@ -3,7 +3,7 @@ import { getWorkItem } from "@/sanity/utils/get-work";
 import PostHero from "@/components/layout-post-hero/PostHero";
 import PostOverview from "@/components/layout-post-overview/PostOverview";
 import PostMediaContent from "@/components/layout-post-media-content/PostMediaContent";
-import ZoomParallax from "@/components/layout-zoom-parallax/ZoomParallax";
+import ParallaxZoom from "@/components/layout-parallax-zoom/ParallaxZoom";
 
 type Props = {
   params: {
@@ -27,7 +27,7 @@ export default async function WorkItemPage({ params }: Props) {
 
   return (
     <>
-      <ZoomParallax />
+      <ParallaxZoom />
       {/* <PostHero title={title} featuredImage={featuredImage} /> */}
 
       <PostOverview
